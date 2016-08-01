@@ -1,9 +1,9 @@
 lock '3.5.0'
 
-set :application, 'znger'
-set :repo_url, 'git@github.com:tublitzed/znger.git' # Edit this to match your repository
+set :application, 'wewillstopthis'
+set :repo_url, 'git@github.com:tublitzed/wewillstopthis.git' # Edit this to match your repository
 set :branch, :master
-set :deploy_to, '/home/deploy/znger'
+set :deploy_to, '/home/deploy/wewillstopthis'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
