@@ -1,0 +1,46 @@
+.btn {
+  @include transition;
+
+  background: #FFF;
+  border: 1px solid $color-grey-200;
+  border-radius: 2px;
+  color: $color-grey-700;
+  font-size: 1.7rem !important;
+  padding: 0.5em;
+  box-shadow: 1px 1px 1px $color-grey-300;
+  cursor: pointer;
+  font-weight: 200;
+
+  &:hover {
+    color: darken($color-grey-700, 20%);
+    border-color: darken($color-grey-200, 20%);
+  }
+
+  &:focus, &:active {
+    color: darken($color-grey-700, 40%);
+    border-color: darken($color-grey-200, 40%);
+  }
+
+  &--primary {
+    background: $color-primary;
+    border-color: darken($color-primary, 5%);
+    color: #FFF;
+
+    &:hover {
+      color: #FFF;
+      background: darken($color-primary, 10%);
+      border-color: darken($color-primary, 20%);
+    }
+
+    &:focus, &:active {
+      color: #FFF;
+      background: darken($color-primary, 15%);
+      border-color: darken($color-primary, 40%);
+    }
+
+    .form & {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}

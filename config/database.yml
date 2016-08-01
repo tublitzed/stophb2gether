@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: wewillstopthis_dev
+  database: wwst_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: wewillstopthis_test
+  database: wwst_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: wewillstopthis_production
-  username: wwst
-  password: <%= ENV['WEWILLSTOPTHIS_DATABASE_PASSWORD'] %>
+  database: wwst_production
+  username: wwst_pr0d_us3R
+  password: <%= ENV['WWST_DATABASE_PASSWORD'] %>

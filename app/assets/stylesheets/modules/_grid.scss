@@ -1,0 +1,38 @@
+$gutter-width: 0.25rem;
+$grid-cols: 12;
+$grid-breakpoint: 600px;
+
+.row {
+  width: 100%;
+  @include flexbox;
+  margin: $gutter-width 0;
+}
+
+@for $i from 1 through $grid-cols {
+    .col-#{$i} {
+        @include flex-grow($i);
+        margin: 0 $gutter-width 0 0;
+
+        &:first-child {
+          margin-left: $gutter-width;
+        }
+    }
+
+    @media (max-width: $grid-breakpoint) {
+        .col-#{$i} {
+          margin: 0 1rem;
+        }
+
+        .row {
+          display: block;
+        }
+    }
+}
+
+// To see this in a view quickly, do:
+// <% for i in 1..11 do %>
+//   <div class="row">
+//     <div class="col-<%= i %>"></div>
+//     <div class="col-<%= 12 - i %>"></div>
+//   </div>
+// <% end %>

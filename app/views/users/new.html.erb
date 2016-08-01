@@ -1,0 +1,24 @@
+<% provide(:title, 'Sign up') %>
+<div class="row">
+<div class="col-4"></div>
+  <div class="col-4">
+  <h1 class="title">Sign up</h1>
+  <%= form_for @user, url: {action: 'create'}, html: {class: 'form'} do |f| %>
+    <%= render partial: 'shared/form_errors', locals: {errors: @user.errors} %>
+    <%= f.label :name, class: 'form__label' %>
+    <%= f.text_field :name, class: 'form__text-input' %>
+    <br />
+    <%= f.label :email, class: 'form__label' %>
+    <%= f.email_field :email, class: 'form__text-input' %>
+    <br />
+    <%= f.label :password, class: 'form__label' %>
+    <%= f.password_field :password, class: 'form__text-input' %>
+    <br />
+    <%= f.label :password_confirmation, "Password Confirmation", class: 'form__label' %>
+    <%= f.password_field :password_confirmation, class: 'form__text-input' %>
+    <br />
+    <%= f.submit "Create my account", class: "btn btn--primary" %>
+  <% end %>
+  </div>
+  <div class="col-4"></div>
+</div>

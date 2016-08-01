@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wewillstopthis</title>
+  <title>WeWillStopThis <= #WeAreNotThis</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+  <%= render partial: 'partials/meta' %>
 </head>
 <body>
 
-<%= yield %>
-
+<div class="container">
+  <%= render partial: 'partials/flash', locals: {flash: flash} %>
+  <%= render partial: 'partials/nav' %>
+  <%= yield %>
+</div>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

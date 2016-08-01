@@ -1,0 +1,24 @@
+<% provide(:title, "Login") %>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+      <h1 class="title">Login</h1>
+      <%= form_for(:session, url: login_path, html: {class: 'form'}) do |f| %>
+
+        <%= f.label :email, class: 'form__label' %>
+        <%= f.email_field :email, class: 'form__text-input' %>
+        <br />
+        <%= f.label :password, class: 'form__label' %>
+        <%= f.password_field :password, class: 'form__text-input' %>
+        <br />
+
+        <%= f.label :remember_me, class: 'form__field-wrapper' do %>
+          <%= f.check_box :remember_me, class: 'form__checkbox' %>
+          <span>Remember me on this computer</span>
+        <% end %>
+
+        <%= f.submit "Login", class: "btn btn--primary" %>
+      <% end %>
+  </div>
+  <div class="col-4"></div>
+</div>

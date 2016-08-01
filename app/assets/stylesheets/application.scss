@@ -1,0 +1,30 @@
+@import 'vars';
+@import 'mixins';
+@import 'base';
+
+@import 'modules/alert';
+@import 'modules/btns';
+@import 'modules/forms';
+@import 'modules/grid';
+@import 'modules/nav';
+
+.placeholder {
+  text-align: center;
+  margin-top: 45vh;
+}
+
+h1.title {
+  line-height: 2;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 2rem;
+}
+
+.new_user {
+  label {
+    display: block;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

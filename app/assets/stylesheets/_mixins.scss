@@ -1,0 +1,13 @@
+@mixin flexbox {
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex-grow($val) {
+    -webkit-flex-grow: $val;
+    flex-grow: $val;
+}
+
+@mixin transition($target: all, $time: $animation-speed, $animation: ease) {
+    transition: $target $time $animation;
+}

@@ -1,0 +1,31 @@
+.form__label {
+  display: block;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+.form__text-input {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  font-size: 1.1rem;
+  border: 1px solid $color-grey-300;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+
+  &:focus {
+    border-color: darken($color-grey-300, 20%);
+  }
+
+  &:focus {
+    background: $color-yellow-200;
+    border-color: darken($color-grey-300, 30%);
+  }
+}
+
+.form-errors {
+  color: $color-error;
+
+  ul {
+    margin: 1.1rem;
+  }
+}

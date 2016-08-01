@@ -1,0 +1,22 @@
+body {
+    font-family: $font-family;
+    background: $color-near-white;
+    color: $color-copy;
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, input {
+    margin: 0;
+    padding: 0;
+}
+
+input, button {
+    outline: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
