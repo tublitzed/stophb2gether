@@ -8,12 +8,11 @@
   <%= render partial: 'partials/meta' %>
 </head>
 <body>
-
 <div class="container">
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
   <%= render partial: 'partials/nav' %>
   <%= yield %>
 </div>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= render partial: 'partials/footer' %>
 </body>
 </html>
