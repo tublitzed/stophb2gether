@@ -16,7 +16,6 @@ $(function () {
 
 var Alert = {
   init: function init() {
-    console.log('ok, browserify is working');
     $('.alert__close').on('click', function () {
       $(this).parents('.alert').slideUp(50);
     });
