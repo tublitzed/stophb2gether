@@ -17,7 +17,7 @@
     "node": ">= 0.10"
   },
   "scripts": {
-    "lint": "eslint ./app/assets/javascripts",
+    "lint": "eslint ./app/assets/javascripts/src",
     "build": "browserify ./app/assets/javascripts/src/main.js -o ./app/assets/javascripts/dist/main.bundle.js",
     "w": "nodemon -e js -w ./app/assets/javascripts/src -x 'npm run build'"
   },
