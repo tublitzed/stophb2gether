@@ -1,6 +1,10 @@
 .alert {
   box-shadow: 1px 1px 1px rgba(132, 132, 132, 0.9);
   margin-bottom: 1em;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   &--note {
     background: $color-blue-500;
   }
@@ -8,7 +12,7 @@
     background: $color-green-500;
   }
   &--error {
-    background: $color-red-500;
+    background: $color-error;
   }
 }
 
@@ -16,7 +20,7 @@
   color: $color-near-white;
   text-align: center;
   font-size: 1.3rem;
-  padding: 1em;
+  padding: 1.5em;
   margin: 0;
 }
 
@@ -26,7 +30,7 @@
   font-size: 3rem;
   right: 13px;
   position: absolute;
-  top: 0;
+  top: 0.25em;
 
   &:hover {
     color: $color-near-white;

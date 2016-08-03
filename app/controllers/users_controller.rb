@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update, :show]
 
   def show
-    puts @current_user
+    # redirect right now, no viewing accounts allowed.
+    redirect_to root_url
     @user = User.find(params[:id])
   end
 
