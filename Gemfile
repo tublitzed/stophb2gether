@@ -24,6 +24,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'figaro'
 
+# https://github.com/railsconfig/config
+gem 'config'
+# https://github.com/jnunemaker/httparty
+gem 'httparty'
+
 group :development do
   gem 'capistrano'
   gem 'capistrano3-puma'

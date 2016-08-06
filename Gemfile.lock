@@ -70,6 +70,10 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
+    config (1.2.1)
+      activesupport (>= 3.0)
+      deep_merge (~> 1.0, >= 1.0.1)
+    deep_merge (1.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10)
@@ -90,6 +94,8 @@ GEM
     guard-minitest (2.3.1)
       guard (~> 2.0)
       minitest (>= 3.0)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -120,6 +126,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -213,8 +220,10 @@ DEPENDENCIES
   capistrano-rvm
   capistrano3-puma
   coffee-rails (~> 4.0.0)
+  config
   figaro
   guard-minitest (= 2.3.1)
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
   mini_backtrace (= 0.1.3)
