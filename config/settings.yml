@@ -1,2 +1,5 @@
 WORDSMITH_API_TOKEN: 503dd71c732967671470e5165685de1606eadc663f83bab8c4ea546a9a6b407b
 WORDSMITH_TEMPLATE_URL: 'https://api.automatedinsights.com/v1/projects/wwst/templates/master/outputs'
+# Will not accept incoming requests to API controller without this key:
+
+WWST_AUTHORIZATION_HEADER: 9423b908206e7365702e4a72d530c6723c711a18549952790fff10b7bf381ec7f89ee6a159bf9f8a073c823098557de7dcc9964440b1409d64752599c1f7581e

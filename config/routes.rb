@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   get 'cat-scratch-fever' => 'home#api'
+
+  #API
+  post    'api/add'   => 'api#add'
 end

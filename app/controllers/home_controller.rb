@@ -10,6 +10,11 @@ class HomeController < ApplicationController
   end
 
   def api
+    if !logged_in?
+      redirect_to root_url
+      return
+    end
+
     url = Settings.WORDSMITH_TEMPLATE_URL + '?access_token=' + Settings.WORDSMITH_API_TOKEN
     data = {
       "date": "55",
@@ -20,6 +25,7 @@ class HomeController < ApplicationController
       "sources": "candy"
     }
     response = HTTParty.post(url, :query => { :data => data })
+    #puts response
     template = response['data']['content']
     puts template
     render :action => :index
