@@ -6,9 +6,13 @@ class ApiController < ApplicationController
       render :json => { success: false }, status: :error
       return
     end
+    puts "HERE0"
+    puts request.raw_post
+    puts "HERE1"
     puts request.body
+    puts "HERE2"
     puts request.params
-    puts "HERE"
+    puts "HERE3"
     formatted = formatValues(request.params['_json'])
     puts formatted
     Builder.buildLoss(formatted)
