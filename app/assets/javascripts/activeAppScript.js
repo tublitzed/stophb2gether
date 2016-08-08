@@ -51,7 +51,9 @@ function onEdit(event) {
     'payload': JSON.stringify(rowValues),
     'contentType': 'application/json',
     'headers': {
-      'Authorization': WWST_AUTHORIZATION_HEADER
+      'Authorization': WWST_AUTHORIZATION_HEADER,
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
     }
   };
   UrlFetchApp.fetch(WWST_POST_URL, options);
