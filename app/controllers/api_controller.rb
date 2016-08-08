@@ -8,7 +8,10 @@ class ApiController < ApplicationController
     end
     puts request.body
     puts request.params
-    Builder.buildLoss(formatValues(request.params['_json']))
+    puts "HERE"
+    formatted = formatValues(request.params['_json'])
+    puts formatted
+    Builder.buildLoss(formatted)
     render :json => request.body
   end
 
