@@ -16,6 +16,8 @@ class ApiController < ApplicationController
 
   def formatValues(postValues)
     postValues = postValues[0]
+    puts 'new post: '
+    puts postValues
     formatted = {}
     formatted['date'] = postValues['date']
     formatted['amount'] = postValues['amount']
@@ -23,6 +25,7 @@ class ApiController < ApplicationController
     formatted['description'] = postValues['description']
     formatted['notes'] = postValues['notes']
     formatted['sources'] = postValues['sources']
+    puts 'SENDING:'
     puts formatted
     formatted
   end
