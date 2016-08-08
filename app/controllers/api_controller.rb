@@ -8,6 +8,10 @@ class ApiController < ApplicationController
     end
     puts request.body
     puts request.params[:api]
+
+    puts request.params[:_json]
+    puts request.params[:_json][0]
+
     Builder.buildLoss(formatValues(request.params[:api]))
     render :json => request.body
   end
