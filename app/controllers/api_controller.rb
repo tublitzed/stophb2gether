@@ -15,8 +15,8 @@ class ApiController < ApplicationController
     puts "HERE3"
     formatted = formatValues(request.params['_json'])
     puts formatted
-    Builder.buildLoss(formatted)
-    render :json => request.body
+    built = Builder.buildLoss(formatted)
+    render :json => built
   end
 
   private
