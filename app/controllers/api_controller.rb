@@ -15,6 +15,7 @@ class ApiController < ApplicationController
   private
 
   def formatValues(postValues)
+    postValues = postValues[0]
     formatted = {}
     formatted['date'] = postValues['date']
     formatted['amount'] = postValues['amount']
