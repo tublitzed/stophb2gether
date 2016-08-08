@@ -6,8 +6,24 @@ class ApiController < ApplicationController
       render :json => { success: false }, status: :error
       return
     end
-    puts request.raw_post
-    render :json => request.raw_post
+    puts request.body
+    puts request.params[:api]
+    Builder.buildLoss(formatValues(request.params[:api]))
+    render :json => request.body
+  end
+
+  private
+
+  def formatValues(postValues)
+    formatted = {}
+    formatted['date'] = postValues['date']
+    formatted['amount'] = postValues['amount']
+    formatted['title'] = postValues['title']
+    formatted['description'] = postValues['description']
+    formatted['notes'] = postValues['notes']
+    formatted['sources'] = postValues['sources']
+    puts formatted
+    formatted
   end
 
 end

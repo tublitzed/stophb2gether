@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  get 'cat-scratch-fever' => 'home#api'
-
   #API
   post    'api/add'   => 'api#add'
 end
