@@ -8,6 +8,7 @@ class ApiController < ApplicationController
     end
     formatted = formatValues(ActiveSupport::JSON.decode(request.raw_post))
     built = Builder.buildLoss(formatted)
+    logger.info(built)
     render :json => ActiveSupport::JSON.encode(built)
   end
 
