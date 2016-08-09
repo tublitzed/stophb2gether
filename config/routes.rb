@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
+  get '/losses' => 'loss#index'
+  get '/about' => 'about#index'
   #API
   post    'api/add'   => 'api#add'
 end

@@ -5,6 +5,9 @@ class HomeController < ApplicationController
     else
       # TODO: cache this.
       @totalLosses = Loss.sum(:amount)
+      @allLosses = Loss.all
+
+      puts @allLosses
       render layout: "application"
     end
   end
