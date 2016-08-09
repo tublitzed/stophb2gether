@@ -6,7 +6,9 @@ class ApiController < ApplicationController
       render :json => { success: false }, status: :error
       return
     end
+    logger.info(request.raw_post)
     formatted = formatValues(ActiveSupport::JSON.decode(request.raw_post))
+    logger.info(formatted)
     built = Builder.buildLoss(formatted)
     logger.info(built)
     render :json => ActiveSupport::JSON.encode(built)
