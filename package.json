@@ -22,6 +22,11 @@
     "w": "nodemon -e js -w ./app/assets/javascripts/src -x 'npm run build'"
   },
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.3"
   }
 }

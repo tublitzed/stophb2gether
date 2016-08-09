@@ -3,8 +3,10 @@
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
   <%= render partial: 'partials/header', locals: {home: false} %>
 <div class="app-container">
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+    <%= render partial: 'partials/foot' %>
+  </div>
 </div>
-<%= render partial: 'partials/foot' %>
 </body>
 </html>

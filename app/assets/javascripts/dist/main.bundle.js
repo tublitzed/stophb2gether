@@ -5,13 +5,18 @@ var _alert = require('./modules/alert');
 
 var _alert2 = _interopRequireDefault(_alert);
 
+var _form = require('./modules/form');
+
+var _form2 = _interopRequireDefault(_form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
   _alert2.default.init();
+  _form2.default.init();
 });
 
-},{"./modules/alert":2}],2:[function(require,module,exports){
+},{"./modules/alert":2,"./modules/form":3}],2:[function(require,module,exports){
 'use strict';
 
 var Alert = {
@@ -23,5 +28,19 @@ var Alert = {
 };
 
 module.exports = Alert;
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
+var Form = {
+  init: function init() {
+    var $autoFocusEl = $('.autofocus');
+    if ($autoFocusEl.length) {
+      $autoFocusEl.focus();
+    }
+  }
+};
+
+module.exports = Form;
 
 },{}]},{},[1]);

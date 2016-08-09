@@ -6,7 +6,7 @@
       <%= form_for(:session, url: login_path, html: {class: 'form'}) do |f| %>
 
         <%= f.label :email, class: 'form__label' %>
-        <%= f.email_field :email, class: 'form__text-input' %>
+        <%= f.email_field :email, class: 'form__text-input autofocus' %>
         <br />
         <%= f.label :password, class: 'form__label' %>
         <%= f.password_field :password, class: 'form__text-input' %>

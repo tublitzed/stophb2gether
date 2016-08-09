@@ -1,7 +1,7 @@
 <% provide(:title, 'Sign up') %>
 <div class="row">
-<div class="col-4"></div>
-  <div class="col-4">
+<div class="col-sm-4"></div>
+  <div class="col-sm-4">
   <h1 class="title">Sign up</h1>
   <%= form_for @user, url: {action: 'create'}, html: {class: 'form'} do |f| %>
     <%= render partial: 'shared/form_errors', locals: {errors: @user.errors} %>
@@ -20,5 +20,20 @@
     <button type="submit" class="btn btn--primary">Create my account</button>
   <% end %>
   </div>
-  <div class="col-4"></div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      One of three columns
+    </div>
+    <div class="col-sm-4">
+      One of three columns
+    </div>
+    <div class="col-sm-4">
+      One of three columns
+    </div>
+  </div>
 </div>

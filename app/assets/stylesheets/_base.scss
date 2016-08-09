@@ -16,40 +16,23 @@ input, button {
   outline: none;
 }
 
+a {
+  color: $color-copy;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 300;
 }
 
 .app-container {
-  padding-top: calc(#{$header-height} + 20px);
-}
-
-.body--home {
-  .app-container {
-    padding-top: 0;
-  }
-
-  header {
-    background: transparent;
-    border-bottom: 0;
-  }
-
-  .logo {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .logo__inner {
-    height: 500px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  padding-top: calc(#{$header-height} + 2em);
 }
