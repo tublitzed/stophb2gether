@@ -30,7 +30,7 @@ function onEdit(event) {
   // Subtract one from the row index to account for the header in data array.
   var adjustedRowIndex = cell.getRowIndex() - 1;
   var keys = [];
-  var rowValues = [];
+  var rowValues = {};
 
   // First grab the keys
   data[0].forEach(function(d) {
@@ -38,11 +38,8 @@ function onEdit(event) {
   });
 
   // Now, get the row we want, add the values
-  var val;
   data[adjustedRowIndex].forEach(function(value, index) {
-    val = {};
-    val[keys[index]] = typeof value !== 'undefined' ? value : '';
-    rowValues.push(val);
+    rowValues[keys[index]] = typeof value !== 'undefined' ? value : '';
   });
 
   // Build POST options and send.
