@@ -1,6 +1,20 @@
 log/
 tmp/
-node_modules/
+
+# Specifically ignoring everything except bootstrap for
+# Sass compilation (for now)
+node_modules/.bin
+
+node_modules/babel*
+node_modules/browserify*
+node_modules/eslint*
+node_modules/nodemon*
+
+
+node_modules/bootstrap/dist
+node_modules/bootstrap/node_modules
+node_modules/bootstrap/grunt
+
 .DS_Store
 
 config/application.yml
