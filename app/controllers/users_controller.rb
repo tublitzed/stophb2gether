@@ -10,8 +10,8 @@ class UsersController < ApplicationController
 
   def new
     # redirect right now, no signups allowed.
-    redirect_to root_url
-    #@user = User.new
+    #redirect_to root_url
+    @user = User.new
   end
 
   def create
