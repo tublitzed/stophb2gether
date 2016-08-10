@@ -2,9 +2,9 @@ $font-family: 'Raleway', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
 $base-font-size: 15px;
 $animation-speed: 200ms;
 
-$color-near-black: #060606;
+$color-near-black: #2E1417;
 $color-near-white: #F4F4F4;
-$color-copy: #484848;
+$color-copy: #59393D;
 
 $color-grey-100: $color-near-white;
 $color-grey-200: #EFEEEE;
@@ -15,16 +15,25 @@ $color-grey-600: #797979;
 $color-grey-700: #4C4C4C;
 $color-grey-1000: #060606;
 
-
+$color-blue-100: #f0fbfd;
 $color-blue-500: #479FB3;
-$color-green-500: #66C569;
-$color-red-500: #C50C22;
+$color-green-500: #5D8D26;
+$color-red-500: #B7091E;
+$color-red-100: transparentize($color-red-500, 0.6);
 $color-yellow-500: #c58d0c;
+
+$color-maroon-800: #2E1417;
+$color-maroon-600: #59393D;
+$color-maroon-400: #6C5B5D;
+$color-maroon-200: #A5898C;
 
 $color-yellow-200: #F5F0E2;
 
-$color-primary: $color-red-500;
-$color-error: $color-yellow-500;
+$color-primary: $color-maroon-600;
+$color-error: $color-red-500;
 
 
 $header-height: 53px;
+
+
+$margins: 1.5em;

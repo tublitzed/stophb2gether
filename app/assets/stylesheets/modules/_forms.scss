@@ -5,6 +5,7 @@
 }
 
 .form__text-input {
+  color: $color-copy;
   width: 100%;
   padding: 0.75rem 0.5rem;
   font-size: 1.1rem;
@@ -17,8 +18,8 @@
   }
 
   &:focus {
-    background: $color-yellow-200;
-    border-color: darken($color-grey-300, 30%);
+    background: $color-blue-100;
+    border-color: $color-maroon-600;
   }
 }
 

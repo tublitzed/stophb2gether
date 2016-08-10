@@ -8,6 +8,10 @@
 @import 'modules/home';
 @import 'modules/forms';
 @import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+.row {
+  margin: 0;
+}
 // @import 'modules/grid';
 @import 'modules/header';
 @import 'modules/nav';
