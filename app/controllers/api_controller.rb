@@ -21,15 +21,11 @@ class ApiController < ApplicationController
     formatted['date'] = postValues['date']
     formatted['amount'] = postValues['amount']
     formatted['title'] = postValues['title']
-    formatted['slug'] = buildSlug(postValues['title'])
+    formatted['slug'] = postValues['slug'].downcase
     formatted['description'] = postValues['description']
     formatted['notes'] = postValues['notes']
     formatted['sources'] = postValues['sources']
     formatted
-  end
-
-  def buildSlug(title)
-    title.downcase.parameterize
   end
 
 end
