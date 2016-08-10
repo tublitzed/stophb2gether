@@ -28,6 +28,8 @@ gem 'figaro'
 gem 'config'
 # https://github.com/jnunemaker/httparty
 gem 'httparty'
+# https://github.com/rroblak/seed_dump
+gem 'seed_dump'
 
 group :development do
   gem 'capistrano'
