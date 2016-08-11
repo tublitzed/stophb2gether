@@ -6,7 +6,7 @@
      <%= @loss.title %>
     </p>
     <hr class="sm-only">
-    <h1 class="lead"><%= number_to_currency(@loss.amount, precision: 0) %></h1>
+    <h1 class="lead"><%= number_to_currency(@loss.amount, precision: 0) %></span></h1>
     <h2 class="lead">lost</h2>
     <hr>
     <h3 class="section-heading"><%= @loss.date.strftime("%B %d, %Y") %></h3>
