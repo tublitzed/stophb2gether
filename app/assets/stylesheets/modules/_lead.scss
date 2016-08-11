@@ -10,7 +10,8 @@ p.lead {
 
 h1.lead {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: $font-family-headings;
     text-align: center;
     color: $color-error;
     margin: 0.5em auto 0;
@@ -27,6 +28,7 @@ h2.lead {
     text-align: center;
     color: $color-red-100;
     text-transform: uppercase;
+    font-family: $font-family-headings;
     line-height: 1;
     margin: 0.2em 0 2em;
 

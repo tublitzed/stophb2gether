@@ -1,18 +1,21 @@
 .template {
-    padding: 1em 0 2em;
+    padding: 0 1em 2em;
+    font-size: 1rem;
 }
 
 .template-quote {
     border-left: 3px solid $color-red-100;
     padding-left: 1em;
-    color: $color-grey-500;
+    color: transparentize($color-loss, 0.2);
     margin: 3em;
 
-    // &:before {
-    //   content: '"';
-    //   color: $color-red-100;
-    //   font-size: 3rem;
-    // }
+    .link {
+        color: $color-grey-500;
+
+        &:hover {
+            color: $color-loss;
+        }
+    }
 }
 
 .template-quote-source {

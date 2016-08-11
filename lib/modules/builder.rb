@@ -6,7 +6,6 @@ module Builder
     template = self.getWordsmithTemplate(data)
     formatted = self.formatLoss(data, template)
 
-    Rails.logger.info("FORMATTED_________")
     Rails.logger.info(formatted)
 
     loss = Loss.find_or_create_by({slug: formatted['slug']})
