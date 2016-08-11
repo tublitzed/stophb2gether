@@ -24,6 +24,7 @@ class ApiController < ApplicationController
       'slug',
       'amount',
       'location',
+      'description',
       'scheduled_date',
       'type',
       'type_count',
