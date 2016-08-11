@@ -24,6 +24,7 @@ class ApiController < ApplicationController
       'name',
       'slug',
       'amount',
+      'percentage_of_total',
       'location',
       'description',
       'scheduled_date',
