@@ -1,0 +1,25 @@
+.link {
+  color: $color-primary;
+
+  &:hover {
+    color: $color-loss;
+    text-decoration: none;
+  }
+
+  &--subtle {
+    color: $color-grey-500;
+  }
+}
+
+
+.margin-top {
+  margin-top: $margins;
+}
+
+.block {
+  display: block;
+}
+
+.float-right {
+  float: right;
+}

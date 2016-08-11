@@ -1,5 +1,5 @@
 <%= render partial: 'partials/head' %>
-<body>
+<body class="<% if @appPath.present? %>body--<%= @appPath %><% end %>">
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
   <%= render partial: 'partials/header', locals: {home: false} %>
 <div class="app-container">

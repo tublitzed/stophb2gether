@@ -1,5 +1,5 @@
 <%= render partial: 'partials/head' %>
-<body class="body--home">
+<body class="body--<%= @appPath %> body--non-auth">
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
   <%= render partial: 'partials/header', locals: {home: true} %>
 <div class="app-container">

@@ -1,1 +1,4 @@
 <% provide(:title, 'Losses') %>
+
+<%= render partial: 'partials/pageTitle', locals: { title: 'Losses', desc: nil } %>
+<%= render partial: 'partials/losses', locals: { losses: @allLosses } %>

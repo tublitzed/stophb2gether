@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def set_app_path(path)
+    @appPath = path
+  end
+
 end

@@ -1,0 +1,11 @@
+<% losses.each_with_index do |loss, index| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <a href="<%= loss_path(loss) %>" class="loss<%= index === 0 ? ' first' : '' %>">
+        <h2 class="loss-amount"><%= number_to_currency(loss.amount, precision: 0) %> <span>lost</span></h2>
+        <h3 class="loss-title"><%= loss.title %></h3>
+        <h6 class="loss-date"><%= loss.date.strftime("%B %d, %Y") %></h6>
+      </a>
+    </div>
+  </div>
+<% end %>

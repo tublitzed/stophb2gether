@@ -1,0 +1,49 @@
+.loss {
+  border-bottom: 1px dotted $color-red-100;
+  text-decoration: none;
+  display: block;
+  padding: 0 1em;
+
+  &:hover {
+    background: $color-yellow-100;
+  }
+
+  @include transition;
+}
+
+.body--home .loss.first {
+  border-top: 1px dotted $color-red-100;
+}
+
+.loss-amount {
+  padding: 1em 0 0.5em 0;
+  margin: 0;
+  color: $color-loss;
+
+  span {
+    text-transform: uppercase;
+    color: $color-red-100;
+    font-weight: 500;
+  }
+}
+
+.loss-title {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 0 0.5em;
+  padding: 0;
+  text-decoration: underline;
+  font-weight: 100;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.loss-date {
+  font-weight: 100;
+  color: $color-grey-500;
+  margin: 0;
+  font-size: 0.9rem;
+  padding-bottom: $margins;
+}
