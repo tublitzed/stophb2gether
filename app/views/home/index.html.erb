@@ -7,11 +7,5 @@
     </div>
   </div>
   <%= render partial: 'partials/losses', locals: { losses: @allLosses } %>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <br />
-        <a href="<%= losses_path %>" class="link link--subtle float-right">View all losses &gt;</a>
-      </div>
-    </div>
+  <%= render partial: 'partials/linkToAll' %>
 <% end %>

@@ -1,0 +1,33 @@
+.footer {
+  background: $color-grey-200;
+  width: calc(100% - 1em);
+  bottom: 0;
+  position: fixed;
+  border-top: 1px solid $color-grey-400;
+  padding: 0.5em;
+}
+
+.footer__links {
+  float: right;
+  list-style: none;
+  font-size: 0.7rem;
+  margin: 0;
+  color: $color-grey-500;
+  li {
+    float: left;
+    display: inline-block;
+    margin: 0 0.5em;
+  }
+
+  a {
+    color: $color-grey-500;
+
+    &:hover {
+      color: $color-grey-700;
+    }
+  }
+
+  &--legal {
+    float: left;
+  }
+}

@@ -10,5 +10,8 @@ class LossesController < ApplicationController
     def show
       set_app_path('loss')
       @loss = Loss.find_by_slug(params[:id])
+      if @loss.nil?
+        render_404
+      end
     end
 end

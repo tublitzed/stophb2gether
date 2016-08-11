@@ -2,8 +2,16 @@
   <ul class="nav__links">
     <% if logged_in? %>
       <li><%= link_to 'Logout', logout_path, method: 'delete', class: 'nav__link nav__link--split' %></li>
-      <li><%= link_to 'About', about_path, class: 'nav__link' %></li>
-      <li><%= link_to 'Losses', losses_path, class: 'nav__link' %></li>
+      <li>
+        <a href="<%= about_path %>" class="nav__link<% if @appPath == 'about' %> nav__link--active<% end %>">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' %> nav__link--active<% end %>">
+          Losses
+        </a>
+      </li>
     <% else %>
       <li><%= link_to 'Login', login_path, class: 'nav__link' %></li>
     <% end %>

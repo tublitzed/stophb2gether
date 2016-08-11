@@ -11,15 +11,21 @@
   }
 }
 
-
-.margin-top {
-  margin-top: $margins;
-}
-
 .block {
   display: block;
 }
 
 .float-right {
   float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-weight: 300;
+  margin: 1em 0;
+  color: $color-grey-600;
+  font-weight: 100;
 }

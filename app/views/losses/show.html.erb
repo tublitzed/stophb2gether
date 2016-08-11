@@ -1,3 +1,21 @@
-<% provide(:title, @loss.title) %>
+<% provide(:title, @loss.title.html_safe) %>
 
-<%= @loss.template %>
+<div class="row">
+  <div class="col-sm-12">
+    <p class="lead">
+     <%= @loss.title %>
+    </p>
+    <h1 class="lead"><%= number_to_currency(@loss.amount, precision: 0) %></h1>
+    <h2 class="lead">lost</h2>
+    <hr>
+    <h3 class="section-heading"><%= @loss.date.strftime("%B %d, %Y") %></h3>
+    <div class="template">
+      <%= @loss.template.html_safe %>
+    </div>
+    <hr>
+    <h3 class="section-heading">Sources:</h3>
+    <div class="sources">
+    </div>
+  </div>
+</div>
+<%= render partial: 'partials/linkToAll' %>
