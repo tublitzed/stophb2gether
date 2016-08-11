@@ -46,4 +46,5 @@ hr {
 .app-container {
   padding-top: calc(#{$header-height} + 4em);
   padding-bottom: 4em;
+  word-wrap: break-word;
 }

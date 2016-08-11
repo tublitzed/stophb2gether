@@ -1,36 +1,64 @@
 p.lead {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 
-  .body--loss & {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5em 0;
-  }
+    .body--loss & {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0.5em 0;
+    }
 }
 
 h1.lead {
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: center;
-  color: $color-error;
-  margin: 0.5em auto 0;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: $color-error;
+    margin: 0.5em auto 0;
 
-  .body--loss & {
-    font-size: 2.5rem;
-    margin: 0;
-  }
+    .body--loss & {
+        font-size: 2.5rem;
+        margin: 0;
+    }
 }
 
 h2.lead {
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  color: $color-red-100;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0.2em 0 2em;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    color: $color-red-100;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0.2em 0 2em;
 
-  .body--loss & {
-    font-size: 1.5rem;
-  }
+    .body--loss & {
+        font-size: 1.5rem;
+    }
+}
+
+@media #{$media-sm} {
+    p.lead {
+        font-size: 1.1rem;
+
+        .body--loss & {
+            font-size: 1.5rem;
+            text-align: left;
+        }
+    }
+
+    h1.lead {
+        font-size: 2rem;
+
+        .body--loss & {
+            font-size: 1.3rem;
+        }
+    }
+
+    h2.lead {
+        font-size: 1.1rem;
+
+        .body--loss & {
+            font-size: 1.1rem;
+            margin-bottom: 1em;
+        }
+    }
 }

@@ -1,0 +1,29 @@
+$breakpoint-min-0: 950;
+
+$breakpoint-min-1: 600;
+$breakpoint-max-1: $breakpoint-min-0 - 1;
+
+$breakpoint-max-2: $breakpoint-min-1 - 1;
+
+$media-sm: "(max-width: #{$breakpoint-max-2}px)";
+$media-med: "(min-width: #{$breakpoint-min-1}px) and (max-width: #{$breakpoint-max-1}px)";
+$media-lg: "(min-width: #{$breakpoint-min-0}px)";
+
+/* debug breakpoints */
+// @media #{$media-sm} {
+//     body {
+//         background: red !important;
+//     }
+// }
+
+// @media #{$media-med} {
+//     body {
+//         background: yellow !important;
+//     }
+// }
+
+// @media #{$media-lg} {
+//     body {
+//         background: blue !important;
+//     }
+// }

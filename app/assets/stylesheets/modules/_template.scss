@@ -1,24 +1,33 @@
 .template {
-  padding: 1em 0 2em;
+    padding: 1em 0 2em;
 }
+
 .template-quote {
-  border-left: 3px solid $color-red-100;
-  padding-left: 1em;
-  color: $color-grey-500;
-  margin: 3em;
-  // &:before {
-  //   content: '"';
-  //   color: $color-red-100;
-  //   font-size: 3rem;
-  // }
+    border-left: 3px solid $color-red-100;
+    padding-left: 1em;
+    color: $color-grey-500;
+    margin: 3em;
+
+    // &:before {
+    //   content: '"';
+    //   color: $color-red-100;
+    //   font-size: 3rem;
+    // }
 }
 
 .template-quote-source {
-  float: right;
-  font-size: 0.8rem;
-  margin: -1em 3em 0 0;
+    float: right;
+    font-size: 0.8rem;
+    margin: -1em 3em 0 0;
 
-  &:hover {
-    color: $color-loss;
-  }
+    &:hover {
+        color: $color-loss;
+    }
+}
+
+@media #{$media-sm} {
+    .template-quote {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
 }

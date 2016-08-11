@@ -33,9 +33,8 @@
     }
 
     &:focus, &:active {
-      color: #FFF;
-      background: darken($color-primary, 15%);
-      border-color: darken($color-primary, 40%);
+      background: $color-primary;
+      border-color: darken($color-primary, 5%);
     }
 
     .form & {

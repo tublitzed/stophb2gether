@@ -24,8 +24,18 @@
 }
 
 .section-heading {
-  font-weight: 300;
+  font-weight: 500;
   margin: 1em 0;
   color: $color-grey-600;
-  font-weight: 100;
+}
+
+
+.sm-only {
+  display: none;
+}
+
+@media #{$media-sm} {
+  .sm-only {
+    display: block;
+  }
 }

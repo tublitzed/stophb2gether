@@ -1,7 +1,9 @@
 @import 'vars';
+@import 'media-queries';
 @import 'mixins';
 @import 'base';
 @import 'helpers';
+
 
 @import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
@@ -12,26 +14,8 @@
 @import 'modules/footer';
 @import 'modules/forms';
 @import 'modules/lead';
+@import 'modules/lists';
 @import 'modules/loss';
 @import 'modules/nav';
-@import 'modules/pageTitle';
+@import 'modules/page-title';
 @import 'modules/template';
-
-.row {
-  margin: 0;
-}
-
-.placeholder {
-  text-align: center;
-  margin-top: 45vh;
-}
-
-.new_user {
-  label {
-    display: block;
-  }
-  input {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-}

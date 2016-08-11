@@ -2,3 +2,10 @@
 
 <%= render partial: 'partials/pageTitle', locals: { title: 'Losses', desc: 'Each loss is money lost to the state of North Carolina due to HB2.' } %>
 <%= render partial: 'partials/losses', locals: { losses: @allLosses } %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br />
+      <small class="small">Is this list missing something? <a href="<%= contact_path %>" class="link">Let us know.</a></small>
+  </div>
+</div>

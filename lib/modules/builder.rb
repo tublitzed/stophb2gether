@@ -6,6 +6,7 @@ module Builder
     template = self.getWordsmithTemplate(data)
     formatted = self.formatLoss(data, template)
 
+    Rails.logger.info("FORMATTED_________")
     Rails.logger.info(formatted)
 
     loss = Loss.find_or_create_by({slug: formatted['slug']})
@@ -26,20 +27,25 @@ module Builder
 
   def self.formatLoss(data, template)
     formatted = {
-        'template' => template
+      'template' => template,
+      'sources' => self.formatSources(data['sources'])
     }
     acceptedFields = [
       'date',
       'amount',
       'title',
       'slug',
-      'description',
-      'sources'
+      'description'
     ]
     acceptedFields.each do |field|
       formatted[field] = data[field]
     end
     formatted
+  end
+
+  def self.formatSources(str)
+    str = str.split(',')
+    ActiveSupport::JSON.encode(str)
   end
 
 end

@@ -5,6 +5,7 @@
     <p class="lead">
      <%= @loss.title %>
     </p>
+    <hr class="sm-only">
     <h1 class="lead"><%= number_to_currency(@loss.amount, precision: 0) %></h1>
     <h2 class="lead">lost</h2>
     <hr>
@@ -12,10 +13,21 @@
     <div class="template">
       <%= @loss.template.html_safe %>
     </div>
-    <hr>
-    <h3 class="section-heading">Sources:</h3>
-    <div class="sources">
-    </div>
+
+    <% if @loss.sources %>
+      <hr>
+      <h3 class="section-heading">Sources:</h3>
+      <ul class="source-list">
+        <% @loss.sources.each do |source| %>
+          <li>
+            <a href="<%= source %>" class="link" target="_blank">
+              <%= source %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <hr />
   </div>
 </div>
 <%= render partial: 'partials/linkToAll' %>
