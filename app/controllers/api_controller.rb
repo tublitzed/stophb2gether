@@ -18,13 +18,33 @@ class ApiController < ApplicationController
 
   def formatValues(postValues)
     formatted = {}
-    formatted['date'] = postValues['date']
-    formatted['amount'] = postValues['amount']
-    formatted['title'] = postValues['title']
-    formatted['slug'] = postValues['slug'].downcase
-    formatted['description'] = postValues['description']
-    formatted['notes'] = postValues['notes']
-    formatted['sources'] = postValues['sources']
+    acceptedFields = [
+      'date',
+      'title',
+      'slug',
+      'amount',
+      'location',
+      'scheduled_date',
+      'type',
+      'type_count',
+      'statement',
+      'statement_fragment',
+      'statement_author',
+      'statement_author_type',
+      'statement_source',
+      'statement_url',
+      'grand_total',
+      'notes',
+      'metadata',
+      'sources',
+      'complete',
+      'trigger_send'
+    ]
+
+    acceptedFields.each do |field|
+      formatted[field] = postValues[field]
+    end
+
     formatted
   end
 
