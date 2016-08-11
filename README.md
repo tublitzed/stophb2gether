@@ -16,6 +16,9 @@ Then, login to the server and restart if new config needs to get reloaded.
 2. `su - deploy`
 3. `sudo service nginx restart`
 
+# prod logs:
+
+`tail -f /home/deploy/wewillstopthis/current/log/production.log`
 
 # copy prod db to local:
 
