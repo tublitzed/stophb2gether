@@ -20,6 +20,11 @@ Then, login to the server and restart if new config needs to get reloaded.
 
 `tail -f /home/deploy/wewillstopthis/current/log/production.log`
 
+
+# drop prod db
+
+`tail -f /home/deploy/wewillstopthis/current/log/production.log`
+
 # copy prod db to local:
 
 SSH into prod. Then:

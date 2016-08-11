@@ -21,6 +21,7 @@ class ApiController < ApplicationController
     acceptedFields = [
       'date',
       'title',
+      'name',
       'slug',
       'amount',
       'location',
