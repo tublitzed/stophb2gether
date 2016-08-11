@@ -3,11 +3,9 @@ class HomeController < ApplicationController
     if !logged_in?
       render layout: "non-auth"
     else
-      # TODO: cache this.
       @totalLosses = Loss.sum(:amount)
-      @allLosses = Loss.all
+      @allLosses = Loss.get_active
 
-      puts @allLosses
       render layout: "application"
     end
   end

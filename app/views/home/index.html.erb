@@ -10,10 +10,9 @@
   <% @allLosses.each do |loss| %>
   <div class="row">
     <div class="col-sm-12">
-      <%= loss.title %>
-      <br/>
-      <%= loss.slug %>
+      <%= link_to loss.title, loss %>
     </div>
   </div>
+  <hr class="splitter">
   <% end %>
 <% end %>
