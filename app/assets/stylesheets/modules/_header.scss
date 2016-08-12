@@ -18,25 +18,82 @@
 
 .logo {
     position: absolute;
-    width: 200px;
-    margin: -8px;
+    margin: -5px 0 0 -2px;
+    width: 190px;
+    display: block;
     svg {
         width: 100%;
         height: 100%;
     }
+    rect.line {
+      width: 1044.078px;
+      fill: $color-loss;
 
-    // rect, path {
-    //   @include transition;
-    // }
+      .body--home.body--auth & {
+        display: none;
+        //duration/delay/iterations
+        animation: 1500ms 1000ms 1 animateHomeLogo linear;
+      }
+    }
+    path, rect {
+      @include transition;
+      fill: $color-grey-700;
+    }
 
-    // &:hover {
-    //   rect {
-    //     fill: brighten($color-loss, 5%);
-    //   }
-    //   path {
-    //     opacity: 0.5;
-    //   }
-    // }
+    .body--home.body--auth & {
+      &:hover {
+        path, rect {
+          fill: darken($color-grey-700, 5%);
+        }
+        rect.line {
+          fill: $color-loss;
+        }
+      }
+    }
+}
+
+.header-animate {
+  height: 11px;
+  width: 156px;
+  position: fixed;
+  z-index: 1000;
+  top: 48px;
+  background: $color-loss;
+  margin-left: 15px;
+  display: none;
+  .body--home.body--auth & {
+    display: block;
+    //duration/delay/iterations
+    animation: 1000ms 0s 1 animateHomeHeaderStripe ease;
+  }
+
+}
+
+@keyframes animateHomeLogo {
+    99% {
+      fill: transparent;
+    }
+    100% {
+      fill: $color-loss;
+    }
+}
+
+@keyframes animateHomeHeaderStripe {
+    0% {
+      margin-left: 90%;
+    }
+
+    50% {
+      margin-left: -10%;
+    }
+
+    75% {
+      margin-left: 20%;
+    }
+
+    100% {
+      margin-left: 15px;
+    }
 }
 
 .fader {
@@ -46,7 +103,7 @@
   background: -webkit-linear-gradient(top,  $color-near-white 29%,rgba(255,255,255,0.59) 58%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  $color-near-white 29%,rgba(255,255,255,0.59) 58%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-  height: 60px;
+  height: 75px;
   top: $header-height;
   z-index: 1;
 }

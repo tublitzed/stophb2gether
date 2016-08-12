@@ -1,9 +1,10 @@
 <header class="header">
-  <% if !home %>
-  <a href="/">
-  <%= render partial: 'partials/logo' %>
-  </a>
+  <% unless nonAuthHome %>
+    <a href="/" title="Stop HB2">
+      <%= render partial: 'partials/logo' %>
+    </a>
   <% end %>
   <%= render partial: 'partials/nav' %>
 </header>
+<div class="header-animate"></div>
 <div class="fader"></div>

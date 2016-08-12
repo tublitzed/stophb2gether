@@ -1,7 +1,7 @@
 <%= render partial: 'partials/head' %>
-<body class="<% if @appPath.present? %>body--<%= @appPath %><% end %>">
+<body class="body--auth <% if @appPath.present? %>body--<%= @appPath %><% end %>">
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
-  <%= render partial: 'partials/header', locals: {home: false} %>
+  <%= render partial: 'partials/header', locals: {nonAuthHome: false} %>
 <div class="app-container">
   <div class="container">
     <%= yield %>

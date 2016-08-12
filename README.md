@@ -21,9 +21,11 @@ Then, login to the server and restart if new config needs to get reloaded.
 `tail -f /home/deploy/wewillstopthis/current/log/production.log`
 
 
-# drop prod db
+# reset prod db
 
-`tail -f /home/deploy/wewillstopthis/current/log/production.log`
+1. `su - deploy`
+2. `cd wewillstopthis/current`
+3. `bundle exec rake db:reset RAILS_ENV=production`
 
 # copy prod db to local:
 
