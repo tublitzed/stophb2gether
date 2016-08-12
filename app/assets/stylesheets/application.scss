@@ -4,19 +4,16 @@
 @import 'base';
 @import 'helpers';
 
-
-@import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
-
 @import 'modules/alert';
 @import 'modules/btns';
 @import 'modules/header';
 @import 'modules/home';
 @import 'modules/footer';
 @import 'modules/forms';
+@import 'modules/grid-bootstrap';
 @import 'modules/lead';
 @import 'modules/lists';
 @import 'modules/loss';
 @import 'modules/nav';
-@import 'modules/odometer';
 @import 'modules/page-title';
 @import 'modules/template';
