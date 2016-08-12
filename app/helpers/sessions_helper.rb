@@ -3,6 +3,8 @@ module SessionsHelper
   # Logs in the given user.
   def log_in(user)
     session[:user_id] = user.id
+
+    logger.info('Logging in user: ' + user.email + ' at ' + DateTime.now.to_s)
   end
 
   # Remembers a user in a persistent session.
@@ -42,6 +44,7 @@ module SessionsHelper
 
   # Logs out the current user.
   def log_out
+    logger.info('Logging out user: ' + current_user.email + ' at ' + DateTime.now.to_s)
     forget(current_user)
     session.delete(:user_id)
     @current_user = nil
