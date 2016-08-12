@@ -33,6 +33,7 @@ class ApiController < ApplicationController
       'statement',
       'statement_fragment',
       'statement_author',
+      'statement_author_title',
       'statement_author_type',
       'statement_source',
       'statement_url',
