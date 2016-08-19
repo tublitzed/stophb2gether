@@ -1,5 +1,5 @@
 User.create!([
-  {name: "Admina Stratter", email: "stophb2gether+admin@gmail.com", password: "not-s00-secureAtAll!"},
+  {name: "Admina Stratter", email: "admin@stophb2gether.com", password: "not-s00-secureAtAll!"},
   {name: "Ai User", email: "stophb2gether+ai@gmail.com", password: "goodluckhavefun"}
 ])
 
