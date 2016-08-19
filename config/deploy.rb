@@ -1,9 +1,9 @@
 lock '3.5.0'
 
-set :application, 'wewillstopthis'
-set :repo_url, 'git@github.com:tublitzed/wewillstopthis.git' # Edit this to match your repository
+set :application, 'stophb2gether'
+set :repo_url, 'git@github.com:tublitzed/stophb2gether.git' # Edit this to match your repository
 set :branch, :master
-set :deploy_to, '/home/deploy/wewillstopthis'
+set :deploy_to, '/home/deploy/stophb2gether'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}

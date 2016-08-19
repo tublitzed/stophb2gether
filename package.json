@@ -1,7 +1,7 @@
 {
-  "name": "wewillstopthis",
+  "name": "stophb2gether",
   "description": "Anti hb2 site dedicate to tracking lost revenue to the state of NC since HB2.",
-  "repository": "https://github.com/tublitzed/wewillstopthis.git",
+  "repository": "https://github.com/tublitzed/stophb2gether.git",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
