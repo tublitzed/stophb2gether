@@ -5,10 +5,10 @@
     </li>
   </ul>
   <ul class="footer__links">
-    <li>
-      <a href="<%= contact_path %>">Contact Us</a>
-    </li>
     <% if logged_in? %>
+      <li>
+        <a href="<%= contact_path %>">Contact Us</a>
+      </li>
       <li>
         <%= link_to 'Logout', logout_path, method: 'delete' %>
       </li>
