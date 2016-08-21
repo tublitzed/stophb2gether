@@ -1,6 +1,6 @@
 User.create!([
   {name: "Admina Stratter", email: "admin@stophb2gether.com", password: "not-s00-secureAtAll!"},
-  {name: "Ai User", email: "stophb2gether+ai@gmail.com", password: "goodluckhavefun"}
+  {name: "Bita Teeestr", email: "stophb2gether+beta@gmail.com", password: "goodluckhavefun"}
 ])
 
 Loss.create!([

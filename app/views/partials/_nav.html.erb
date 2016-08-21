@@ -1,5 +1,10 @@
 <nav class="nav">
   <ul class="nav__links">
+      <li>
+        <a href="<%= store_path %>" class="nav__link<% if @appPath == 'store' %> nav__link--active<% end %>">
+          Store
+        </a>
+      </li>
     <% if logged_in? %>
       <li>
         <a href="<%= about_path %>" class="nav__link<% if @appPath == 'about' %> nav__link--active<% end %>">
@@ -11,8 +16,6 @@
           Losses
         </a>
       </li>
-    <% else %>
-      <li><%= link_to 'Login', login_path, class: 'nav__link' %></li>
     <% end %>
   </ul>
 </nav>

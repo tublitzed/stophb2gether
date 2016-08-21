@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
+  get '/store' => 'store#index'
   get '/losses' => 'losses#index'
   get '/about' => 'about#index'
   get '/contact' => 'contact#index'
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   # authenticated :user do
   #   resources :losses
   # end
+
+  post   '/list'   => 'list#join'
 
   #API
   post    'api/add'   => 'api#add'

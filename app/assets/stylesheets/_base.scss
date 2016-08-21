@@ -20,13 +20,14 @@ input, button {
 a {
   color: $color-copy;
   &:hover {
-    color: $color-primary;
+    color: $color-loss;
   }
 }
 
 p {
   font-size: 1.2rem;
   line-height: 1.6;
+  margin: 1em 0 2em 0;
 }
 
 h1 {

@@ -1,16 +1,9 @@
 class HomeController < ApplicationController
+  before_action -> { set_app_path('home') }
 
   def index
-    @appPath = 'home'
-
-    if !logged_in?
-      render layout: "non-auth"
-    else
-      @totalLosses = Loss.sum(:amount)
-      @allLosses = Loss.get_active(3)
-
-      render layout: "application"
-    end
+    @totalLosses = Loss.sum(:amount)
+    @allLosses = Loss.get_active(3)
   end
 
 end
