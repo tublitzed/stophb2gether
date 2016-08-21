@@ -1,0 +1,11 @@
+class Subscriber < ActiveRecord::Base
+  # TODO: move this to somewhere shared with user model
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
+  before_save { self.email = email.downcase }
+
+  validates :email, presence: true,
+                    length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+end

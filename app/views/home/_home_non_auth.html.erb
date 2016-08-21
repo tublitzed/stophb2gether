@@ -4,9 +4,10 @@
 
         <div class="row">
           <div class="col-sm-8 offset-sm-2">
-          <%= form_tag list_path, :class => 'form' do  %>
-            <input class="form__text-input" type="email" name="something" placeholder="Enter your email address" />
-            <button type="submit" class="btn btn--primary">Join our mailing list</button>
+          <%= form_for @subscriber, url: {action: 'create', controller: 'subscribers'}, html: {class: 'form'} do |f| %>
+            <%= render partial: 'shared/form_errors', locals: {errors: @subscriber.errors} %>
+            <%= f.text_field :email, class: 'form__text-input form__text-input--no-margin', type: 'email', placeholder: 'Enter your email address', required: true %>
+            <button type="submit" class="btn btn--primary">Join the mailing list</button>
           <% end %>
           </div>
         </div>

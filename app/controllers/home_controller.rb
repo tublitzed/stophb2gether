@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   def index
     @totalLosses = Loss.sum(:amount)
     @allLosses = Loss.get_active(3)
+    @subscriber = Subscriber.new
   end
 
 end

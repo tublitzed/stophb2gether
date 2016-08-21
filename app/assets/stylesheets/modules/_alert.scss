@@ -4,8 +4,8 @@
   top: 0;
   position: fixed;
   width: 100%;
-  z-index: 100;
-  &--note {
+  z-index: 1500;
+  &--note, &--alert {
     background: $color-blue-500;
   }
   &--success {

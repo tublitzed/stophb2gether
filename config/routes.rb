@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  post 'subscribers/create'
+
   root 'home#index'
-  resources :users
   #get 'signup'  => 'users#new'
 
   get    'login'   => 'sessions#new'
@@ -12,12 +13,9 @@ Rails.application.routes.draw do
   get '/about' => 'about#index'
   get '/contact' => 'contact#index'
 
+  resources :users
   resources :losses
-  # authenticated :user do
-  #   resources :losses
-  # end
-
-  post   '/list'   => 'list#join'
+  resources :subscribers
 
   #API
   post    'api/add'   => 'api#add'
