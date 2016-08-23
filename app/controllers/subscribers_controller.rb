@@ -1,7 +1,8 @@
 class SubscribersController < ApplicationController
 
   def create
-    @subscriber = Subscriber.new(subscriber_params)
+    @subscriber = Subscriber.find_or_create_by(subscriber_params)
+
     if @subscriber.save
         flash[:success] = "Thanks! #{@subscriber.email} is on the list!"
         redirect_to store_path
