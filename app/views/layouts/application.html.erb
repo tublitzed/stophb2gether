@@ -1,7 +1,13 @@
 <%= render partial: 'partials/head' %>
-<body class="body--auth <% if @appPath.present? %>body--<%= @appPath %><% end %>">
+<body class="<% if @appPath.present? %>body--<%= @appPath %><% end %>">
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
-  <%= render partial: 'partials/header', locals: {nonAuthHome: false} %>
+  <%= render partial: 'partials/header' %>
+
+<% if !logged_in? && @appPath == 'home' %>
+  <div class="home-banner"></div>
+  <div class="fader fader--home"></div>
+<% end %>
+
 <div class="app-container">
   <div class="container">
     <%= yield %>

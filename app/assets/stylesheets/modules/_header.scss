@@ -29,7 +29,7 @@
       width: 1044.078px;
       fill: $color-loss;
 
-      .body--home.body--auth & {
+      .body--home & {
         display: none;
         //duration/delay/iterations
         animation: 1500ms 1000ms 1 animateHomeLogo linear;
@@ -40,7 +40,7 @@
       fill: $color-grey-700;
     }
 
-    .body--home.body--auth & {
+    .body--home & {
       &:hover {
         path, rect {
           fill: darken($color-grey-700, 5%);
@@ -61,7 +61,7 @@
   background: $color-loss;
   margin-left: 15px;
   display: none;
-  .body--home.body--auth & {
+  .body--home & {
     display: block;
     //duration/delay/iterations
     animation: 1000ms 0s 1 animateHomeHeaderStripe ease;
@@ -94,16 +94,4 @@
     100% {
       margin-left: 15px;
     }
-}
-
-.fader {
-  width: 100%;
-  position: fixed;
-  background: -moz-linear-gradient(top,  $color-near-white 29%, rgba(255,255,255,0.59) 58%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  $color-near-white 29%,rgba(255,255,255,0.59) 58%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  $color-near-white 29%,rgba(255,255,255,0.59) 58%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-  height: 75px;
-  top: $header-height;
-  z-index: 1;
 }
