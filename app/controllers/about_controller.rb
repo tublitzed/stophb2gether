@@ -3,6 +3,6 @@ class AboutController < ApplicationController
   before_action -> { set_app_path('about') }
 
   def index
-    AppMailer.new_subscriber().deliver_now
+    SubscriberMailer.new_subscriber().deliver_now
   end
 end

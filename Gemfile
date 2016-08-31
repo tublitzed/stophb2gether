@@ -33,6 +33,8 @@ gem 'httparty'
 # https://github.com/rroblak/seed_dump
 gem 'seed_dump'
 
+gem 'dotenv-rails'
+
 group :development do
   gem 'capistrano'
   gem 'capistrano3-puma'

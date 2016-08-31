@@ -79,13 +79,14 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # currently identical to dev except port number.
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 25,
-    :domain => "stophb2gether.com",
-    :user_name => "postmaster@stophb2gether.com",
-    :password => "279b1b9ecfbf3603bdfa4fc16b7ed240"
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => Settings.GMAIL_USERNAME,
+    :password             => Settings.GMAIL_PASSWORD,
+    :authentication       => "plain",
+    :enable_starttls_auto => true
   }
 end

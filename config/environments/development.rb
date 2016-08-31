@@ -42,13 +42,14 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   #
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "stophb2gether.mailgun.org",
-    :user_name => "postmaster@stophb2gether.mailgun.org",
-    :password => "279b1b9ecfbf3603bdfa4fc16b7ed240"
+    :user_name => '52688bdfef3264',
+    :password => 'b77020302b8c71',
+    :address => 'mailtrap.io',
+    :domain => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
   }
 end
