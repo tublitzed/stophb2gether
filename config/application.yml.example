@@ -1,1 +1,3 @@
 SECRET_KEY_BASE: "{key-here}"
+GMAIL_USERNAME: "{username-here}"
+GMAIL_PASSWORD: "{password-here}"
