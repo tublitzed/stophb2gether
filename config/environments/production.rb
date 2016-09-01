@@ -85,7 +85,7 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :user_name            => "admin@stophb2gether.com",
-    :password             => "emailsucks",
+    :password             => ENV["GMAIL_PASSWORD"],
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
