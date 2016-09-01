@@ -4,6 +4,9 @@ require "capistrano/setup"
 # Include default deployment tasks
 require "capistrano/deploy"
 
+# Ensure that capistrano has access to ENV
+require "dotenv/rails-now"
+
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
