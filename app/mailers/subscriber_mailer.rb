@@ -6,9 +6,8 @@ class SubscriberMailer < ApplicationMailer
   #   en.app_mailer.new_subscriber.subject
   #
   default from: "admin@stophb2gether.com"
-  def new_subscriber
-    @greeting = "Hi"
-
-    mail to: "tublitzed@gmail.com", subject: "Success! You did it."
+  def new_subscriber(subscriber)
+    @subscriber = subscriber
+    mail to: "tublitzed@gmail.com", subject: "New subscriber: #{subscriber.email}"
   end
 end
