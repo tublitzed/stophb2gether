@@ -5,7 +5,7 @@ set :repo_url, 'git@github.com:tublitzed/stophb2gether.git' # Edit this to match
 set :branch, :master
 set :deploy_to, '/home/deploy/stophb2gether'
 set :pty, true
-set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_files, %w{config/database.yml config/application.yml .env}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user

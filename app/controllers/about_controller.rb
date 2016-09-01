@@ -3,7 +3,7 @@ class AboutController < ApplicationController
   before_action -> { set_app_path('about') }
 
   def index
-    logger.info('ARG');
+    logger.info('PLEASE_DEAR_GOD_WORK');
     foo = ENV["GMAIL_USERNAME"]
     bar = ENV['GMAIL_PASSWORD']
     logger.info(foo)
