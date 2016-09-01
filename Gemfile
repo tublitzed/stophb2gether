@@ -33,7 +33,7 @@ gem 'httparty'
 # https://github.com/rroblak/seed_dump
 gem 'seed_dump'
 
-gem 'dotenv-rails', :groups => [:development, :test, :production]
+gem "figaro"
 
 group :development do
   gem 'capistrano'
