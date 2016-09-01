@@ -3,6 +3,7 @@ tmp/
 node_modules/
 
 .env
+.env.*
 .DS_Store
 
 config/application.yml
