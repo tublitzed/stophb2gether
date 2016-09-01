@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 
-gem 'dotenv-rails', :groups => [:development, :test, :production]
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 gem 'bcrypt','3.1.7'
@@ -35,6 +33,7 @@ gem 'httparty'
 # https://github.com/rroblak/seed_dump
 gem 'seed_dump'
 
+gem 'dotenv-rails', :groups => [:development, :test, :production]
 
 group :development do
   gem 'capistrano'
