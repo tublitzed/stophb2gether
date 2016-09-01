@@ -5,7 +5,8 @@ class AboutController < ApplicationController
   def index
     logger.info('WTF');
     foo = ENV["GMAIL_USERNAME"]
-    logger.info(foo)
+    logger.info(ENV["GMAIL_USERNAME"])
+    logger.info(ENV["GMAIL_PASSWORD"])
     logger.info(Settings.GMAIL_USERNAME)
     SubscriberMailer.new_subscriber().deliver_now
   end
