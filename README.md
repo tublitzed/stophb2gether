@@ -20,6 +20,14 @@ Then, login to the server and restart if new config needs to get reloaded.
 
 `tail -f /home/deploy/stophb2gether/current/log/production.log`
 
+# restart Puma in prod
+
+1. cd into app dir
+2. `~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/stophb2gether/shared/tmp/pids/puma.state restart`
+
+# restart nginx in prod
+
+1. `sudo service nginx restart`
 
 # reset prod db
 
