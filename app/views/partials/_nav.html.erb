@@ -7,18 +7,24 @@
         </a>
       </li>
       <li>
-        <a href="<%= about_path %>" class="nav__link<% if @appPath == 'about' %> nav__link--active<% end %>">
-          About
+        <a href="<%= contribute_path %>" class="nav__link<% if @appPath == 'contribute' %> nav__link--active<% end %>">
+          <span class="nav__link-inner">
+            Get Involved
+          </span>
         </a>
       </li>
       <li>
         <a href="<%= resources_path %>" class="nav__link<% if @appPath == 'resources' %> nav__link--active<% end %>">
-          Resources
+          <span class="nav__link-inner">
+            Resources
+          </span>
         </a>
       </li>
       <li>
         <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' %> nav__link--active<% end %>">
-          Losses
+          <span class="nav__link-inner">
+            Losses
+          </span>
         </a>
       </li>
     <% end %>

@@ -1,11 +1,15 @@
 .app-banner {
   background: url("/images/banners/money.jpg");
-  height: 320px;
+  height: 86px;
   background-size: cover;
   top: 0;
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #56666c;
+
+  .body--home & {
+    height: 320px;
+  }
 }
 
 .banner-text {

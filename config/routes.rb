@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   #get '/store' => 'store#index'
+  get '/contribute' => 'contribute#index'
   get '/resources' => 'resources#index'
   get '/losses' => 'losses#index'
   get '/about' => 'about#index'

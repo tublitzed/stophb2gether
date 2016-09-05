@@ -1,7 +1,7 @@
-@import 'sidebarNav';
+@import "sidebarNav";
 
 .nav {
-    margin: 4px 0 0 0;
+    margin: -15px 0 0 0;
     float: right;
 }
 
@@ -11,13 +11,7 @@
 
     li {
         float: right;
-        padding: 3px 10px;
-        background: $color-near-black;
-        margin-left: 0.5em;
-
-        &.social {
-            background: transparent;
-        }
+        margin-left: 0.75em;
     }
 }
 
@@ -30,30 +24,16 @@
 
     @include transition;
 
-    &:hover {
-        color: $color-red;
-        border-bottom: 2px solid $color-red;
-    }
-
-    &:focus {
-        color: $color-loss;
-    }
-
-    &--active {
-        border-bottom: 2px solid $color-red;
-    }
-
     &--social {
-        line-height: 1.4;
         background: $color-red;
-        padding: 2px 6px;
+        line-height: 1.8;
+        padding: 8px 13px;
         font-size: 23px;
-        margin-left: 5px;
+        margin: 0;
 
         &:hover {
-            border: 0;
-            color: $color-red;
             background: #FFF;
+            color: $color-red;
         }
     }
 
@@ -61,5 +41,27 @@
         .fa {
             margin-right: 6px;
         }
+    }
+}
+
+.nav__link-inner {
+    padding: 3px 8px;
+    display: block;
+    background: $color-near-black;
+    border-top: 4px solid $color-near-black;
+
+    @include transition;
+
+    .nav__link:hover & {
+        border-color: $color-red;
+        color: #FFF;
+    }
+
+    .nav__link:active & {
+        color: $color-red;
+    }
+
+    .nav__link--active & {
+        border-color: $color-red;
     }
 }
