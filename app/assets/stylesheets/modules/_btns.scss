@@ -23,19 +23,19 @@
   }
 
   &--primary {
-    background: $color-primary;
-    border-color: darken($color-primary, 5%);
+    background: $color-green-500;
+    border-color: darken($color-green-500, 5%);
     color: #FFF;
 
     &:hover {
       color: #FFF;
-      background: darken($color-primary, 10%);
-      border-color: darken($color-primary, 20%);
+      background: darken($color-green-500, 10%);
+      border-color: darken($color-green-500, 20%);
     }
 
     &:focus, &:active {
-      background: $color-primary;
-      border-color: darken($color-primary, 5%);
+      background: $color-green-500;
+      border-color: darken($color-green-500, 5%);
     }
 
     .form & {

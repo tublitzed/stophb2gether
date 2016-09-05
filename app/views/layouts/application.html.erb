@@ -1,21 +1,24 @@
 <%= render partial: 'partials/head' %>
 <body class="<% if @appPath.present? %>body--<%= @appPath %><% end %>">
-  <% if logged_in? %>
-    <div class="app-banner"></div>
-  <% end %>
-  <%= render partial: 'partials/flash', locals: {flash: flash} %>
-  <%= render partial: 'partials/header' %>
+    <%= render partial: 'partials/sidebarNav' %>
+    <div class="body-wrapper">
+        <% if logged_in? %>
+            <div class="app-banner"></div>
+        <% end %>
+        <%= render partial: 'partials/flash', locals: {flash: flash} %>
+        <%= render partial: 'partials/header' %>
 
-<% if !logged_in? && @appPath == 'home' %>
-  <div class="home-banner"></div>
-<% end %>
+        <% if !logged_in? && @appPath == 'home' %>
+            <div class="home-banner"></div>
+        <% end %>
 
-<div class="app-container">
-  <div class="container">
-    <%= yield %>
-  </div>
-</div>
-<%= render partial: 'partials/footer' %>
-<%= render partial: 'partials/foot' %>
+        <div class="app-container">
+            <div class="container">
+                <%= yield %>
+            </div>
+        </div>
+        <%= render partial: 'partials/footer' %>
+        <%= render partial: 'partials/foot' %>
+    </div>
 </body>
 </html>

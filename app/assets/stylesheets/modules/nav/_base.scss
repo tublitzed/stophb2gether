@@ -1,3 +1,5 @@
+@import 'sidebarNav';
+
 .nav {
     margin: 4px 0 0 0;
     float: right;
@@ -26,7 +28,6 @@
     text-decoration: none;
     line-height: 2;
 
-
     @include transition;
 
     &:hover {
@@ -48,17 +49,17 @@
         padding: 2px 6px;
         font-size: 23px;
         margin-left: 5px;
+
         &:hover {
             border: 0;
             color: $color-red;
             background: #FFF;
         }
     }
-}
 
-@media #{$media-sm} {
-    .nav__link {
-        font-size: 1rem;
-        padding: 0 0.5em;
+    &--with-icon {
+        .fa {
+            margin-right: 6px;
+        }
     }
 }
