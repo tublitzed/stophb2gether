@@ -1,9 +1,9 @@
-$font-family: 'Raleway', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family: 'Lato', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
 $font-family-headings: 'Oswald', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
 $base-font-size: 15px;
 $animation-speed: 200ms;
 
-$color-near-black: #2E1417;
+$color-near-black: #030303;
 $color-near-white: #F4F4F4;
 $color-copy: #59393D;
 
@@ -32,12 +32,13 @@ $color-maroon-200: #A5898C;
 
 $color-yellow-200: #F5F0E2;
 
+$color-red: $color-red-500;
 $color-primary: $color-maroon-600;
 $color-error: $color-red-500;
 
 $color-loss: $color-red-500;
 
-$header-height: 48px;
+$header-height: 75px;
 
 
 $margins: 1.5em;

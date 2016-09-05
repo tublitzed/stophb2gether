@@ -1,0 +1,28 @@
+.app-banner {
+  background: url("/images/banners/money.jpg");
+  height: 320px;
+  background-size: cover;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #56666c;
+}
+
+.banner-text {
+  background: transparentize(#FFF, 0.1);
+  text-align: center;
+  padding: 0.75em 0;
+  margin: 14px 0 65px;
+}
+
+.banner-text__title {
+  font-family: $font-family-headings;
+  color: $color-red;
+  font-size: 4rem;
+}
+
+.banner-text__subtitle {
+  text-transform: uppercase;
+  color: $color-red-100;
+  font-size: 2rem;
+}

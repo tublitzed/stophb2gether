@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  get '/store' => 'store#index'
+  #get '/store' => 'store#index'
+  get '/resources' => 'resources#index'
   get '/losses' => 'losses#index'
   get '/about' => 'about#index'
   get '/contact' => 'contact#index'

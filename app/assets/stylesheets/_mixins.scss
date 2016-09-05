@@ -11,3 +11,11 @@
 @mixin transition($target: all, $time: $animation-speed, $animation: ease) {
     transition: $target $time $animation;
 }
+
+@mixin gradient--ltr($color1, $color2, $percent1: 0%, $ieSupportFallbackHex: #000) {
+  background: -moz-linear-gradient(left,  $color1 $percent1, $color2 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $color1 $percent1,$color2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $color1 $percent1,$color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ieSupportFallbackHex', endColorstr='$ieSupportFallbackHex',GradientType=1 ); /* IE6-9 */
+}
+// linear-gradient(to right, rgba(3, 3, 3, 0.95) 0%, rgba(3, 3, 3, 0.8) 100%)

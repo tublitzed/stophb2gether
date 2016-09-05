@@ -1,97 +1,50 @@
 .header {
   width: 100%;
-  background: #FFF;
+
+  @include gradient--ltr(
+    transparentize($color-near-black, 0.05),
+    transparentize($color-near-black, 0.2),
+    30%
+    );
+
   height: $header-height;
   position: fixed;
-  z-index: 2;
+  z-index: 300;
   top: 0;
-  border-bottom: 1px solid $color-red-100;
+  border-bottom: 3px solid $color-red;
+}
 
-  &:after {
-    content: '';
-    width: 100%;
-    border-bottom: 1px solid $color-red-100;
-    margin-top: calc(#{$header-height} + 10px);
-    position: absolute;
-  }
+.header-bg {
+  width: 100%;
+  background-image: url("/images/banners/money.jpg");
+  height: $header-height;
+  background-size: cover;
+  position: fixed;
+  z-index: 200;
 }
 
 .logo {
-    position: absolute;
-    margin: -5px 0 0 -2px;
-    width: 190px;
-    display: block;
-    svg {
-        width: 100%;
-        height: 100%;
-    }
-    rect.line {
-      width: 1044.078px;
-      fill: $color-loss;
+  position: absolute;
+  margin: -2px 0 0 -2px;
+  width: 130px;
+  display: block;
 
-      .body--home & {
-        display: none;
-        //duration/delay/iterations
-        animation: 1500ms 1000ms 1 animateHomeLogo linear;
-      }
-    }
-    path, rect {
-      @include transition;
-      fill: $color-grey-700;
-    }
-
-    .body--home & {
-      &:hover {
-        path, rect {
-          fill: darken($color-grey-700, 5%);
-        }
-        rect.line {
-          fill: $color-loss;
-        }
-      }
-    }
-}
-
-.header-animate {
-  height: 11px;
-  width: 156px;
-  position: fixed;
-  z-index: 1000;
-  top: 48px;
-  background: $color-loss;
-  margin-left: 15px;
-  display: none;
-  .body--home & {
-    display: block;
-    //duration/delay/iterations
-    animation: 1000ms 0s 1 animateHomeHeaderStripe ease;
+  svg {
+    width: 100%;
+    height: 100%;
   }
 
-}
+  path, rect {
+    @include transition;
+  }
 
-@keyframes animateHomeLogo {
-    99% {
-      fill: transparent;
+  &:hover {
+    path, rect {
+      fill: darken($color-grey-700, 15%);
     }
-    100% {
+
+    rect.line {
       fill: $color-loss;
     }
-}
-
-@keyframes animateHomeHeaderStripe {
-    0% {
-      margin-left: 90%;
-    }
-
-    50% {
-      margin-left: -10%;
-    }
-
-    75% {
-      margin-left: 20%;
-    }
-
-    100% {
-      margin-left: 15px;
-    }
+  }
 }

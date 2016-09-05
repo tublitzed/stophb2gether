@@ -1,14 +1,19 @@
 <nav class="nav">
   <ul class="nav__links">
-      <li>
-        <a href="<%= store_path %>" class="nav__link<% if @appPath == 'store' %> nav__link--active<% end %>">
-          Store
+    <% if logged_in? %>
+      <li class="social">
+        <a href="<%= Settings.TWITTER_LINK %>" target="_blank" class="nav__link nav__link--social">
+          <span class="fa fa-twitter"></span>
         </a>
       </li>
-    <% if logged_in? %>
       <li>
         <a href="<%= about_path %>" class="nav__link<% if @appPath == 'about' %> nav__link--active<% end %>">
           About
+        </a>
+      </li>
+      <li>
+        <a href="<%= resources_path %>" class="nav__link<% if @appPath == 'resources' %> nav__link--active<% end %>">
+          Resources
         </a>
       </li>
       <li>

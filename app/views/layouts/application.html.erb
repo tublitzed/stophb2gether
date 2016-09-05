@@ -1,5 +1,8 @@
 <%= render partial: 'partials/head' %>
 <body class="<% if @appPath.present? %>body--<%= @appPath %><% end %>">
+  <% if logged_in? %>
+    <div class="app-banner"></div>
+  <% end %>
   <%= render partial: 'partials/flash', locals: {flash: flash} %>
   <%= render partial: 'partials/header' %>
 

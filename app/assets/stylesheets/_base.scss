@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-ol, ul, input {
+ol, ul, input, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
 }
@@ -46,7 +46,9 @@ hr {
 }
 
 .app-container {
-  padding-top: calc(#{$header-height} + 4em);
+  padding-top: calc(#{$header-height} + 2em);
   padding-bottom: 4em;
   word-wrap: break-word;
+  z-index: 100;
+  position: relative;
 }
