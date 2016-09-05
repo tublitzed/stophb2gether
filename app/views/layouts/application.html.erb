@@ -1,6 +1,8 @@
 <%= render partial: 'partials/head' %>
 <body class="<% if @appPath.present? %>body--<%= @appPath %><% end %>">
+    <% if logged_in? %>
     <%= render partial: 'partials/sidebarNav' %>
+    <% end %>
     <div class="body-wrapper">
         <% if logged_in? %>
             <div class="app-banner"></div>
