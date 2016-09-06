@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.find_or_create_by(contact_params)
     if @contact.save
         flash[:success] = "Thanks, #{@contact.name}! Your message has been delivered."
         ContactMailer.new_contact_message(@contact).deliver_now

@@ -6,6 +6,8 @@ class Contact < ActiveRecord::Base
 
   validates :email, presence: true,
                     length: { maximum: 255 },
-                    format: { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
+                    format: { with: VALID_EMAIL_REGEX }
+
+  validates :name, presence: true, length: { maximum: 255 }
+  validates :message, presence: true, length: { maximum: 2048 }
 end

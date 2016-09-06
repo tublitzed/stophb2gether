@@ -1,13 +1,13 @@
 <%= form_for @contact, url: {action: 'create'}, html: {class: 'form'} do |f| %>
-<%= render partial: 'shared/form_errors', locals: {errors: @contact.errors} %>
-<label class="form__label">Name:</label>
-<%= f.text_field :name, class: 'form__text-input autofocus', required: true %>
-<br />
-<label class="form__label">Email:</label>
-<%= f.email_field :email, class: 'form__text-input', type: 'email', required: true %>
-<br />
-<label class="form__label">Message:</label>
-<%= f.text_area :message, class: 'form__text-input form__text-input--textarea', rows: 8, required: true %>
-<br />
-<button type="submit" class="btn btn--primary">Submit</button>
+  <%= render partial: 'shared/form_errors', locals: {errors: @contact.errors} %>
+  <label class="form__label">Name:</label>
+  <%= f.text_field :name, class: 'form__text-input autofocus', required: true, maxlength: 255 %>
+  <br />
+  <label class="form__label">Email:</label>
+  <%= f.email_field :email, class: 'form__text-input', type: 'email', required: true, maxlength: 255 %>
+  <br />
+  <label class="form__label">Message:</label>
+  <%= f.text_area :message, class: 'form__text-input form__text-input--textarea', rows: 8, required: true, maxlength: 2048 %>
+  <br />
+  <button type="submit" class="btn btn--primary">Submit</button>
 <% end %>

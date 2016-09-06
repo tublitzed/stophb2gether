@@ -9,7 +9,7 @@
             <h2><a href="https://twitter.com/stophb2gether" target="_blank">StopHb2gether</a> is under development. Join the list and we'll let you know when we launch!</h2>
             <%= form_for @subscriber, url: {action: 'create', controller: 'subscribers'}, html: {class: 'form'} do |f| %>
               <%= render partial: 'shared/form_errors', locals: {errors: @subscriber.errors} %>
-              <%= f.text_field :email, class: 'form__text-input form__text-input--no-margin autofocus', placeholder: 'Enter your email address', required: true %>
+              <%= f.text_field :email, class: 'form__text-input form__text-input--no-margin autofocus', placeholder: 'Enter your email address', required: true, maxlength: 255 %>
               <button type="submit" class="btn btn--primary">Join the mailing list</button>
             <% end %>
           </div>
