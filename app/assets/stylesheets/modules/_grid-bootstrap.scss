@@ -1,5 +1,11 @@
 //  "bootstrap": "^4.0.0-alpha.3"
 //  this is the grid only
+
+* {
+  box-sizing: border-box;
+}
+
+//  START BOOTSTRAP:
 .container {
   margin-left: auto;
   margin-right: auto;

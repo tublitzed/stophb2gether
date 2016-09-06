@@ -25,6 +25,10 @@
   &--no-margin {
     margin: 0;
   }
+
+  &--textarea {
+    resize: vertical;
+  }
 }
 
 .form-errors {

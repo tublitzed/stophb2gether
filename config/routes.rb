@@ -13,11 +13,12 @@ Rails.application.routes.draw do
   get '/resources' => 'resources#index'
   get '/losses' => 'losses#index'
   get '/about' => 'about#index'
-  get '/contact' => 'contact#index'
+  get '/contact' => 'contacts#index'
 
   resources :users
   resources :losses
   resources :subscribers
+  resources :contacts
 
   #API
   post    'api/add'   => 'api#add'

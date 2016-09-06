@@ -1,8 +1,9 @@
 <% provide(:title, 'Sign up') %>
+<%= render partial: 'partials/pageTitle', locals: { title: 'Sign up', desc: nil } %>
+<br />
+<br />
 <div class="row">
-<div class="col-sm-4"></div>
-  <div class="col-sm-4">
-  <h1 class="title">Sign up</h1>
+  <div class="col-sm-12">
   <%= form_for @user, url: {action: 'create'}, html: {class: 'form'} do |f| %>
     <%= render partial: 'shared/form_errors', locals: {errors: @user.errors} %>
     <%= f.label :name, class: 'form__label' %>
@@ -20,5 +21,4 @@
     <button type="submit" class="btn btn--primary">Create my account</button>
   <% end %>
   </div>
-  <div class="col-sm-4"></div>
 </div>
