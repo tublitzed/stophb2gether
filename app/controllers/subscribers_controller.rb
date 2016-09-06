@@ -6,7 +6,7 @@ class SubscribersController < ApplicationController
     if @subscriber.save
         flash[:success] = "Thanks! #{@subscriber.email} is on the list!"
         SubscriberMailer.new_subscriber(@subscriber).deliver_now
-        redirect_to store_path
+        redirect_to root_path
     else
         flash[:error] = "Error joining mailing list!"
         redirect_to root_path
