@@ -1,8 +1,8 @@
 .sidebarnav-trigger-label {
     display: none;
-    position: relative;
+    position: fixed;
     color: #fff;
-    float: right;
+    right: 0;
     z-index: 400;
     font-size: 20px;
     margin: 28px 13px 0 0;
@@ -66,9 +66,15 @@
     .logo {
         background: $color-near-black;
         margin: 0;
-        width: 72px;
-        padding: 0px 64px;
+        width: 100%;
+        height: 50px;
         border-bottom: 2px solid $color-red;
+
+        svg {
+            height: 40%;
+            width: 40%;
+            margin: 0 0 0 60px;
+        }
     }
 }
 
