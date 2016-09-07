@@ -12,7 +12,7 @@
 function onEdit(event) {
   var WWST_AUTHORIZATION_HEADER = '9423b908206e7365702e4a72d530c6723c711a18549952790fff10b7bf381ec7f89ee6a159bf9f8a073c823098557de7dcc9964440b1409d64752599c1f7581e';
   var WWST_POST_URL = 'https://www.stophb2gether.com/api/add';
-  var TRIGGER_COL_INDEX = 24;
+  var TRIGGER_COL_INDEX = 25;
 
   var sheet = SpreadsheetApp.getActiveSheet();
   var cell = sheet.getActiveCell();

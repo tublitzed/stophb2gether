@@ -34,7 +34,9 @@ module Builder
       'amount',
       'title',
       'slug',
-      'description'
+      'description',
+      'active',
+      'featured'
     ]
     acceptedFields.each do |field|
       formatted[field] = data[field]
