@@ -29,12 +29,6 @@ Then, login to the server and restart if new config needs to get reloaded.
 
 1. `sudo service nginx restart`
 
-# reset prod db
-
-1. `su - deploy`
-2. `cd stophb2gether/current`
-3. `bundle exec rake db:reset RAILS_ENV=production`
-
 # copy prod db to local:
 
 SSH into prod. Then:
@@ -44,6 +38,6 @@ SSH into prod. Then:
 3. `bundle exec rake db:seed:dump FILE=db/seeds-tmp.rb RAILS_ENV=production`
 4. `sudo mv db/seeds-tmp.rb /home/ubuntu/`
 5. logout of server
-6. `scp -i "/Users/tublitzed/.ssh/id_rsa-aws.pem" -r ec2-52-91-46-41.compute-1.amazonaws.com:seeds-tmp.rb /Users/tublitzed/Desktop/`
+6. `scp -i /Users/tublitzed/.ssh/id_rsa-aws.pem -r ubuntu@ec2-52-91-46-41.compute-1.amazonaws.com:~/seeds-tmp.rb /Users/tublitzed/Desktop/`
 7. `slime /Users/tublitzed/Desktop/seeds-tmp.rb`
 8. copy contents to local seeds file and rake db:reset
