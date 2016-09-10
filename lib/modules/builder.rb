@@ -27,7 +27,6 @@ module Builder
   def self.formatLoss(data, template)
     formatted = {
       'template' => template,
-      'sources' => self.formatSources(data['sources']),
       'active' => data['active'] || false,
       'featured' => data['featured'] || false
     }
@@ -36,7 +35,8 @@ module Builder
       'amount',
       'title',
       'slug',
-      'description'
+      'description',
+      'sources'
     ]
 
     acceptedFields.each do |field|
@@ -44,11 +44,6 @@ module Builder
     end
 
     formatted
-  end
-
-  def self.formatSources(str)
-    str = str.split(',')
-    ActiveSupport::JSON.encode(str)
   end
 
 end

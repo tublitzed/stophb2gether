@@ -20,8 +20,8 @@
       <ul class="source-list">
         <% @loss.sources.each do |source| %>
           <li>
-            <a href="<%= source %>" class="link" target="_blank">
-              <%= source %>
+            <a href="<%= source['link'] %>" class="link" target="_blank">
+              <%= source['meta']['title'] %>
             </a>
           </li>
         <% end %>
