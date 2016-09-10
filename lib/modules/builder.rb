@@ -27,20 +27,22 @@ module Builder
   def self.formatLoss(data, template)
     formatted = {
       'template' => template,
-      'sources' => self.formatSources(data['sources'])
+      'sources' => self.formatSources(data['sources']),
+      'active' => data['active'] || false,
+      'featured' => data['featured'] || false
     }
     acceptedFields = [
       'date',
       'amount',
       'title',
       'slug',
-      'description',
-      'active',
-      'featured'
+      'description'
     ]
+
     acceptedFields.each do |field|
       formatted[field] = data[field]
     end
+
     formatted
   end
 
