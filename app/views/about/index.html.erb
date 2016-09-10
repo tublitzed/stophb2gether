@@ -1,7 +1,23 @@
 <%= render partial: 'partials/pageTitle', locals: { title: 'About', desc: nil } %>
 
-  <div class="row">
-    <div class="small-12 columns">
-      <p>This site was created to raise awareness of the disastrous economic implications for the state of North Carolina created by HB2.</p>
+<div class="row">
+  <div class="small-12 columns">
+    <ul class="tabs" data-tabs id="about-page-tabs">
+      <li class="tabs-title<% if  @active_tab == 'general' %> is-active<% end %>" data-tab-name="general"><a href="#panel-about" aria-selected="true">General Information</a></li>
+      <li class="tabs-title<% if  @active_tab == 'calculations' %> is-active<% end %>" data-tab-name="calculations"><a href="#panel-calcs">Calculations</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="tabs-content" data-tabs-content="about-page-tabs">
+      <div class="tabs-panel<% if  @active_tab == 'general' %> is-active<% end %>"" id="panel-about">
+        <p>This site was created to raise awareness of the disastrous economic implications for the state of North Carolina created by HB2.</p>
+      </div>
+      <div class="tabs-panel<% if  @active_tab == 'calculations' %> is-active<% end %>"" id="panel-calcs">
+        <p>Calculations will go here</p>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,20 @@
+<h3 class="section-heading">Sources:</h3>
+<ul class="source-list">
+  <% @loss.sources.each do |source| %>
+    <li>
+      <% if source['link'] == 'CUSTOM_CALC' %>
+        <a href="<%= url_for(['about', tab: 'calculations', anchor: "#{@loss.slug}"] ) %>" class="link">Custom calculation</a>, StopHB2gether.
+      <% else %>
+
+        <% if source['meta']['author'] %>
+          <%= source['meta']['author'] %>,
+        <% end %>
+
+        "<a href="<%= source['link'] %>" class="link" target="_blank"><%= source['meta']['title'] %></a>" -
+        <%= source['meta']['date'] %>,
+        <%= source['meta']['publication'] %>.
+        <span class="subtle">Accessed on <%= source['meta']['accessed'] %>.</span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -4,8 +4,9 @@
 //= require jquery_ujs
 
 //= require foundation
-$(document).foundation();
 
 //= require dist/main.bundle.js
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  $(document).foundation();
+});

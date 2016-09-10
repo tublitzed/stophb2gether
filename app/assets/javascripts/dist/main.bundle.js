@@ -9,14 +9,19 @@ var _form = require('./modules/form');
 
 var _form2 = _interopRequireDefault(_form);
 
+var _tabs = require('./modules/tabs');
+
+var _tabs2 = _interopRequireDefault(_tabs);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
   _alert2.default.init();
   _form2.default.init();
+  _tabs2.default.init();
 });
 
-},{"./modules/alert":2,"./modules/form":3}],2:[function(require,module,exports){
+},{"./modules/alert":2,"./modules/form":3,"./modules/tabs":4}],2:[function(require,module,exports){
 'use strict';
 
 var Alert = {
@@ -42,5 +47,29 @@ var Form = {
 };
 
 module.exports = Form;
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+/**
+ * Assumes presence of Foundation for site.
+ */
+var Tabs = {
+  onTabChange: function onTabChange() {
+    var activeTabName = $('.tabs-title.is-active').data('tab-name');
+    console.log(activeTabName);
+    console.log('TODO: change url param');
+  },
+
+  init: function init() {
+    var _this = this;
+
+    $('.tabs-title').on('click', function () {
+      _this.onTabChange();
+    });
+  }
+};
+
+module.exports = Tabs;
 
 },{}]},{},[1]);

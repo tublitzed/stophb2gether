@@ -36,6 +36,7 @@ h1 {
 }
 
 hr {
+  border-bottom: 0; // foundation override.
   border-top: 1px dotted $color-red-100;
   background: transparent;
   clear: both;
