@@ -1,12 +1,15 @@
 .source-list {
   margin: 0 0 1em 2em;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 
   li {
     padding: 0.5em 0;
   }
 
-  a {
-    color: $color-grey-500;
+  .link {
+    color: $color-copy;
+    &:hover {
+      color: $color-red;
+    }
   }
 }

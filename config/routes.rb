@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/losses' => 'losses#index'
   get '/about' => 'about#index'
   get '/contact' => 'contacts#index'
+  get '/about/calculations' => 'about#calculations'
 
   resources :users
   resources :losses

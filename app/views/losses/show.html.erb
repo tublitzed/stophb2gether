@@ -1,7 +1,7 @@
 <% provide(:title, @loss.title.html_safe) %>
 
 <div class="row">
-  <div class="col-sm-12">
+  <div class="small-12 columns">
     <p class="lead">
      <%= @loss.title %>
     </p>
@@ -20,9 +20,14 @@
       <ul class="source-list">
         <% @loss.sources.each do |source| %>
           <li>
-            <a href="<%= source['link'] %>" class="link" target="_blank">
-              <%= source['meta']['title'] %>
-            </a>
+            <% if source['link'] == 'CUSTOM_CALC' %>
+              <a href="/about/calculations">Custom calculation</a>
+            <% else %>
+              <%= source['meta']['author'] %>, <%= source['meta']['date'] %>.
+              "<a href="<%= source['link'] %>" class="link" target="_blank"><%= source['meta']['title'] %></a>",
+              <%= source['meta']['publication'] %>.
+              <span class="subtle">Accessed on <%= source['meta']['accessed'] %>.</span>
+            <% end %>
           </li>
         <% end %>
       </ul>

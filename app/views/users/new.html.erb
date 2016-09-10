@@ -3,7 +3,7 @@
 <br />
 <br />
 <div class="row">
-  <div class="col-sm-12">
+  <div class="small-12 columns">
   <%= form_for @user, url: {action: 'create'}, html: {class: 'form'} do |f| %>
     <%= render partial: 'shared/form_errors', locals: {errors: @user.errors} %>
     <%= f.label :name, class: 'form__label' %>
