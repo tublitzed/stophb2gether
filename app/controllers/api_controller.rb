@@ -18,6 +18,7 @@ class ApiController < ApplicationController
 
   def formatValues(postValues)
     formatted = {}
+    # Note: when changing values here, remember to also change in builder.rb
     acceptedFields = [
       'date',
       'title',
@@ -40,6 +41,7 @@ class ApiController < ApplicationController
       'grand_total',
       'notes',
       'metadata',
+      'short_name',
       'sources',
       'complete',
       'trigger_send'

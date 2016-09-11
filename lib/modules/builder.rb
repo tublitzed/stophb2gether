@@ -25,6 +25,7 @@ module Builder
   end
 
   def self.formatLoss(data, template)
+    # Note: when changing values here, remember to also change in API controller
     formatted = {
       'template' => template,
       'active' => data['active'] || false,

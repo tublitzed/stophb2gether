@@ -46,4 +46,4 @@ SSH into prod. Then:
 
 1. `su - deploy`
 2. `cd stophb2gether/current`
-3. `bundle exec rails console production`
+3. `bundle exec rails c production`
