@@ -21,7 +21,7 @@
         </a>
       </li>
       <li>
-        <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' %> nav__link--active<% end %>">
+        <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' || @appPath == 'loss' %> nav__link--active<% end %>">
           <span class="nav__link-inner">
             Losses
           </span>

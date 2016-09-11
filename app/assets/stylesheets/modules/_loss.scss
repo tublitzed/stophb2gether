@@ -9,6 +9,12 @@
   }
 
   @include transition;
+
+  .tabs-content & {
+    &.first {
+      margin-top: -1em;
+    }
+  }
 }
 
 .body--home .loss.first {
@@ -21,6 +27,7 @@
   color: $color-loss;
   font-family: $font-family-headings;
   font-size: 2rem;
+
   span {
     text-transform: uppercase;
     color: $color-red-100;
@@ -47,4 +54,18 @@
   margin: 0;
   font-size: 0.9rem;
   padding-bottom: $margins;
+}
+
+.other-losses {
+  list-style: none;
+
+  li {
+    border-top: 1px dotted $color-red-100;
+    padding: 1em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 }
