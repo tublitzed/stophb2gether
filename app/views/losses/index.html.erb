@@ -15,6 +15,9 @@
   <div class="small-12 columns">
     <div class="tabs-content" data-tabs-content="losses-page-tabs">
       <div class="tabs-panel<% if  @active_tab == 'losses' %> is-active<% end %>"" id="panel-losses">
+
+        <%= render partial: 'partials/pagination', locals: { currentPage: @currentPage, perPage: @perPage, items: @allLosses } %>
+        <hr />
         <%= render partial: 'partials/losses', locals: { losses: @allLosses } %>
 
       <br />

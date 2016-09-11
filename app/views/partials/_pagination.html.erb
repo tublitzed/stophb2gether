@@ -1,0 +1,43 @@
+<%
+  itemCount = items.size
+  pageCount = (itemCount/perPage.to_f).ceil
+  rangeStart = (perPage * currentPage) - (perPage - 1)
+  rangeEnd = (rangeStart + perPage) - 1
+
+  if rangeEnd > itemCount
+    rangeEnd = itemCount
+  end
+%>
+
+<div class="pagination-info">
+  Viewing <%= rangeStart %>-<%= rangeEnd %> of <%= itemCount %>.
+</div>
+
+<ul class="pagination" role="navigation" aria-label="Pagination">
+
+  <li class="pagination-previous<% if currentPage <= 1 %> disabled<% end %>">
+    <% if currentPage <= 1 %>
+      Previous <span class="show-for-sr">page</span>
+    <% else %>
+      <a href="<%= url_for(['losses', tab: 'losses', page: "#{currentPage - 1}"] ) %>" aria-label="Previous page">Previous <span class="show-for-sr">page</span></a>
+    <% end %>
+  </li>
+
+  <% (1..pageCount).each do |page| %>
+    <li<% if page == currentPage %> class="current"<% end %>>
+      <% if page == currentPage %>
+        <span class="show-for-sr">You're on page</span>
+      <% end %>
+      <a href="<%= url_for(['losses', tab: 'losses', page: "#{page}"] ) %>" aria-label="Page <%= page %>"><%= page %></a>
+    </li>
+  <% end %>
+
+  <li class="pagination-next<% if currentPage >= pageCount %> disabled<% end %>">
+    <% if currentPage >= pageCount %>
+      Next <span class="show-for-sr">page</span>
+    <% else %>
+      <a href="<%= url_for(['losses', tab: 'losses', page: "#{currentPage + 1}"] ) %>" aria-label="Previous page">Next <span class="show-for-sr">page</span></a>
+    <% end %>
+  </li>
+
+</ul>

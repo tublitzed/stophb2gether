@@ -1,0 +1,24 @@
+// Some Foundation overrides:
+.pagination-info {
+    float: right;
+    border-left: 1px solid $light-gray;
+    padding-left: 1em;
+    margin-top: 8px;
+    font-size: 0.8rem;
+}
+
+.pagination {
+  float: right;
+
+  .current {
+    a {
+      color: $color-near-white;
+    }
+
+    &:hover {
+      a {
+        background: $color-primary;
+      }
+    }
+  }
+}
