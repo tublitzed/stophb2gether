@@ -9,7 +9,12 @@ class LossesController < ApplicationController
       set_app_path('losses')
       @totalLosses = Loss.sum(:amount)
       @allLosses = Loss.get_active
+
       @currentPage = get_page
+      offset = (@currentPage - 1) * PER_PAGE
+
+      puts offset
+      @losses = Loss.get_active(PER_PAGE, offset)
     end
 
     def show

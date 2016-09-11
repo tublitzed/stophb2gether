@@ -4,12 +4,10 @@ class Loss < ActiveRecord::Base
 
   validates :slug, uniqueness: true
 
-  def self.get_active(limit = nil)
-    results = self.all.order(date: :desc).select{ |loss| loss.amount.present? }
-    if limit
-      results = results.slice(0, limit)
-    end
-    results
+  def self.get_active(limit = nil, offset = 0)
+    results = self.where(active: true)
+      .order(date: :desc)
+      .offset(offset).limit(limit)
   end
 
 end

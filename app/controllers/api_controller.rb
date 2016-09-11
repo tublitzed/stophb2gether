@@ -20,6 +20,8 @@ class ApiController < ApplicationController
     formatted = {}
     # Note: when changing values here, remember to also change in builder.rb
     acceptedFields = [
+      'active',
+      'featured',
       'date',
       'title',
       'name',
