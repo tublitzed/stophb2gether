@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 
   def index
     @totalLosses = Loss.sum(:amount)
-    @allLosses = Loss.get_active(3)
+    @allLosses = Loss.get_active(nil, 0, true)
     @subscriber = Subscriber.new
   end
 

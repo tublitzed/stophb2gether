@@ -4,8 +4,12 @@ class Loss < ActiveRecord::Base
 
   validates :slug, uniqueness: true
 
-  def self.get_active(limit = nil, offset = 0)
-    results = self.where(active: true)
+  def self.get_active(limit = nil, offset = 0, featured_only = false)
+    params = { active: true }
+    if featured_only
+      params['featured'] = true
+    end
+    results = self.where(params)
       .order(date: :desc)
       .offset(offset).limit(limit)
   end

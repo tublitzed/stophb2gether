@@ -1,11 +1,14 @@
 <% losses.each_with_index do |loss, index| %>
+<a href="<%= loss_path(loss) %>" class="loss<%= index === 0 ? ' first' : '' %>">
   <div class="row">
-    <div class="small-12 columns">
-      <a href="<%= loss_path(loss) %>" class="loss<%= index === 0 ? ' first' : '' %>">
+    <div class="small-12 medium-3 large-2 columns">
+     <div class="loss-img" style='background-image: url("/images/losses/<%=loss.slug%>.jpg");'></div>
+    </div>
+    <div class="small-12 medium-9 large-10 columns">
         <h2 class="loss-amount"><%= number_to_currency(loss.amount, precision: 0) %> <span>lost</span></h2>
         <h3 class="loss-title"><%= loss.title %></h3>
         <h6 class="loss-date"><%= loss.date.strftime("%B %d, %Y") %></h6>
-      </a>
     </div>
   </div>
+</a>
 <% end %>

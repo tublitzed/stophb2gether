@@ -24,7 +24,7 @@
   </li>
 
   <% (1..pageCount).each do |page| %>
-    <li<% if page == currentPage %> class="current"<% end %>>
+    <li class="item<% if page == currentPage %> current<% end %>">
       <% if page == currentPage %>
         <span class="show-for-sr">You're on page</span>
       <% end %>

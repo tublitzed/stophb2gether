@@ -17,7 +17,7 @@
       <div class="tabs-panel<% if  @active_tab == 'losses' %> is-active<% end %>"" id="panel-losses">
 
         <%= render partial: 'partials/pagination', locals: { currentPage: @currentPage, perPage: @perPage, items: @allLosses } %>
-        <hr />
+        <div class="clear"></div>
         <%= render partial: 'partials/losses', locals: { losses: @losses } %>
 
       <br />

@@ -19,3 +19,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ieSupportFallbackHex', endColorstr='$ieSupportFallbackHex',GradientType=1 ); /* IE6-9 */
 }
 // linear-gradient(to right, rgba(3, 3, 3, 0.95) 0%, rgba(3, 3, 3, 0.8) 100%)
+
+
+@mixin truncate($width: 100%) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

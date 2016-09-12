@@ -1,16 +1,32 @@
 // Some Foundation overrides:
 .pagination-info {
-    float: right;
-    border-left: 1px solid $light-gray;
-    padding-left: 1em;
-    margin-top: 8px;
-    font-size: 0.8rem;
+  float: right;
+  border-left: 1px solid $light-gray;
+  padding-left: 1em;
+  margin-top: 6px;
+  font-size: 0.8rem;
 }
 
 .pagination {
   float: right;
 
+  a {
+    color: $color-copy;
+  }
+
+  li.item {
+    border-radius: 50%;
+
+    a {
+      border-radius: 50%;
+    }
+  }
+
   .current {
+    width: 30px;
+    text-align: center;
+    padding: 0;
+
     a {
       color: $color-near-white;
     }

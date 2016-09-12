@@ -2,17 +2,23 @@
   border-bottom: 1px dotted $color-red-100;
   text-decoration: none;
   display: block;
-  padding: 0 1em;
 
   &:hover {
     background: $color-yellow-100;
+
+    .loss-img {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      // filter: hue-rotate(90deg);
+      // -webkit-filter: hue-rotate(90deg);
+    }
   }
 
   @include transition;
 
   .tabs-content & {
     &.first {
-      margin-top: -1em;
+      border-top: 1px dotted $color-red-100;
     }
   }
 }
@@ -21,8 +27,16 @@
   border-top: 1px dotted $color-red-100;
 }
 
+
+.loss-img {
+  height: 150px;
+  width: 100%;
+  @include transition;
+}
+
+
 .loss-amount {
-  padding: 1em 0 0.5em 0;
+  padding: 0.75em 0 0.25em 0;
   margin: 0;
   color: $color-loss;
   font-family: $font-family-headings;
@@ -43,6 +57,8 @@
   text-decoration: underline;
   font-weight: 100;
 
+  @include truncate;
+
   &:hover {
     text-decoration: none;
   }
@@ -53,7 +69,6 @@
   color: $color-grey-500;
   margin: 0;
   font-size: 0.9rem;
-  padding-bottom: $margins;
 }
 
 .other-losses {
@@ -68,4 +83,14 @@
     font-size: 1.5rem;
     font-weight: 500;
   }
+}
+
+@media #{$media-sm-foundation} {
+    .loss {
+      margin-bottom: 1em;
+    }
+
+    .loss-date {
+      margin-bottom: 1em;
+    }
 }

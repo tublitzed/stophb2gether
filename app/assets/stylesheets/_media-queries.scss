@@ -9,6 +9,9 @@ $media-sm: "(max-width: #{$breakpoint-max-2}px)";
 $media-med: "(min-width: #{$breakpoint-min-1}px) and (max-width: #{$breakpoint-max-1}px)";
 $media-lg: "(min-width: #{$breakpoint-min-0}px)";
 
+// Foundation's small breakpoint
+$media-sm-foundation: "screen and (max-width: 40em)";
+
 /* debug breakpoints */
 // @media #{$media-sm} {
 //     body {
@@ -27,3 +30,5 @@ $media-lg: "(min-width: #{$breakpoint-min-0}px)";
 //         background: blue !important;
 //     }
 // }
+
+
