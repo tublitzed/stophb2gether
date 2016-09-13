@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160913010540) do
   end
 
   create_table "losses", force: :cascade do |t|
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.datetime "date"
     t.decimal  "amount"
     t.string   "title"
@@ -34,9 +34,10 @@ ActiveRecord::Schema.define(version: 20160913010540) do
     t.string   "description"
     t.string   "template"
     t.json     "sources"
-    t.boolean  "active",      default: false, null: false
-    t.boolean  "featured",    default: false, null: false
+    t.boolean  "active",       default: false, null: false
+    t.boolean  "featured",     default: false, null: false
     t.string   "short_name"
+    t.string   "photo_credit"
   end
 
   create_table "subscribers", force: :cascade do |t|
