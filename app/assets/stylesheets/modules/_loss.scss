@@ -32,12 +32,20 @@
 
 .loss-banner {
   background-size: cover;
+  position: relative;
+  .photo-credit {
+    right: 2px;
+  }
 }
 .loss-img {
   height: 150px;
   width: 100%;
   @include transition;
   background-size: cover;
+  position: relative;
+  .photo-credit {
+    bottom: 0;
+  }
 }
 
 

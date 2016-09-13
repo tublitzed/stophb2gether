@@ -2,7 +2,11 @@
 <a href="<%= loss_path(loss) %>" class="loss<%= index === 0 ? ' first' : '' %>">
   <div class="row">
     <div class="small-12 medium-3 large-2 columns">
-     <div class="loss-img" style='background-image: url("/images/losses/<%=loss.slug%>.jpg");'></div>
+     <div class="loss-img" style='background-image: url("/images/losses/<%=loss.slug%>.jpg");'>
+      <% if (loss.photo_credit) %>
+        <div class="photo-credit"><%= loss.photo_credit %></div>
+      <% end %>
+     </div>
     </div>
     <div class="small-12 medium-9 large-10 columns">
         <h2 class="loss-amount"><%= number_to_currency(loss.amount, precision: 0) %> <span>lost</span></h2>
