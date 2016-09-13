@@ -35,6 +35,10 @@ h1 {
   font-weight: 300;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 hr {
   border-bottom: 0; // foundation override.
   border-top: 1px dotted $color-red-100;

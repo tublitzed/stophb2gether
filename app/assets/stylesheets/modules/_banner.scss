@@ -17,6 +17,11 @@
   text-align: center;
   padding: 0.75em 0;
   margin: 14px 0 65px;
+
+  .body--loss & {
+    margin: 14px auto;
+    width: 90%;
+  }
 }
 
 .banner-text__title {

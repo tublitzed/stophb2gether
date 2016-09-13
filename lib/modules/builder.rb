@@ -38,7 +38,8 @@ module Builder
       'slug',
       'description',
       'sources',
-      'short_name'
+      'short_name',
+      'photo_credit'
     ]
 
     acceptedFields.each do |field|

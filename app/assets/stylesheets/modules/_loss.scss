@@ -6,6 +6,9 @@
   &:hover {
     background: $color-yellow-100;
 
+    .loss-title {
+      text-decoration: none;
+    }
     .loss-img {
       -webkit-filter: grayscale(1);
       filter: grayscale(1);
@@ -27,11 +30,14 @@
   border-top: 1px dotted $color-red-100;
 }
 
-
+.loss-banner {
+  background-size: cover;
+}
 .loss-img {
   height: 150px;
   width: 100%;
   @include transition;
+  background-size: cover;
 }
 
 

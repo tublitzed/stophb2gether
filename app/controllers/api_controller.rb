@@ -42,6 +42,7 @@ class ApiController < ApplicationController
       'statement_url',
       'grand_total',
       'notes',
+      'photo_credit',
       'metadata',
       'short_name',
       'sources',

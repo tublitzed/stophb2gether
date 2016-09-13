@@ -1,25 +1,38 @@
 <% provide(:title, @loss.title.html_safe) %>
 <div class="row">
-  <div class="small-12 columns">
-    <a href="<%= losses_path %>" class="link">All Losses</a> &gt; <%= @loss.short_name %>
-  </div>
+	<div class="small-12 columns">
+		<a href="<%= losses_path %>" class="link">All Losses</a> &gt; <%= @loss.short_name %>
+	</div>
 </div>
 <div class="row">
-  <div class="small-12 columns">
-    <p class="lead">
-      <%= @loss.title %>
-    </p>
-    <hr class="sm-only">
-  <h1 class="lead"><%= number_to_currency(@loss.amount, precision: 0) %></span></h1>
-  <h2 class="lead">lost</h2>
-  <hr>
-  <h3 class="section-heading"><%= @loss.date.strftime("%B %d, %Y") %></h3>
-  <div class="template">
-    <%= @loss.template.html_safe %>
-  </div>
-  <hr />
-  <%= render partial: 'sources', locals: {loss: @loss} %>
-  <hr />
+	<div class="large-12 columns">
+		<hr>
+		<div class="loss-banner" style='background-image: url("/images/losses/<%=@loss.slug%>_lg.jpg");'>
+			<div class="row">
+				<div class="large-6 large-centered columns">
+					<div class="banner-text">
+						<h1 class="banner-text__title">
+						<%= number_to_currency(@loss.amount, precision: 0) %>
+						</h1>
+						<h2 class="banner-text__subtitle">lost</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+<br>
+<div class="row">
+	<div class="small-12 columns">
+		<h2><%= @loss.title %></h2>
+		<hr>
+		<h3 class="section-heading"><%= @loss.date.strftime("%B %d, %Y") %></h3>
+		<div class="template">
+			<%= @loss.template.html_safe %>
+		</div>
+		<hr />
+		<%= render partial: 'sources', locals: {loss: @loss} %>
+		<hr />
+	</div>
 </div>
 <%= render partial: 'partials/linkToAll' %>
