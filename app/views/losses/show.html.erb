@@ -18,7 +18,7 @@
 					</div>
 				</div>
 			</div>
-			<% if (@loss.photo_credit) %>
+			<% if (@loss.photo_credit.present?) %>
 				<div class="photo-credit">Image via: <%= @loss.photo_credit %></div>
 			<% end %>
 		</div>

@@ -3,7 +3,7 @@
   <div class="row">
     <div class="small-12 medium-3 large-2 columns">
      <div class="loss-img" style='background-image: url("/images/losses/<%=loss.slug%>.jpg");'>
-      <% if (loss.photo_credit) %>
+      <% if (loss.photo_credit.present?) %>
         <div class="photo-credit"><%= loss.photo_credit %></div>
       <% end %>
      </div>
