@@ -11,7 +11,10 @@
         <% end %>
 
         <a href="<%= source['link'] %>" class="link" target="_blank"><%= source['meta']['title'] %></a> -
-        <%= source['meta']['date'] %>,
+
+        <% if source['meta']['date'] %>
+          <%= source['meta']['date'] %>,
+        <% end %>
         <%= source['meta']['publication'] %>.
         <span class="subtle">Accessed on <%= source['meta']['accessed'] %>.</span>
       <% end %>
