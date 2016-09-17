@@ -1,7 +1,6 @@
 .source-list {
   margin: 0 0 1em 2em;
   font-size: 0.8rem;
-
   li {
     padding: 0.5em 0;
   }
@@ -11,5 +10,14 @@
     &:hover {
       color: $color-red;
     }
+  }
+}
+
+
+.list {
+  margin: 0 0 1em 2em;
+
+  li {
+    padding: 0.5em 0;
   }
 }

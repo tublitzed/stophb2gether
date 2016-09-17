@@ -27,7 +27,7 @@ a {
 p {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin: 1em 0 2em 0;
+  margin: 1em 0;
 }
 
 h1 {
@@ -37,6 +37,10 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
 }
 
 hr {
@@ -52,8 +56,12 @@ hr {
 
 .app-container {
   padding-top: calc(#{$header-height} + 2em);
-  padding-bottom: 4em;
   word-wrap: break-word;
   z-index: 100;
   position: relative;
+}
+
+.app-content {
+    padding-bottom: 4em;
+    min-height: 100vh; // footer
 }

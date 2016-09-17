@@ -1,12 +1,9 @@
 .footer {
     background: $color-grey-200;
     width: 100%;
-    bottom: 0;
     min-height: 2.2em;
     border-top: 1px solid $color-grey-400;
     padding: 0.5em;
-    z-index: 200;
-    position: fixed;
 }
 
 .footer__links {

@@ -1,3 +1,73 @@
-<% provide(:title, 'Resources') %>
+<% provide(:title, 'Resources | Learn more about HB2') %>
+<%= render partial: 'partials/pageTitle', locals: { title: 'Resources', desc: 'Learn more about HB2' } %>
+<div class="row">
+  <div class="small-12 columns">
+    <div class="page-banner page-banner--resources"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <br />
+    <h2>What is HB2?</h2>
+    <div class="indent">
+      <p>If you're looking to learn more about HB2, here's some useful links:</p>
+      <ul class="list">
+        <li>The <a href="https://en.wikipedia.org/wiki/Public_Facilities_Privacy_%26_Security_Act" class="link" target="_blank">Wikipedia page on HB2</a> includes a very detailed and well sourced account of the bill and it's history.</li>
+        <li>Here's the <a href="<%= asset_url('pdf/H2v4.pdf') %>" class="link" target="_blank">full text</a> of the bill. You can see that this is version 4, there are 3 previous versions also available: <a href="<%= asset_url('pdf/H2v1.pdf') %>" class="link" target="_blank">v1</a>, <a href="<%= asset_url('pdf/H2v2.pdf') %>" class="link" target="_blank">v2</a>, and <a href="<%= asset_url('pdf/H2v3.pdf') %>" class="link" target="_blank">v3</a>.
+        <small class="subtle"> Obtained via <a href="http://www.ncleg.net/" class="link" target="_blank">NCGA</a>.</small></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="small-12 columns">
+    <br />
+    <h2>Stop HB2</h2>
+    <div class="indent">
+      <p>Since HB2 came into existence, there are a lot of sites and protest movements that have sprung up around it. There many people working to stop this bill. Here's a roundup:</p>
+      <hr>
 
-<%= render partial: 'partials/pageTitle', locals: { title: 'Resources', desc: 'TODO' } %>
+      <a href="http://startups-against-hb2.com/" class="link other-org" target="_blank">
+        <div class="row">
+          <div class="medium-3 small-12 columns">
+            <img src="/images/other-sites/startups-against-hb2.jpg" class="other-org__img" />
+          </div>
+          <div class="medium-9 small-12 columns">
+            <h3>Startups against HB2</h3>
+            <p>HB2 is wrong — for people and business. This site is a new and growing list of small businesses who know North Carolina can do better. <br /><small>startups-against-hb2.com</small></p>
+          </div>
+        </div>
+      </a>
+
+      <hr>
+
+      <a href="http://turnoutnc.org/" class="link other-org" target="_blank">
+        <div class="row">
+          <div class="medium-3 small-12 columns">
+            <img src="/images/other-sites/turnoutnc.jpg" class="other-org__img" />
+          </div>
+          <div class="medium-9 small-12 columns">
+            <h3>Turnout NC</h3>
+            <p>North Carolinians agree: House Bill 2 must be repealed. <br /><small>turnoutnc.org</small></p>
+          </div>
+        </div>
+      </a>
+
+      <hr>
+
+      <a href="http://www.wearenotthis.com/" class="link other-org" target="_blank">
+        <div class="row">
+          <div class="medium-3 small-12 columns">
+            <img src="/images/other-sites/wearenotthis.jpg" class="other-org__img" />
+          </div>
+          <div class="medium-9 small-12 columns">
+            <h3>WeAreNotThis</h3>
+            <p>We are humans, we are people, we are citizens, we are family. We Are United For Equality. <br /><small>wearenotthis.com</small></p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>

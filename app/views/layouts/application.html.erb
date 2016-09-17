@@ -14,12 +14,12 @@
             <div class="home-banner"></div>
         <% end %>
 
-        <div class="app-container">
-            <div class="container">
+        <div class="app-container container">
+            <div class="app-content">
                 <%= yield %>
             </div>
+            <%= render partial: 'partials/footer' %>
         </div>
-        <%= render partial: 'partials/footer' %>
         <%= render partial: 'partials/foot' %>
     </div>
 </body>
