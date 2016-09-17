@@ -14,10 +14,10 @@
   <div class="small-12 columns">
     <div class="tabs-content" data-tabs-content="about-page-tabs">
       <div class="tabs-panel<% if  @active_tab == 'general' %> is-active<% end %>"" id="panel-about">
-        <p>This site was created to raise awareness of the disastrous economic implications for the state of North Carolina created by HB2.</p>
+        <%= render partial: 'aboutTab' %>
       </div>
       <div class="tabs-panel<% if  @active_tab == 'calculations' %> is-active<% end %>"" id="panel-calcs">
-        <p>Calculations will go here</p>
+        <%= render partial: 'calculationsTab' %>
       </div>
     </div>
   </div>

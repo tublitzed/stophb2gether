@@ -1,0 +1,58 @@
+<h3>Where do the numbers come from?</h3>
+<p>Wherever possible, we've tried to use third party sources for the economic impact citations in our losses. Economic impact calculations are never an exact science; as we are not economists, we've tried to leave that to the professionals wherever possible. At the bottom of each individual loss on this site, you'll see a list of sources. If the specific number cited is from an external source, you'll see a link there. If it's not, you'll find a link to this page.</p>
+
+<hr />
+
+<h3>Custom calculations</h3>
+<p>In some cases, economic impact figures were not available for losses. We've followed a <b>very conservative formula</b> for calculations, which you can learn about below in more detail. Most of the losses without figures associated with them fell into specific buckets. We'll outline our strategy for calculating each bucket below.</p>
+
+<div class="indent">
+  <h4 id="events-formula">Events</h4>
+  <p>For each event that took place, we made a few assumptions:</p>
+  <ul class="list">
+    <li>The event took place in a venue that was filled to <b>65%</b> of capacity.</li>
+    <li><b>15%</b> of revenues from total ticket sales were subtracted to account for booking fees.</li>
+    <li><b>3%</b> of the total attendees for a single day event stayed in a hotel.</li>
+    <li>In most cases, ticket prices were no longer available for an event, so an average for a given artist was used. The source for each average is noted in the <a href="#specific-calculations" class="link">specific calculations</a> section below.</li>
+  </ul>
+  <p>The formula for events is as follows:</p>
+  <code>((capacity-of-venue * 0.65) * ticket-price) * 0.85</code>
+</div>
+
+<br />
+<p>Each loss has been <b>rounded down</b> to the nearest $1,000. So, if a loss was $28,874, we rounded down to $28,000.</p>
+
+<p>It's worth noting that the formulas outlined above do not take into account a number of things that would likely make these numbers much higher. We completely ignored:</p>
+
+  <ul class="list">
+    <li>Spending in the area related to the event/trip. Ie dinners, shopping.</li>
+    <li>Local transportation costs. Ie rental cars, taxis, Uber.</li>
+  </ul>
+
+<hr />
+<h3 id="specific-calculations">Specific calculations</h3>
+<p>Here's a complete list of each item where we've applied a custom calculation, and the details around each one.</p>
+
+<div class="indent">
+
+<% if (Loss.exists?(slug: 'duke-vs-albany-basketball')) %>
+  <h4 id="duke-vs-albany-basketball"><a href="<%= url_for('losses/duke-vs-albany-basketball') %>" class="link">Duke vs. Albany</a></h4>
+  <p><%= raw(formula_html("events")) %> This event was scheduled to take place at Cameron Stadium, which has a capacity of 9,314. The average ticket price for a Duke game is <a href="http://247wallst.com/special-report/2016/03/10/the-25-most-expensive-college-basketball-tickets/6/" class="link" target="_blank">$198.02</a>. <%= raw(hotel_html("Durham")) %>
+  </p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'blue-man-group')) %>
+  <h4 id="blue-man-group"><a href="<%= url_for('losses/blue-man-group') %>" class="link">Blue Man Group</a></h4>
+  <p><%= raw(formula_html("events")) %> There were 7 total shows planned to take place at Charlotte's Belk Theater, which has a capacity of 2,097. The average ticket price for a Blue Man Group show is <a href="http://www.pollstar.com/atpDetail.aspx?SearchBy=B" class="link" target="_blank">$58.23</a>. <%= raw(hotel_html("Charlotte")) %>
+  </p>
+<% end %>
+
+<hr />
+<h4 id="hotel-price-list">Hotel prices in various North Carolina cities</h4>
+<br />
+<ul class="list">
+  <li>Durham - <a href="http://www.cvent.com/rfp/durham-nc-guide/meeting-event-planning-627e2cad66d4454ba89c3e18a7d2db37.aspx" class="link" target="_blank">$<%= Settings.HOTEL_PRICE_DURHAM %></a></li>
+  <li>Charlotte - <a href="http://www.statista.com/statistics/202379/average-daily-rate-of-hotels-in-charlotte/" class="link" target="_blank">$<%= Settings.HOTEL_PRICE_CHARLOTTE %></a></li>
+</ul>
+
+</div>
