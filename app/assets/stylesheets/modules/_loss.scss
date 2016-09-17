@@ -40,6 +40,8 @@
 .loss-img {
   height: 150px;
   width: 100%;
+  margin: 1em 0;
+  border-radius: 2px;
   @include transition;
   background-size: cover;
   position: relative;
@@ -106,5 +108,9 @@
 
     .loss-date {
       margin-bottom: 1em;
+    }
+
+    .loss-img {
+      margin: 0;
     }
 }
