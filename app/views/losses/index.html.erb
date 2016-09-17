@@ -19,8 +19,9 @@
         <%= render partial: 'partials/pagination', locals: { currentPage: @currentPage, perPage: @perPage, items: @allLosses } %>
         <div class="clear"></div>
         <%= render partial: 'partials/losses', locals: { losses: @losses } %>
-
-      <br />
+        <br />
+        <%= render partial: 'partials/pagination', locals: { currentPage: @currentPage, perPage: @perPage, items: @allLosses } %>
+      <hr />
       <small class="small">Is this list missing something? <a href="<%= contact_path %>" class="link">Let us know.</a></small>
       </div>
       <div class="tabs-panel<% if  @active_tab == 'other' %> is-active<% end %>"" id="panel-other">
