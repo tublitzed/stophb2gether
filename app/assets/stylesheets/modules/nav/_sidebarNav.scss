@@ -3,14 +3,13 @@
   color: #fff;
   background: $color-near-black;
   right: -10px;
-  z-index: 400;
+  z-index: $sidebar-nav-z-index + 1;
   font-size: 20px;
   line-height: 3.4;
   cursor: pointer;
   height: calc(#{$header-height} - 3px);
   padding: 0 20px;
   border-left: 1px solid $color-grey-800;
-  @include transition;
 
   &:hover {
     color: $color-red;
@@ -83,7 +82,7 @@
 @media #{$media-sm} {
   // foundation override
   [type='checkbox'] + .sidebarnav-trigger-label {
-    display: block;
+    display: block !important;
   }
 
   header .nav--main {
@@ -92,7 +91,6 @@
 
   #sidebarnav-trigger:checked ~ .sidebarnav-trigger-label {
     background: $color-grey-200;
-    z-index: $sidebar-nav-z-index + 1;
     right: 30px;
     color: $color-grey-600;
     border: 0;
