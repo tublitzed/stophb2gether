@@ -36,7 +36,6 @@
   font-size: 2rem;
 }
 
-
 .page-banner {
   max-width: 100%;
   height: 100px;
@@ -44,5 +43,13 @@
 
   &--resources {
     background: url("/images/banners/resources.jpg");
+  }
+}
+
+@media #{$media-sm} {
+  .app-banner {
+    .body--home & {
+      height: 290px;
+    }
   }
 }

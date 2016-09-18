@@ -11,7 +11,7 @@
   position: fixed;
   z-index: 300;
   top: 0;
-  border-bottom: 3px solid $color-red;
+  border-bottom: $header-border-bottom;
 }
 
 .header-bg {
@@ -45,6 +45,17 @@
 
     rect.line {
       fill: $color-loss;
+    }
+  }
+}
+
+
+@media #{$media-sm} {
+  .logo {
+    margin: 0 0 0 -2px;
+    svg {
+      width: 90%;
+      height: 90%;
     }
   }
 }

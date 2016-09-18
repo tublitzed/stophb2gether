@@ -1,8 +1,10 @@
+html {
+  font-size: $base-font-size;
+}
 body {
   font-family: $font-family;
   background: #FFF;
   color: $color-copy;
-  font-size: $base-font-size;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -69,3 +71,11 @@ hr {
     padding-bottom: 4em;
     min-height: 100vh; // footer
 }
+
+
+@media #{$media-sm} {
+  html {
+    font-size: 13px;
+  }
+}
+

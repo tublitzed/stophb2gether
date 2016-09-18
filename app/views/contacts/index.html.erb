@@ -2,10 +2,10 @@
 <%= render partial: 'partials/pageTitle', locals: { title: 'Contact', desc: 'Get in touch! We\'d love to hear from you.' } %>
 <br /><br />
 <div class="row">
-  <div class="small-8 columns">
+  <div class="medium-8 small-12 columns">
     <%= render partial: 'contactForm' %>
   </div>
-  <div class="small-4 columns">
+  <div class="medium-4 small-12 columns">
     <br/>
     <h6><span class="fa fa-envelope-o"></span> <a href="mailto:<%= Settings.ADMIN_EMAIL %>" class="link"><%= Settings.ADMIN_EMAIL %></a></h3>
     <br/>
