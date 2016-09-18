@@ -37,9 +37,10 @@ module Builder
       'title',
       'slug',
       'description',
+      'photo_credit',
       'sources',
       'short_name',
-      'photo_credit'
+      'tweet'
     ]
 
     acceptedFields.each do |field|

@@ -34,6 +34,8 @@
 			<%= @loss.template.html_safe %>
 		</div>
 		<hr />
+		<%= render partial: 'share', locals: {loss: @loss} %>
+		<hr />
 		<%= render partial: 'sources', locals: {loss: @loss} %>
 		<hr />
 	</div>

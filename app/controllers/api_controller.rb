@@ -47,7 +47,8 @@ class ApiController < ApplicationController
       'short_name',
       'sources',
       'complete',
-      'trigger_send'
+      'trigger_send',
+      'tweet'
     ]
 
     acceptedFields.each do |field|

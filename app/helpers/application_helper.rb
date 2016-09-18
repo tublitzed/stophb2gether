@@ -25,4 +25,20 @@ module ApplicationHelper
     number = number_with_delimiter(capacity, delimeter: ',')
     "This event was scheduled to take place at #{city}'s #{name}, which has a capacity of #{number}."
   end
+
+  def twitter_loss_share_link(loss)
+    tweet = ERB::Util.url_encode(loss.tweet)
+    "https://twitter.com/intent/tweet?text=#{tweet}"
+  end
+
+  def email_loss_share_link(loss)
+    body = ERB::Util.url_encode("something here" + loss.description)
+    subject = ERB::Util.url_encode(loss.title)
+    "mailto:?subject=#{subject}&body=#{body}"
+  end
+
+  def facebook_loss_share_link(loss)
+    url = ERB::Util.url_encode("https://www.stophb2gether.com/losses/#{loss.slug}")
+    "https://www.facebook.com/sharer/sharer.php?u=#{url}"
+  end
 end
