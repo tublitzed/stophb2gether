@@ -16,7 +16,14 @@
     <li>In most cases, ticket prices were no longer available for an event, so an average for a given artist was used. The source for each average is noted in the <a href="#specific-calculations" class="link">specific calculations</a> section below.</li>
   </ul>
   <p>The formula for events is as follows:</p>
-  <code>((capacity-of-venue * 0.65) * ticket-price) * 0.85</code>
+  <ul class="list">
+    <li>1. <code>number-of-people</code> = capacity-of-venue * 0.65</li>
+    <li>2. <code>ticket-revenue</code> = number-of-people * ticket-price</li>
+    <li>3. <code>booking-fee</code> = ticket-revenue * 0.15</li>
+    <li>4. <code>hotel-revenue</code> = ((number-of-people * 0.03) * hotel-price) * days-of-event</li>
+  </ul>
+
+  <code>total = number-of-events * (ticket-revenue - booking-fee) + hotel-revenue</code>
 </div>
 
 <br />
