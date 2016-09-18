@@ -41,4 +41,28 @@ module ApplicationHelper
     url = ERB::Util.url_encode("https://www.stophb2gether.com/losses/#{loss.slug}")
     "https://www.facebook.com/sharer/sharer.php?u=#{url}"
   end
+
+  def twitter_card_title(loss = nil)
+    if (loss.present?)
+      loss.title
+    else
+      title
+    end
+  end
+
+  def twitter_card_desc(loss = nil)
+    if (loss.present?)
+      loss.description
+    else
+      Settings.META_DESC
+    end
+  end
+
+  def twitter_card_img(loss = nil)
+    if (loss.present?)
+      "https://www.stophb2gether.com/images/losses/#{loss.slug}_card.jpg"
+    else
+      Settings.META_CARD_IMG
+    end
+  end
 end
