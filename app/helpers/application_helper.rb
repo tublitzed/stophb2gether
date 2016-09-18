@@ -23,6 +23,6 @@ module ApplicationHelper
 
   def venue(name, city, capacity)
     number = number_with_delimiter(capacity, delimeter: ',')
-    "This event was scheduled to take place in #{city}'s #{name}, which has a capacity of #{number}."
+    "This event was scheduled to take place at #{city}'s #{name}, which has a capacity of #{number}."
   end
 end

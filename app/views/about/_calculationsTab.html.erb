@@ -1,98 +1,169 @@
 <h3>Where do the numbers come from?</h3>
 <p>Wherever possible, we've tried to use third party sources for the economic impact citations in our losses. Economic impact calculations are never an exact science; as we are not economists, we've tried to leave that to the professionals wherever possible. At the bottom of each individual loss on this site, you'll see a list of sources. If the specific number cited is from an external source, you'll see a link there. If it's not, you'll find a link to this page.</p>
-
 <hr />
-
 <h3>Custom calculations</h3>
 <p>In some cases, economic impact figures were not available for losses. We've followed a <b>very conservative formula</b> for calculations, which you can learn about below in more detail. Most of the losses without figures associated with them fell into specific buckets. We'll outline our strategy for calculating each bucket below.</p>
-
 <div class="indent">
-  <h4 id="events-formula">Events</h4>
-  <p>For each event that took place, we made a few assumptions:</p>
-  <ul class="list">
-    <li>The event took place in a venue that was filled to <b>65%</b> of capacity.</li>
-    <li><b>15%</b> of revenues from total ticket sales were subtracted to account for booking fees.</li>
-    <li><b>3%</b> of the total attendees for a single day event stayed in a hotel.</li>
-    <li>In most cases, ticket prices were no longer available for an event, so an average for a given artist was used. The source for each average is noted in the <a href="#specific-calculations" class="link">specific calculations</a> section below.</li>
-  </ul>
-  <p>The formula for events is as follows:</p>
-  <ul class="list">
-    <li>1. <code>number-of-people</code> = capacity-of-venue * 0.65</li>
-    <li>2. <code>ticket-revenue</code> = number-of-people * ticket-price</li>
-    <li>3. <code>booking-fee</code> = ticket-revenue * 0.15</li>
-    <li>4. <code>hotel-revenue</code> = ((number-of-people * 0.03) * hotel-price) * days-of-event</li>
-  </ul>
-
-  <code>total = number-of-events * (ticket-revenue - booking-fee) + hotel-revenue</code>
+	<h4 id="performances-formula">Performances</h4>
+	<p>For each performance, concert, or sporting event that took place, we made a few assumptions:</p>
+	<ul class="list">
+		<li>The event took place in a venue that was filled to <b>65%</b> of capacity.</li>
+		<li><b>15%</b> of revenues from total ticket sales were subtracted to account for booking fees.</li>
+		<li><b>3%</b> of the total attendees for a single day event stayed in a hotel.</li>
+		<li>In most cases, ticket prices were no longer available for an event, so an average for a given artist was used. The source for each average is noted in the <a href="#specific-calculations" class="link">specific calculations</a> section below.</li>
+	</ul>
+	<p>The formula for performances is as follows:</p>
+	<ul class="list">
+		<li>1. <code>number-of-people</code> = capacity-of-venue * 0.65</li>
+		<li>2. <code>ticket-revenue</code> = number-of-people * ticket-price</li>
+		<li>3. <code>booking-fee</code> = ticket-revenue * 0.15</li>
+		<li>4. <code>hotel-revenue</code> = ((number-of-people * 0.03) * hotel-price) * days-of-event</li>
+	</ul>
+	<code>total = number-of-events * (ticket-revenue - booking-fee) + hotel-revenue</code>
+	<hr />
+	<h4 id="conferences-formula">Conferences</h4>
+	<p>For each conference or convention that took place, we assumed:</p>
+	<ul class="list">
+		<li>Of the people attending the event, 75% of them booked a hotel room.</li>
+	</ul>
+	<p>The formula for conferences is as follows:</p>
+	<ul class="list">
+		<li>1. <code>revenue-per-night</code> = event-attendees * 0.5</li>
+	</ul>
+	<code>total = duration-of-event * revenue-per-night</code>
 </div>
-
 <br />
 <p>Each loss has been <b>rounded down</b> to the nearest $1,000. So, if a loss was $28,874, we rounded down to $28,000.</p>
-
 <p>It's worth noting that the formulas outlined above do not take into account a number of things that would likely make these numbers much higher. We completely ignored:</p>
-
-  <ul class="list">
-    <li>Spending in the area related to the event/trip. Ie dinners, shopping.</li>
-    <li>Local transportation costs. Ie rental cars, taxis, Uber.</li>
-  </ul>
-
+<ul class="list">
+	<li>Spending in the area related to the event/trip. Ie dinners, shopping.</li>
+	<li>Local transportation costs. Ie rental cars, taxis, Uber.</li>
+</ul>
 <hr />
 <h3 id="specific-calculations">Specific calculations</h3>
 <p>Here's a complete list of each item where we've applied a custom calculation, and the details around each one.</p>
-
 <div class="indent">
 
 <% if (Loss.exists?(slug: 'duke-vs-albany-basketball')) %>
-  <h4 id="duke-vs-albany-basketball"><a href="<%= url_for('losses/duke-vs-albany-basketball') %>" class="link">Duke vs. Albany</a></h4>
-  <p>
-    <%= raw(formula_html("events")) %>
-    <%= raw(venue("Cameron Stadium", "Durham", 9314)) %>
-    <%= raw(average_ticket_price(198.02, "a Duke game", "http://247wallst.com/special-report/2016/03/10/the-25-most-expensive-college-basketball-tickets/6/")) %>
-    <%= raw(hotel_html("Durham")) %>
-  </p>
+	<h4 id="duke-vs-albany-basketball"><a href="<%= url_for('losses/duke-vs-albany-basketball') %>" class="link">Duke vs. Albany</a></h4>
+	<p>
+		<%= raw(formula_html("performances")) %>
+		<%= raw(venue("Cameron Stadium", "Durham", 9314)) %>
+		<%= raw(average_ticket_price(198.02, "a Duke game", "http://247wallst.com/special-report/2016/03/10/the-25-most-expensive-college-basketball-tickets/6/")) %>
+		<%= raw(hotel_html("Durham")) %>
+	</p>
 <% end %>
 
-
 <% if (Loss.exists?(slug: 'blue-man-group')) %>
-  <h4 id="blue-man-group"><a href="<%= url_for('losses/blue-man-group') %>" class="link">Blue Man Group</a></h4>
-  <p><%= raw(formula_html("events")) %> There were 7 total shows planned to take place at Charlotte's Belk Theater, which has a capacity of 2,097. The average ticket price for a Blue Man Group show is <a href="http://www.pollstar.com/atpDetail.aspx?SearchBy=B" class="link" target="_blank">$58.23</a>. <%= raw(hotel_html("Charlotte")) %>
-  </p>
+	<h4 id="blue-man-group"><a href="<%= url_for('losses/blue-man-group') %>" class="link">Blue Man Group</a></h4>
+	<p><%= raw(formula_html("performances")) %> There were 7 total shows planned to take place at Charlotte's Belk Theater, which has a capacity of 2,097. The average ticket price for a Blue Man Group show is <a href="http://www.pollstar.com/atpDetail.aspx?SearchBy=B" class="link" target="_blank">$58.23</a>. <%= raw(hotel_html("Charlotte")) %>
+	</p>
 <% end %>
 
 <% if (Loss.exists?(slug: 'highpoint-market')) %>
-  <h4 id="highpoint-market"><a href="<%= url_for('losses/highpoint-market') %>" class="link">Highpoint Market</a></h4>
-  <p>This event loss figure was calculated as follows: The market has been cited as bringing <a href="http://www.hickoryrecord.com/news/crowd-thins-slightly-at-nc-furniture-market-after-lgbt-law/article_0063fe40-2429-11e6-bd3a-9baf79980be0.html" class="link" target="_blank">$5 billion</a> in economic activity to NC.  Attendance for the market dipped this year from <a href="http://www.hickoryrecord.com/news/crowd-thins-slightly-at-nc-furniture-market-after-lgbt-law/article_0063fe40-2429-11e6-bd3a-9baf79980be0.html" class="link" target="_blank">80,000 to 79,000</a>, which has been cited as a reversal for the market and correlated with HB2. <code>79/80 = x/5000000000 | x = 4937500000 | total = 5000000000 - 4937500000</code>
-  </p>
+	<h4 id="highpoint-market"><a href="<%= url_for('losses/highpoint-market') %>" class="link">Highpoint Market</a></h4>
+	<p>This event loss figure was calculated as follows: The market has been cited as bringing <a href="http://www.hickoryrecord.com/news/crowd-thins-slightly-at-nc-furniture-market-after-lgbt-law/article_0063fe40-2429-11e6-bd3a-9baf79980be0.html" class="link" target="_blank">$5 billion</a> in economic activity to NC.  Attendance for the market dipped this year from <a href="http://www.hickoryrecord.com/news/crowd-thins-slightly-at-nc-furniture-market-after-lgbt-law/article_0063fe40-2429-11e6-bd3a-9baf79980be0.html" class="link" target="_blank">80,000 to 79,000</a>, which has been cited as a reversal for the market and correlated with HB2. <code>79/80 = x/5000000000 | x = 4937500000 | total = 5000000000 - 4937500000</code>
+	</p>
 <% end %>
 
 <% if (Loss.exists?(slug: 'maroon-5')) %>
-  <h4 id="maroon-5"><a href="<%= url_for('losses/maroon-5') %>" class="link">Maroon 5</a></h4>
-  <p><%= raw(formula_html("events")) %> Two shows were cancelled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500). Ticket price for the Charlotte show is listed as a range of <a href="http://charlotte.eventful.com/events/maroon-5-concert-/E0-001-090071917-3" class="link" target="_blank">$30.50 - $126</a>, we used a mean of $78.25. <%= raw(hotel_html("Charlotte")) %> <%= raw(hotel_html("Raleigh")) %>
-  </p>
+	<h4 id="maroon-5"><a href="<%= url_for('losses/maroon-5') %>" class="link">Maroon 5</a></h4>
+	<p><%= raw(formula_html("performances")) %> Two shows were cancelled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500). Ticket price for the Charlotte show is listed as a range of <a href="http://charlotte.eventful.com/events/maroon-5-concert-/E0-001-090071917-3" class="link" target="_blank">$30.50 - $126</a>, we used a mean of $78.25. <%= raw(hotel_html("Charlotte")) %> <%= raw(hotel_html("Raleigh")) %>
+	</p>
 <% end %>
 
 <% if (Loss.exists?(slug: 'itzhak-perlman')) %>
-  <h4 id="itzhak-perlman"><a href="<%= url_for('losses/itzhak-perlman') %>" class="link">Itzhak Perlman</a></h4>
-  <p>
-    <%= raw(formula_html("events")) %>
-    <%= raw(venue("Meymandi Concert Hall", "Raleigh", 1700)) %>
-    <%= raw(average_ticket_price(80.81, "Itzhak Perlman", "http://www.pollstar.com/atpDetail.aspx?SearchBy=I")) %>
-    <%= raw(hotel_html("Raleigh")) %>
-  </p>
+	<h4 id="itzhak-perlman"><a href="<%= url_for('losses/itzhak-perlman') %>" class="link">Itzhak Perlman</a></h4>
+	<p>
+	<%= raw(formula_html("performances")) %>
+	<%= raw(venue("Meymandi Concert Hall", "Raleigh", 1700)) %>
+	<%= raw(average_ticket_price(80.81, "Itzhak Perlman", "http://www.pollstar.com/atpDetail.aspx?SearchBy=I")) %>
+	<%= raw(hotel_html("Raleigh")) %>
+	</p>
 <% end %>
 
 <% if (Loss.exists?(slug: 'demi-lovato-nick-jonas')) %>
-  <h4 id="demi-lovato-nick-jonas"><a href="<%= url_for('losses/demi-lovato-nick-jonas') %>" class="link">Demi Lovato and Nick Jonas</a></h4>
-  <p>
-    <%= raw(formula_html("events")) %>
-    Two shows were cancelled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500).
+<h4 id="demi-lovato-nick-jonas"><a href="<%= url_for('losses/demi-lovato-nick-jonas') %>" class="link">Demi Lovato and Nick Jonas</a></h4>
+<p>
+	<%= raw(formula_html("performances")) %>
+	Two shows were cancelled, one at Charlotte's Spectrum Center( formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500).
+	The ticket prices for the Raleigh show were used for both events. The Raleigh show prices are listed as <a href="https://www.thepncarena.com/events/detail/demi-lovato-2" class="link" target="blank">$26.95, $36.95, $66.95, and $86.95</a>. We averaged these for a final ticket price of $54.45.
+	<%= raw(hotel_html("Raleigh")) %>  <%= raw(hotel_html("Charlotte")) %>
+</p>
+<% end %>
 
-    The ticket prices for the Raleigh show were used for both events. The Raleigh show prices are listed as <a href="https://www.thepncarena.com/events/detail/demi-lovato-2" class="link" target="blank">$26.95, $36.95, $66.95, and $86.95</a>. We averaged these for a final ticket price of $54.45.
-    <%= raw(hotel_html("Raleigh")) %>  <%= raw(hotel_html("Charlotte")) %>
-  </p>
+<% if (Loss.exists?(slug: 'nova')) %>
+	<h4 id="nova"><a href="<%= url_for('losses/nova') %>" class="link">The National Organization for Victim Assistance</a></h4>
+	<p>
+	This event would have yielded <a href="http://www.charlotteobserver.com/news/business/article73023232.html" class="link" target="_blank">1,516</a> hotel room nights for the city of Charlotte.
+	<%= raw(hotel_html("Charlotte")) %>
+	</p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'alsc')) %>
+	<h4 id="alsc"><a href="<%= url_for('losses/alsc') %>" class="link">Association for Library Service to Children</a></h4>
+	<p>
+	<%= raw(formula_html("conferences")) %>
+	There were 300 confirmed attendees for this event (via email from <a href="http://www.ala.org/alsc/" class="link" target="_blank">ALA</a> source).
+	<%= raw(hotel_html("Charlotte")) %>
+	</p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'pearl-jam')) %>
+	<h4 id="pearl-jam"><a href="<%= url_for('losses/pearl-jam') %>" class="link">Pearl Jam</a></h4>
+	<p>
+		<%= raw(formula_html("performances")) %>
+		<%= raw(venue("PNC Arena", "Raleigh", 1700)) %>
+		<%= raw(average_ticket_price(65.57, "Pearl Jam", "http://www.pollstar.com/atpDetail.aspx?SearchBy=P")) %>
+		<%= raw(hotel_html("Raleigh")) %>
+	</p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'boston')) %>
+	<h4 id="boston"><a href="<%= url_for('losses/boston') %>" class="link">Boston</a></h4>
+	<p>
+		<%= raw(formula_html("performances")) %>
+		Three shows were cancelled, one at Charlotte's Spectrum Center (formerly Time Warner Cable Arena, capacity 16,700), another at Greensboro's White Oak Amphitheatre (capacity 7,061), and the last at Raleigh's Red Hat Ampitheater (capacity 5,990).
+		<%= raw(average_ticket_price(58.73, "Boston", "http://www.pollstar.com/atpDetail.aspx?SearchBy=B")) %>
+		<%= raw(hotel_html("Raleigh")) %>
+		<%= raw(hotel_html("Charlotte")) %>
+		<%= raw(hotel_html("Greensboro")) %>
+	</p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'cirque-du-soleil')) %>
+	<h4 id="cirque-du-soleil"><a href="<%= url_for('losses/cirque-du-soleil') %>" class="link">Cirque du Soleil</a></h4>
+	<p>
+		<%= raw(formula_html("performances")) %>
+		A total of 21 shows were cancelled, 7 in each location. Cirque du Soleil's OVO was scheduled to stop at the Greensboro Coliseum (capacity 23,000) and Charlotte's Spectrum Center( formerly Time Warner Cable Arena, capacity 16,700).  Cirque du Soleil's TORUK was scheduled to stop at Raleigh's PNC arena (capacity 19,500).
+
+		<%= raw(average_ticket_price(66.47, "Cirque du Soleil's OVO", "http://www.pollstar.com/atpDetail.aspx?SearchBy=C")) %>
+		<%= raw(average_ticket_price(67.62, "Cirque du Soleil's TORUK", "http://www.pollstar.com/atpDetail.aspx?SearchBy=C")) %>
+
+		<%= raw(hotel_html("Raleigh")) %>
+		<%= raw(hotel_html("Charlotte")) %>
+		<%= raw(hotel_html("Greensboro")) %>
+	</p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'ringo-starr')) %>
+	<h4 id="ringo-starr"><a href="<%= url_for('losses/ringo-starr') %>" class="link">Ringo Starr</a></h4>
+	<p>
+		<%= raw(formula_html("performances")) %>
+		<%= raw(venue("Koka Booth Ampitheatre", "Cary", 7000)) %>
+		<%= raw(average_ticket_price(90.20, "Ringo Starr", "http://www.pollstar.com/atpDetail.aspx?SearchBy=R")) %>
+		The average 3-star hotel price in Cary is <a href='https://www.hotelplanner.com/Hotels/3214-in-Cary-NC.html#dir-bar' class="link" target="_blank">$97.61</a>.
+	</p>
+<% end %>
+
+
+<% if (Loss.exists?(slug: 'duck-pd-conference')) %>
+	<h4 id="duck-pd-conference"><a href="<%= url_for('losses/duck-pd-conference') %>" class="link">Duck Police Department</a></h4>
+	<p>
+		15 out of town guests where confirmed to attend this conference (figured obtained via email with Duck PD).
+		The average hotel room price near Duck is <a href='https://www.kayak.com/hotels/Duck,NC-c42932/2017-04-14/2017-04-15' class="link" target="_blank">$85</a>.
+	</p>
 <% end %>
 
 <hr />
-
-
 </div>
