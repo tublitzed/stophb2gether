@@ -9,13 +9,13 @@
   cursor: pointer;
   height: calc(#{$header-height} - 3px);
   padding: 0 20px;
-  @include transition;
   border-left: 1px solid $color-grey-800;
+  @include transition;
+
   &:hover {
     color: $color-red;
   }
 }
-
 
 // foundation override
 [type='checkbox'] + .sidebarnav-trigger-label {
@@ -60,13 +60,15 @@
 
     &--social {
       padding: 0;
+      position: absolute;
+      margin-top: 163px;
+      width: 173px;
+      line-height: 2.3;
     }
+  }
 
-    &:hover {
-      border: 0;
-      background: $color-red;
-      color: #FFF;
-    }
+  .nav__link-inner {
+    padding: 10px 8px;
   }
 
   .header-placeholder {
@@ -79,7 +81,6 @@
 }
 
 @media #{$media-sm} {
-
   // foundation override
   [type='checkbox'] + .sidebarnav-trigger-label {
     display: block;
@@ -87,11 +88,6 @@
 
   header .nav--main {
     display: none;
-  }
-
-  #sidebarnav-trigger:checked ~ .body-wrapper {
-
-
   }
 
   #sidebarnav-trigger:checked ~ .sidebarnav-trigger-label {

@@ -1,11 +1,7 @@
 .header {
   width: 100%;
 
-  @include gradient--ltr(
-    transparentize($color-near-black, 0.05),
-    transparentize($color-near-black, 0.2),
-    30%
-    );
+  @include gradient--ltr(transparentize($color-near-black, 0.05), transparentize($color-near-black, 0.2), 30%);
 
   height: $header-height;
   position: fixed;
@@ -49,13 +45,35 @@
   }
 }
 
+.header-twitter-link {
+  display: none;
+  position: absolute;
+  background: $color-red;
+  color: #FFF;
+  font-size: 30px;
+  height: calc(#{$header-height} - 20px);
+  line-height: 1.8;
+  padding: 0 20px;
+  right: 122px;
+  margin-top: 9px;
+
+  &:hover {
+    background: #FFF;
+    color: $color-red;
+  }
+}
 
 @media #{$media-sm} {
   .logo {
     margin: 0 0 0 -2px;
+
     svg {
       width: 90%;
       height: 90%;
     }
+  }
+
+  .header-twitter-link {
+    display: block;
   }
 }
