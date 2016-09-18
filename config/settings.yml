@@ -12,3 +12,10 @@ HOTEL_PRICE_CHARLOTTE: 121
 HOTEL_PRICE_RALEIGH: 95.87
 HOTEL_PRICE_CARY: 97.61
 HOTEL_PRICE_GREENSBORO: 90
+
+
+HOTEL_SOURCE_DURHAM: "http://www.cvent.com/rfp/durham-nc-guide/meeting-event-planning-627e2cad66d4454ba89c3e18a7d2db37.aspx"
+HOTEL_SOURCE_CHARLOTTE: "http://www.statista.com/statistics/202379/average-daily-rate-of-hotels-in-charlotte/"
+HOTEL_SOURCE_RALEIGH: "http://www.bizjournals.com/triangle/news/2016/02/11/wake-county-reports-highest-tourism-tax-revenues.html/"
+HOTEL_SOURCE_CARY: ""
+HOTEL_SOURCE_GREENSBORO: ""

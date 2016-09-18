@@ -13,6 +13,16 @@ module ApplicationHelper
 
   def hotel_html(city)
     amount = Settings['HOTEL_PRICE_' + city.upcase]
-    'The average hotel room price in ' + city + ' is <a href="#hotel-price-list" class="link">$' + amount.to_s + '</a>.'
+    link = Settings['HOTEL_SOURCE_' + city.upcase]
+    'The average hotel room price in ' + city + ' is <a href="' + link + '" class="link" target="_blank">$' + amount.to_s + '</a>.'
+  end
+
+  def average_ticket_price(amount, name, link)
+    'The average ticket for ' + name + ' is <a href="' + link + '" class="link" target="blank">$' + amount.to_s + '</a>.'
+  end
+
+  def venue(name, city, capacity)
+    number = number_with_delimiter(capacity, delimeter: ',')
+    "This event was scheduled to take place in #{city}'s #{name}, which has a capacity of #{number}."
   end
 end

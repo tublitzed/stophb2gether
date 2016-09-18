@@ -44,9 +44,14 @@
 
 <% if (Loss.exists?(slug: 'duke-vs-albany-basketball')) %>
   <h4 id="duke-vs-albany-basketball"><a href="<%= url_for('losses/duke-vs-albany-basketball') %>" class="link">Duke vs. Albany</a></h4>
-  <p><%= raw(formula_html("events")) %> This event was scheduled to take place at Cameron Stadium, which has a capacity of 9,314. The average ticket price for a Duke game is <a href="http://247wallst.com/special-report/2016/03/10/the-25-most-expensive-college-basketball-tickets/6/" class="link" target="_blank">$198.02</a>. <%= raw(hotel_html("Durham")) %>
+  <p>
+    <%= raw(formula_html("events")) %>
+    <%= raw(venue("Cameron Stadium", "Durham", 9314)) %>
+    <%= raw(average_ticket_price(198.02, "a Duke game", "http://247wallst.com/special-report/2016/03/10/the-25-most-expensive-college-basketball-tickets/6/")) %>
+    <%= raw(hotel_html("Durham")) %>
   </p>
 <% end %>
+
 
 <% if (Loss.exists?(slug: 'blue-man-group')) %>
   <h4 id="blue-man-group"><a href="<%= url_for('losses/blue-man-group') %>" class="link">Blue Man Group</a></h4>
@@ -54,12 +59,40 @@
   </p>
 <% end %>
 
+<% if (Loss.exists?(slug: 'highpoint-market')) %>
+  <h4 id="highpoint-market"><a href="<%= url_for('losses/highpoint-market') %>" class="link">Highpoint Market</a></h4>
+  <p>This event loss figure was calculated as follows: The market has been cited as bringing <a href="http://www.hickoryrecord.com/news/crowd-thins-slightly-at-nc-furniture-market-after-lgbt-law/article_0063fe40-2429-11e6-bd3a-9baf79980be0.html" class="link" target="_blank">$5 billion</a> in economic activity to NC.  Attendance for the market dipped this year from <a href="http://www.hickoryrecord.com/news/crowd-thins-slightly-at-nc-furniture-market-after-lgbt-law/article_0063fe40-2429-11e6-bd3a-9baf79980be0.html" class="link" target="_blank">80,000 to 79,000</a>, which has been cited as a reversal for the market and correlated with HB2. <code>79/80 = x/5000000000 | x = 4937500000 | total = 5000000000 - 4937500000</code>
+  </p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'maroon-5')) %>
+  <h4 id="maroon-5"><a href="<%= url_for('losses/maroon-5') %>" class="link">Maroon 5</a></h4>
+  <p><%= raw(formula_html("events")) %> Two shows were cancelled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500). Ticket price for the Charlotte show is listed as a range of <a href="http://charlotte.eventful.com/events/maroon-5-concert-/E0-001-090071917-3" class="link" target="_blank">$30.50 - $126</a>, we used a mean of $78.25. <%= raw(hotel_html("Charlotte")) %> <%= raw(hotel_html("Raleigh")) %>
+  </p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'itzhak-perlman')) %>
+  <h4 id="itzhak-perlman"><a href="<%= url_for('losses/itzhak-perlman') %>" class="link">Itzhak Perlman</a></h4>
+  <p>
+    <%= raw(formula_html("events")) %>
+    <%= raw(venue("Meymandi Concert Hall", "Raleigh", 1700)) %>
+    <%= raw(average_ticket_price(80.81, "Itzhak Perlman", "http://www.pollstar.com/atpDetail.aspx?SearchBy=I")) %>
+    <%= raw(hotel_html("Raleigh")) %>
+  </p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'demi-lovato-nick-jonas')) %>
+  <h4 id="demi-lovato-nick-jonas"><a href="<%= url_for('losses/demi-lovato-nick-jonas') %>" class="link">Demi Lovato and Nick Jonas</a></h4>
+  <p>
+    <%= raw(formula_html("events")) %>
+    Two shows were cancelled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500).
+
+    The ticket prices for the Raleigh show were used for both events. The Raleigh show prices are listed as <a href="https://www.thepncarena.com/events/detail/demi-lovato-2" class="link" target="blank">$26.95, $36.95, $66.95, and $86.95</a>. We averaged these for a final ticket price of $54.45.
+    <%= raw(hotel_html("Raleigh")) %>  <%= raw(hotel_html("Charlotte")) %>
+  </p>
+<% end %>
+
 <hr />
-<h4 id="hotel-price-list">Hotel prices in various North Carolina cities</h4>
-<br />
-<ul class="list">
-  <li>Durham - <a href="http://www.cvent.com/rfp/durham-nc-guide/meeting-event-planning-627e2cad66d4454ba89c3e18a7d2db37.aspx" class="link" target="_blank">$<%= Settings.HOTEL_PRICE_DURHAM %></a></li>
-  <li>Charlotte - <a href="http://www.statista.com/statistics/202379/average-daily-rate-of-hotels-in-charlotte/" class="link" target="_blank">$<%= Settings.HOTEL_PRICE_CHARLOTTE %></a></li>
-</ul>
+
 
 </div>
