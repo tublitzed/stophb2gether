@@ -32,7 +32,12 @@ module ApplicationHelper
   end
 
   def email_loss_share_link(loss)
-    body = ERB::Util.url_encode("something here" + loss.description)
+    html = "Hi, \n\n"
+    html += "I thought you might find this interesting:\n\n"
+    html += loss.title + "\n"
+    html += loss.description + "\n\n"
+    html += "Read more about it at: www.stophb2gether.com/losses/" + loss.slug
+    body = ERB::Util.url_encode(html)
     subject = ERB::Util.url_encode(loss.title)
     "mailto:?subject=#{subject}&body=#{body}"
   end
