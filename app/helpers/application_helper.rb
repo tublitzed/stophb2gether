@@ -42,15 +42,15 @@ module ApplicationHelper
     "https://www.facebook.com/sharer/sharer.php?u=#{url}"
   end
 
-  def twitter_card_title(loss = nil)
+  def og_title(loss = nil)
     if (loss.present?)
       loss.title
     else
-      title
+      title.gsub('| StopHB2gether', '').squish
     end
   end
 
-  def twitter_card_desc(loss = nil)
+  def og_desc(loss = nil)
     if (loss.present?)
       loss.description
     else
@@ -58,11 +58,12 @@ module ApplicationHelper
     end
   end
 
-  def twitter_card_img(loss = nil)
+  def og_img(loss = nil)
     if (loss.present?)
       "https://www.stophb2gether.com/images/losses/#{loss.slug}_card.jpg"
     else
       Settings.META_CARD_IMG
     end
   end
+
 end

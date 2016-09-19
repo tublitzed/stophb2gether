@@ -1,5 +1,14 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@stophb2gether" />
-<meta name="twitter:title" content="<%= twitter_card_title(loss) %>" />
-<meta name="twitter:description" content="<%= twitter_card_desc(loss) %>" />
-<meta name="twitter:image" content="<%= twitter_card_img(loss) %>" />
+<meta name="twitter:title" content="<%= og_title(loss) %>" />
+<meta name="twitter:description" content="<%= og_desc(loss) %>" />
+<meta name="twitter:image" content="<%= og_img(loss) %>" />
+
+
+<meta property="og:url" content="<%= request.original_url %>" />
+<meta property="og:type" content="<%= loss.present? ? 'article' : 'website' %>" />
+<meta property="og:title" content="<%= og_title(loss) %>" />
+<meta property="og:description" content="<%= og_desc(loss) %>" />
+<meta property="og:image" content="<%= og_img(loss) %>" />
+
+<meta property="fb:app_id" content="<%= Settings.FB_APP_ID %>" />

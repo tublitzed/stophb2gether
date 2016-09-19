@@ -6,6 +6,8 @@ WWST_AUTHORIZATION_HEADER: 9423b908206e7365702e4a72d530c6723c711a18549952790fff1
 ADMIN_EMAIL: 'admin@stophb2gether.com'
 TWITTER_LINK: 'https://twitter.com/stophb2gether'
 
+FB_APP_ID: '1793062874269631'
+
 META_DESC: "Learn more about HB2 and the devastating economic impact it's had so far on the state of North Carolina."
 META_CARD_IMG: "https://www.stophb2gether.com/images/card.jpg"
 
