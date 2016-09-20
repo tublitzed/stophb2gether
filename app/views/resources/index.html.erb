@@ -5,77 +5,9 @@
     <div class="page-banner page-banner--resources"></div>
   </div>
 </div>
-
-<div class="row">
-  <div class="small-12 columns">
-    <br />
-    <h2>What is HB2?</h2>
-    <div class="indent">
-      <p>If you're looking to learn more about HB2, here's some useful links:</p>
-      <ul class="list">
-        <li>The <a href="https://en.wikipedia.org/wiki/Public_Facilities_Privacy_%26_Security_Act" class="link" target="_blank">Wikipedia page on HB2</a> includes a very detailed and well sourced account of the bill and it's history.</li>
-        <li>Here's the <a href="<%= asset_url('pdf/H2v4.pdf') %>" class="link" target="_blank">full text</a> of the bill. You can see that this is version 4, there are 3 previous versions also available: <a href="<%= asset_url('pdf/H2v1.pdf') %>" class="link" target="_blank">v1</a>, <a href="<%= asset_url('pdf/H2v2.pdf') %>" class="link" target="_blank">v2</a>, and <a href="<%= asset_url('pdf/H2v3.pdf') %>" class="link" target="_blank">v3</a>.
-        <small class="subtle"> Obtained via <a href="http://www.ncleg.net/" class="link" target="_blank">NCGA</a>.</small></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= render partial: 'what' %>
 <hr />
-<div class="row">
-  <div class="small-12 columns">
-    <br />
-    <h2>Stop HB2</h2>
-    <div class="indent">
-      <p>Since HB2 came into existence, there are a lot of sites and protest movements that have sprung up around it. There many people working to stop this bill. Here's just a few of them:</p>
-      <hr>
-
-      <p>On Twitter, you can find the hashtags <a href="<%= hashtag_search_url('WeAreNotThis') %>" class="link" target="_blank">#WeAreNotThis</a>, <a href="<%= hashtag_search_url('RepealHB2') %>" class="link" target="_blank">#RepealHB2</a>, <a href="<%= hashtag_search_url('HateBill2') %>" class="link" target="_blank">#HateBill2</a>, <a href="<%= hashtag_search_url('YallMeansAll') %>" class="link" target="_blank">#YallMeansAll</a>, and many more cropping up each day.</p>
-
-      <hr />
-      <a href="http://startups-against-hb2.com/" class="link other-org" target="_blank">
-        <div class="row">
-          <div class="small-3 medium-2 columns">
-            <img src="/images/other-sites/startups-against-hb2.jpg" class="other-org__img" />
-          </div>
-          <div class="small-9 medium-10 columns">
-            <h3>Startups against HB2</h3>
-            <p>HB2 is wrong — for people and business. This site is a new and growing list of small businesses who know North Carolina can do better. <br /><small>startups-against-hb2.com</small></p>
-          </div>
-        </div>
-      </a>
-
-      <hr>
-
-      <a href="http://turnoutnc.org/" class="link other-org" target="_blank">
-        <div class="row">
-          <div class="small-3 medium-2 columns">
-            <img src="/images/other-sites/turnoutnc.jpg" class="other-org__img" />
-          </div>
-          <div class="small-9 medium-10 columns">
-            <h3>TurnOUT! NC</h3>
-            <p>North Carolinians agree: House Bill 2 must be repealed. <br /><small>turnoutnc.org</small></p>
-          </div>
-        </div>
-      </a>
-
-      <hr>
-
-      <a href="http://www.catscradle.com/event/1292293-stand-against-hb2-north-carrboro/" class="link other-org" target="_blank">
-        <div class="row">
-          <div class="small-3 medium-2 columns">
-            <img src="/images/other-sites/stand-against-hb2-carrboro.jpg" class="other-org__img" />
-          </div>
-          <div class="small-9 medium-10 columns">
-            <h3>Stand Against HB2</h3>
-            <p>North Carolina Musicians United for EqualityNC and QORDS. Featuring The Love Language, The Veldt, Foxture, Henbrain, Pre-Raphaelites, Olsen Twins, My 3 Sons, Happy Abandon, Onward, Soldiers, Blue Cactus, the grand shell game, Matt Phillips & the Back Pocket, The Fabulous Knobs, Pinto, the dB's, Brett Harris, 6 String Drag, Tres Chicas, Robert Kirkland, Rod Abernethy, Ur Mom, Orlando Parker, Jr., Someone's Sister. Sunday Nov 6th 2016, at Cat's Cradle, Carrboro NC.<br /><small>catscradle.com/event/1292293-stand-against-hb2-north-carrboro/</small></p>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</div>
-
+<%= render partial: 'stop' %>
 <hr />
 <div class="row">
   <div class="small-12 columns">
