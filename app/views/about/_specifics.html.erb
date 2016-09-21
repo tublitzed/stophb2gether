@@ -125,3 +125,17 @@
     The average 3-star hotel price in Cary is <a href='https://www.hotelplanner.com/Hotels/3214-in-Cary-NC.html#dir-bar' class="link" target="_blank">$97.61</a>.
   </p>
 <% end %>
+
+<% if (Loss.exists?(slug: 'russell-wilson-ciara')) %>
+  <h4 id="russell-wilson-ciara"><a href="<%= url_for('losses/russell-wilson-ciara') %>" class="link">Russell Wilson and Ciara</a></h4>
+  <p>
+  There was no data available on the location of the wedding, so we took an average of Charlotte ($<%= Settings.HOTEL_PRICE_CHARLOTTE %>) and Raleigh ($<%= Settings.HOTEL_PRICE_RALEIGH %>), or $108.43. There were <a href="http://www.theknotnews.com/mindy-weiss-ciara-russell-wilson-wedding-exclusive-12390" target="_blank" class="link">110 guests</a>, and we assumed that 75% of them booked hotel rooms. We also assumed the length of stay to be just one night.
+  </p>
+<% end %>
+
+<% if (Loss.exists?(slug: 'uvm-vs-unc')) %>
+  <h4 id="uvm-vs-unc"><a href="<%= url_for('losses/uvm-vs-unc') %>" class="link">UVM vs. UNC</a></h4>
+  <p>
+  This one was a bit of a special case because of the fact that <a href="http://www.usatoday.com/story/sports/college/vermont/2016/08/24/uvm-cancels-basketball-game-unc/89303284/" class="link" target="_blank">is on the record agreeing to pay UVM $17,500 to come to NC plus 12 hotel nights per player</a>. Because of this, we adjusted our standard <a href="#performances-formula" class="link">performances formula</a> as follows: we replaced the booking fee with $17,500. We also removed all hotel room nights from the formula completely. The 2016 UNC women's basketbal ticket prices are <a href="http://www.goheels.com/ViewArticle.dbml?ATCLID=210433758" class="link" target="_blank">$4 for a standard game</a>. <%= raw(hotel_html("ChapelHill")) %>
+  </p>
+<% end %>
