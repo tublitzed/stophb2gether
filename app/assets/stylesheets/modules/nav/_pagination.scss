@@ -38,3 +38,10 @@
     }
   }
 }
+
+@media #{$media-sm-foundation} {
+  .pagination-info {
+    margin-top: 3px;
+    font-size: 0.9rem;
+  }
+}
