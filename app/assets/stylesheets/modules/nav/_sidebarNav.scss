@@ -39,7 +39,7 @@
 
   .nav {
     float: none;
-    margin-top: calc(#{$header-height} - 80px);
+    margin: 2px;
   }
 
   .nav__links {
@@ -48,7 +48,7 @@
     li {
       float: none;
       text-align: center;
-      margin: 0 0 3px;
+      margin: 0 0 2px 0;
       padding: 0;
     }
   }
@@ -59,15 +59,42 @@
 
     &--social {
       padding: 0;
-      position: absolute;
-      margin-top: 163px;
-      width: 173px;
-      line-height: 2.3;
+      line-height: 2.4;
+
+      &:hover {
+        background: transparentize($color-red, 0.75);
+      }
+
+      &:active {
+        .nav__link-inner {
+          color: #FFF;
+          background: $color-red;
+        }
+      }
+    }
+
+    &:hover {
+      .nav__link-inner {
+        background: $color-grey-600;
+      }
+    }
+
+    &:active {
+      .nav__link-inner {
+        color: #FFF;
+        background: $color-red;
+      }
     }
   }
 
+  .nav__link--active .nav__link-inner {
+    background: $color-grey-600;
+  }
+
   .nav__link-inner {
-    padding: 10px 8px;
+    border: 0;
+    padding: 16px 8px;
+    background: $color-near-black;
   }
 
   .header-placeholder {
@@ -91,9 +118,14 @@
 
   #sidebarnav-trigger:checked ~ .sidebarnav-trigger-label {
     background: $color-grey-200;
-    right: 30px;
+    right: 0;
     color: $color-grey-600;
     border: 0;
+    width: #{$sidebar-nav-width}px;
+    height: 72px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 
     &:hover {
       color: $color-red;

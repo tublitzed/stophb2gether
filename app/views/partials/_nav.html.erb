@@ -1,15 +1,10 @@
 <nav class="nav nav--main">
   <ul class="nav__links nav__links--main">
     <% if logged_in? %>
-      <li class="social">
-        <a href="<%= Settings.TWITTER_LINK %>" target="_blank" class="nav__link nav__link--social">
-          <span class="fa fa-twitter"></span>
-        </a>
-      </li>
       <li>
-        <a href="<%= contribute_path %>" class="nav__link<% if @appPath == 'contribute' %> nav__link--active<% end %>">
+        <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' || @appPath == 'loss' %> nav__link--active<% end %>">
           <span class="nav__link-inner">
-            Get Involved
+            Losses
           </span>
         </a>
       </li>
@@ -21,10 +16,15 @@
         </a>
       </li>
       <li>
-        <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' || @appPath == 'loss' %> nav__link--active<% end %>">
+        <a href="<%= contribute_path %>" class="nav__link<% if @appPath == 'contribute' %> nav__link--active<% end %>">
           <span class="nav__link-inner">
-            Losses
+            Get Involved
           </span>
+        </a>
+      </li>
+      <li class="social">
+        <a href="<%= Settings.TWITTER_LINK %>" target="_blank" class="nav__link nav__link--social">
+          <span class="fa fa-twitter"></span>
         </a>
       </li>
     <% end %>
