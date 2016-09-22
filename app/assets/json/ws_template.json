@@ -1,0 +1,1209 @@
+{
+  "slug": "master",
+  "name": "master",
+  "archived": false,
+  "content": {
+    "name": "master",
+    "klass": "narrative",
+    "segments": [
+      {
+        "klass": "divider"
+      },
+      {
+        "klass": "synonym",
+        "id": "cde3bc46-bf41-4544-a41c-462f50b5a1ec",
+        "synonym_variations": [
+          {
+            "klass": "synonym_variation",
+            "id": "25f13d63-e988-4503-8871-0c9e9b4e7c06",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "ebb99297-b3d6-4a32-b882-dad120d4f10f",
+                "value": "Here's another unfortunate loss for North Carolina."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "d5819cf8-addb-417c-90dd-5315ba350f5e",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "998c8c27-ab7c-4c87-9939-be7d5a48fcc8",
+                "value": "NC loses even more money due to HB2."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "6de6dcfc-ba11-4a5f-b3a8-551e3215ea67",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "720431f0-ee01-470e-9597-6168db821287",
+                "value": "The state of North Carolina reports another loss due to HB2."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "8d125fc0-de89-4675-ae4f-90dd22634d77",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "f23c3d4f-3753-4534-9d06-657a6d81f417",
+                "value": "NC continues to lose money due to the controversial House Bill 2."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "fa116af6-ec09-4cb5-86de-af342b4afe07",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "19c1b41f-ebe2-4e4d-8d43-e9679bb9244b",
+                "value": "North Carolina reports further HB2 related losses."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "92cc31d4-1edc-4df0-b15c-b1c5acfa6d95",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "382c7e91-9dfe-4940-95f5-04e117760a20",
+                "value": "North Carolina bears the burden of more economic strain over HB2, the controversial \"bathroom bill\" law."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "aa6b349d-4bd6-4cf5-8769-c79a1570eb05",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "9178ae96-0788-40b6-af0b-6e97a58a02d5",
+                "value": "Things just keep getting worse for the state of NC over HB2."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "klass": "text",
+        "id": "7dddb24c-fea5-458b-a4d8-61f2a0546e0b",
+        "value": " "
+      },
+      {
+        "id": "01449ffb-53b0-4be4-9a61-9a7b16d971ab",
+        "klass": "datavar",
+        "name": "description",
+        "absoluteValue": "false",
+        "apFormat": "false",
+        "commas": "true",
+        "decimalSeparator": ".",
+        "language": "en",
+        "numDecimals": "0",
+        "ordinal": "false",
+        "percentage": "false",
+        "significantFigures": "0",
+        "largeNumber": "false",
+        "numDecimalsMillions": "1",
+        "numDecimalsBillions": "2",
+        "numDecimalsHuge": "3",
+        "toWords": "false",
+        "stringFormat": "unchanged",
+        "listConjunction": "and",
+        "listOxfordComma": "true"
+      },
+      {
+        "klass": "divider"
+      },
+      {
+        "klass": "divider"
+      },
+      {
+        "klass": "branch",
+        "id": "ab788ba1-7f9e-42a3-8e05-b659add0c388",
+        "conditions": [
+          {
+            "klass": "condition",
+            "id": "7805fecb-1d88-455a-b326-d6e8765119c0",
+            "code": "percentage_of_total > 1",
+            "segments": [
+              {
+                "klass": "synonym",
+                "id": "f1b12652-bc8a-44ee-9018-26eae72998a2",
+                "synonym_variations": [
+                  {
+                    "klass": "synonym_variation",
+                    "id": "b2d8987c-33e2-404f-839e-f8b03c687d39",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "777a68d4-aeeb-4570-932e-bb7e13a9a235",
+                        "value": "This is a huge loss for"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "c894af81-ca35-4e9a-a153-546a513363c0",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "b64ac3ff-1f6c-45c5-a178-13fb2b52d822",
+                        "value": "It's a massive loss for"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "6a9dd805-fe5e-4eac-b812-dd585197b4eb",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "ffaf7b76-47ca-4d09-a0a8-80c751e1e9d5",
+                        "value": "This is an enormous loss for"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "text",
+                "id": "e1043103-a5bf-4376-878e-783eea855eee",
+                "value": " "
+              },
+              {
+                "klass": "synonym",
+                "id": "7236d120-a101-4c24-8cab-40dfbf295ebf",
+                "synonym_variations": [
+                  {
+                    "klass": "synonym_variation",
+                    "id": "a54622a8-baa8-4f4d-8ae1-f73ecadd5aaa",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "aa748924-8349-42a1-a41b-2642bbed640a",
+                        "value": "North Carolina"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "2ecd1145-e8b6-4ad0-ac78-a2d17eb222d7",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "4ab4b6fd-84ba-41db-9712-6ae0f7d20cee",
+                        "value": "the southern state"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "a16f08d5-732b-49ef-9851-9b38a5b6c18d",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "65cadf83-69bc-434e-96a0-0ebf107c2e7d",
+                        "value": "NC"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "b4c426be-d5b5-412e-bcfa-75a81e0340c8",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "6d7beed8-f4b1-4ca0-a0b0-10e9be8ed1de",
+                        "value": "the Tar Heel State"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "9c76fe31-0952-48cf-bee2-bb9f5ae8ab3f",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "07eb7926-0ffc-4cb4-b39b-b21a1880b9a9",
+                        "value": "the state"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "text",
+                "id": "10041b7b-d467-40ee-8490-8c3af273025a",
+                "value": ", accounting for "
+              },
+              {
+                "id": "49319680-3553-4cac-826e-963284d1055c",
+                "klass": "datavar",
+                "name": "percentage_of_total",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "2",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "7f22f083-f7f9-454b-86f6-2539d723d240",
+                "value": "% of the "
+              },
+              {
+                "klass": "synonym",
+                "id": "bc67d140-e652-4347-9cd5-782f3d613456",
+                "synonym_variations": [
+                  {
+                    "klass": "synonym_variation",
+                    "id": "e2d25ba3-cd86-4afd-956e-a15a9256ef19",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "373feca7-e932-4da5-b9de-f3aa776be48c",
+                        "value": "total HB2 losses to date"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "synonym_variation",
+                    "id": "1b00f74e-8dd5-4236-98f7-f0bf76332162",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "b8cfa2bd-bb80-420c-94e1-5b877699b2e8",
+                        "value": "total HB2 related losses so far"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "text",
+                "id": "f8b23dd1-c079-44fa-bdaf-e2e1a6d87def",
+                "value": "."
+              }
+            ]
+          },
+          {
+            "klass": "condition",
+            "id": "40a5faab-2c92-4574-91a6-c3f03afdf2b8",
+            "code": "true",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "ab0109df-70c1-443b-8f38-aad86d2350ac",
+                "value": "Losing "
+              },
+              {
+                "klass": "branch",
+                "id": "d784c5f0-4aaa-4011-a495-9edb1a07d0ae",
+                "conditions": [
+                  {
+                    "klass": "condition",
+                    "id": "8d689a63-9312-4563-ac5f-235f55407133",
+                    "code": "type_count = 1",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "6b84b01f-5841-45ca-8458-8e646a9703ea",
+                        "value": "this"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "condition",
+                    "id": "9ec9ca60-11b6-4aac-9f7e-3e1935621398",
+                    "code": "true",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "7099ab1b-5ecb-4808-8651-5c5139c0111a",
+                        "value": "these"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "text",
+                "id": "a139a90e-91f1-4827-a5bc-0e8e90e06371",
+                "value": " "
+              },
+              {
+                "id": "55ba9dee-3e50-4e90-9ac8-0d18b1be590f",
+                "klass": "datavar",
+                "name": "type",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "branch",
+                "id": "6c07b115-eaf1-461f-97d4-4cba0a6bb5d8",
+                "conditions": [
+                  {
+                    "klass": "condition",
+                    "id": "dd369ed3-5c6e-4668-891a-5076dd21f5be",
+                    "code": "type_count > 1",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "26b00703-a690-4d39-b370-120d0f012ab5",
+                        "value": "s"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "condition",
+                    "id": "a5b5f21b-014d-4da5-9b93-b9a493f05b19",
+                    "code": "true",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "value": "",
+                        "id": "f880cb75-502a-4d29-aa38-825ce48dda26"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "text",
+                "id": "57a908a4-d1b6-4251-9a92-680e42878291",
+                "value": " "
+              },
+              {
+                "klass": "branch",
+                "id": "fcf1caa8-9ce8-4ffa-8797-9fe6a87bfd72",
+                "conditions": [
+                  {
+                    "klass": "condition",
+                    "id": "a87e1119-cd97-4023-b8c0-6cd334a93788",
+                    "code": "location != \"NC\"",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "27a70bb8-b7da-410a-bc43-4d959f577627",
+                        "value": " in "
+                      },
+                      {
+                        "id": "99b33970-e310-4db8-9bc4-08333b249ced",
+                        "klass": "datavar",
+                        "name": "location",
+                        "absoluteValue": "false",
+                        "apFormat": "false",
+                        "commas": "true",
+                        "decimalSeparator": ".",
+                        "language": "en",
+                        "numDecimals": "0",
+                        "ordinal": "false",
+                        "percentage": "false",
+                        "significantFigures": "0",
+                        "largeNumber": "false",
+                        "numDecimalsMillions": "1",
+                        "numDecimalsBillions": "2",
+                        "numDecimalsHuge": "3",
+                        "toWords": "false",
+                        "stringFormat": "unchanged",
+                        "listConjunction": "and",
+                        "listOxfordComma": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "condition",
+                    "id": "562a6e7a-7eb6-46f9-9fd8-5e74ed00f35b",
+                    "code": "true",
+                    "segments": []
+                  }
+                ]
+              },
+              {
+                "klass": "text",
+                "id": "252afe9b-879c-4bde-aa12-93b0aebe942b",
+                "value": " increases the negative economic impact of HB2 even further."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "klass": "text",
+        "id": "50f1c518-25b4-4642-859a-f77154402ce9",
+        "value": "  "
+      },
+      {
+        "klass": "branch",
+        "id": "153e761c-0302-40aa-bc33-a37138341cd1",
+        "conditions": [
+          {
+            "klass": "condition",
+            "id": "568fa6c8-acef-447e-a28e-a936e8782031",
+            "code": "venue != \"\"",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "8425f059-4157-4568-9fcf-d671704c676c",
+                "value": "Scheduled for "
+              },
+              {
+                "id": "8366aa17-8413-40e7-87f7-c25154cada3a",
+                "klass": "datavar",
+                "name": "venue",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "a6c0379a-db70-4575-9fa8-9c98f3109a90",
+                "value": ", "
+              },
+              {
+                "klass": "branch",
+                "id": "5354500a-e7c6-4340-a816-7da3467c8533",
+                "conditions": [
+                  {
+                    "klass": "condition",
+                    "id": "866d223a-2cf0-4030-bde5-71cdc884ccc9",
+                    "code": "type_count > 1 ",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "95572f96-a9fa-4f7b-a5ce-61b05bd4e42c",
+                        "value": "there were "
+                      },
+                      {
+                        "id": "f06b68b2-c493-46a1-951b-7eb7f787cdfc",
+                        "klass": "datavar",
+                        "name": "type_count",
+                        "absoluteValue": "false",
+                        "apFormat": "false",
+                        "commas": "true",
+                        "decimalSeparator": ".",
+                        "language": "en",
+                        "numDecimals": "0",
+                        "ordinal": "false",
+                        "percentage": "false",
+                        "significantFigures": "0",
+                        "largeNumber": "false",
+                        "numDecimalsMillions": "1",
+                        "numDecimalsBillions": "2",
+                        "numDecimalsHuge": "3",
+                        "toWords": "false",
+                        "stringFormat": "unchanged",
+                        "listConjunction": "and",
+                        "listOxfordComma": "true"
+                      },
+                      {
+                        "klass": "text",
+                        "id": "6ad2f511-e872-4ce1-9f2b-d4df6ec2e987",
+                        "value": " "
+                      },
+                      {
+                        "klass": "text",
+                        "id": "cfe9e985-80a4-4fb5-a270-96004915d223",
+                        "value": "total "
+                      },
+                      {
+                        "id": "b51bbc77-0717-42ed-ac03-eb3bf3c40dbb",
+                        "klass": "datavar",
+                        "name": "type",
+                        "absoluteValue": "false",
+                        "apFormat": "false",
+                        "commas": "true",
+                        "decimalSeparator": ".",
+                        "language": "en",
+                        "numDecimals": "0",
+                        "ordinal": "false",
+                        "percentage": "false",
+                        "significantFigures": "0",
+                        "largeNumber": "false",
+                        "numDecimalsMillions": "1",
+                        "numDecimalsBillions": "2",
+                        "numDecimalsHuge": "3",
+                        "toWords": "false",
+                        "stringFormat": "unchanged",
+                        "listConjunction": "and",
+                        "listOxfordComma": "true"
+                      },
+                      {
+                        "klass": "text",
+                        "id": "8c21fe38-a113-4510-b739-1c583498fd46",
+                        "value": "s that are no longer happening due to "
+                      },
+                      {
+                        "klass": "synonym",
+                        "id": "c58c5e07-1524-4336-a28b-2370e408a948",
+                        "synonym_variations": [
+                          {
+                            "klass": "synonym_variation",
+                            "id": "b6713978-659c-43e1-87bc-b0783384b897",
+                            "segments": [
+                              {
+                                "klass": "text",
+                                "id": "31de9aed-25a8-4a27-8b3c-783c3efe74c1",
+                                "value": "the controversial new piece of legislature"
+                              }
+                            ]
+                          },
+                          {
+                            "klass": "synonym_variation",
+                            "id": "317d345b-4689-4d75-8efb-4d9fd22177bb",
+                            "segments": [
+                              {
+                                "klass": "text",
+                                "id": "62914700-63ff-460e-9f32-f8788a394cb8",
+                                "value": "HB2"
+                              }
+                            ]
+                          },
+                          {
+                            "klass": "synonym_variation",
+                            "id": "28b4ecc7-8c41-44ed-9d99-170979d9065f",
+                            "segments": [
+                              {
+                                "klass": "text",
+                                "id": "3db996b4-16f7-4cf1-826b-8516bf79ee4e",
+                                "value": "House Bill 2"
+                              }
+                            ]
+                          },
+                          {
+                            "klass": "synonym_variation",
+                            "id": "27d1c94e-6781-444c-8f32-fc518da47edd",
+                            "segments": [
+                              {
+                                "klass": "text",
+                                "id": "da755128-ba5a-4e2e-8389-fa585f63cf02",
+                                "value": "the discriminatory bill"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "klass": "text",
+                        "id": "fefb066a-516a-4c40-9796-c61e436f5828",
+                        "value": "."
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "condition",
+                    "id": "5f138df3-c51f-4cc2-88ee-3d09c278ec70",
+                    "code": "true",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "dc387cfe-a2d3-40f3-a04f-d84d417ade9d",
+                        "value": "the loss of this "
+                      },
+                      {
+                        "id": "9e7d7bf7-b13a-4342-8fd3-99a7dd9e5a30",
+                        "klass": "datavar",
+                        "name": "type",
+                        "absoluteValue": "false",
+                        "apFormat": "false",
+                        "commas": "true",
+                        "decimalSeparator": ".",
+                        "language": "en",
+                        "numDecimals": "0",
+                        "ordinal": "false",
+                        "percentage": "false",
+                        "significantFigures": "0",
+                        "largeNumber": "false",
+                        "numDecimalsMillions": "1",
+                        "numDecimalsBillions": "2",
+                        "numDecimalsHuge": "3",
+                        "toWords": "false",
+                        "stringFormat": "unchanged",
+                        "listConjunction": "and",
+                        "listOxfordComma": "true"
+                      },
+                      {
+                        "klass": "text",
+                        "id": "8b4a8d6b-e86f-4fd0-8816-5fca4e02c15e",
+                        "value": " is an unfortunate side effect of the discriminatory bill."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "klass": "condition",
+            "id": "91d4d66d-5831-4c99-8fea-d94b465d0b59",
+            "code": "true",
+            "segments": [
+              {
+                "klass": "text",
+                "value": "",
+                "id": "3b504042-8b12-4bc4-989c-73aec4cf6cf3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "klass": "divider"
+      },
+      {
+        "klass": "branch",
+        "id": "a6179593-5d71-47e8-bcb0-b477e70d64d4",
+        "conditions": [
+          {
+            "klass": "condition",
+            "id": "dc18afd9-becd-403f-90a7-7e50b7336047",
+            "code": "statement_fragment != \"\"",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "87107ffe-a666-4723-ad5f-3114ce7fa0db",
+                "value": "<blockquote class=\"template-quote\">"
+              },
+              {
+                "klass": "divider"
+              },
+              {
+                "klass": "text",
+                "id": "bb7d917d-8943-4c94-8fa6-d63c246dcd35",
+                "value": "\""
+              },
+              {
+                "id": "d3cd7848-16f7-4790-813e-a951f0640045",
+                "klass": "datavar",
+                "name": "statement_fragment",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "51d7e764-61e4-46f0-80b4-071240e63828",
+                "value": "\""
+              },
+              {
+                "klass": "divider"
+              },
+              {
+                "klass": "text",
+                "id": "9ffa957b-3671-46d3-915e-4bf00fdb1191",
+                "value": "<br><br>"
+              },
+              {
+                "klass": "divider"
+              },
+              {
+                "klass": "text",
+                "id": "af5beaba-a9b1-4805-9df1-9d522207f209",
+                "value": "- "
+              },
+              {
+                "id": "a06a38b6-7bf0-4e87-93bc-2fec014113b4",
+                "klass": "datavar",
+                "name": "statement_author",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "branch",
+                "id": "0c20b415-c9c4-42da-9869-41989638ca36",
+                "conditions": [
+                  {
+                    "klass": "condition",
+                    "id": "b2e7f3bf-b4ee-4abc-9e80-8a389b8f00c8",
+                    "code": "statement_author_title != \"\"",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "a7371817-c6e9-46f4-8512-85290252b994",
+                        "value": ", "
+                      },
+                      {
+                        "id": "53d96de5-16a7-4453-bd57-c77b96e02101",
+                        "klass": "datavar",
+                        "name": "statement_author_title",
+                        "absoluteValue": "false",
+                        "apFormat": "false",
+                        "commas": "true",
+                        "decimalSeparator": ".",
+                        "language": "en",
+                        "numDecimals": "0",
+                        "ordinal": "false",
+                        "percentage": "false",
+                        "significantFigures": "0",
+                        "largeNumber": "false",
+                        "numDecimalsMillions": "1",
+                        "numDecimalsBillions": "2",
+                        "numDecimalsHuge": "3",
+                        "toWords": "false",
+                        "stringFormat": "unchanged",
+                        "listConjunction": "and",
+                        "listOxfordComma": "true"
+                      },
+                      {
+                        "klass": "branch",
+                        "id": "0269208d-9f73-4bb5-a17f-1196578f4d4c",
+                        "conditions": [
+                          {
+                            "klass": "condition",
+                            "id": "1bdae363-5a2d-47fa-b288-9b5e79062f6d",
+                            "code": "statement_source != \"\"",
+                            "segments": [
+                              {
+                                "klass": "text",
+                                "id": "217da98e-b4ea-4b1b-b329-63a54d21775d",
+                                "value": " via "
+                              },
+                              {
+                                "id": "97f5ba9d-fe0a-4aa9-9660-f5bd4330a400",
+                                "klass": "datavar",
+                                "name": "statement_source",
+                                "absoluteValue": "false",
+                                "apFormat": "false",
+                                "commas": "true",
+                                "decimalSeparator": ".",
+                                "language": "en",
+                                "numDecimals": "0",
+                                "ordinal": "false",
+                                "percentage": "false",
+                                "significantFigures": "0",
+                                "largeNumber": "false",
+                                "numDecimalsMillions": "1",
+                                "numDecimalsBillions": "2",
+                                "numDecimalsHuge": "3",
+                                "toWords": "false",
+                                "stringFormat": "unchanged",
+                                "listConjunction": "and",
+                                "listOxfordComma": "true"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "klass": "condition",
+                    "id": "02e7c87f-8d36-4335-b884-574f1020aa2e",
+                    "code": "statement_source != \"\"",
+                    "segments": [
+                      {
+                        "klass": "branch",
+                        "id": "abc091e6-9137-4699-bb08-ba84a37588b9",
+                        "conditions": [
+                          {
+                            "klass": "condition",
+                            "id": "4fe887cf-5666-48dd-abaf-60f329ca6a5c",
+                            "code": "statement_source != \"\"",
+                            "segments": [
+                              {
+                                "klass": "text",
+                                "id": "c886d408-e9c6-4f9a-a1c4-6989b3963237",
+                                "value": " via "
+                              },
+                              {
+                                "id": "b0f7a851-f171-45d2-b1d1-57733c63eedd",
+                                "klass": "datavar",
+                                "name": "statement_source",
+                                "absoluteValue": "false",
+                                "apFormat": "false",
+                                "commas": "true",
+                                "decimalSeparator": ".",
+                                "language": "en",
+                                "numDecimals": "0",
+                                "ordinal": "false",
+                                "percentage": "false",
+                                "significantFigures": "0",
+                                "largeNumber": "false",
+                                "numDecimalsMillions": "1",
+                                "numDecimalsBillions": "2",
+                                "numDecimalsHuge": "3",
+                                "toWords": "false",
+                                "stringFormat": "unchanged",
+                                "listConjunction": "and",
+                                "listOxfordComma": "true"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "divider"
+              },
+              {
+                "klass": "branch",
+                "id": "635d524a-21f5-48fe-b65f-77a9accc8f07",
+                "conditions": [
+                  {
+                    "klass": "condition",
+                    "id": "6ca83c4b-68f1-4878-bc78-acdddbb30689",
+                    "code": "statement_url != \"\"",
+                    "segments": [
+                      {
+                        "klass": "text",
+                        "id": "205767bd-3b9b-4cda-88f4-c9b105c162e2",
+                        "value": "<a href=\""
+                      },
+                      {
+                        "id": "2207d12e-e647-4a84-a7a6-443ac3c52692",
+                        "klass": "datavar",
+                        "name": "statement_url",
+                        "absoluteValue": "false",
+                        "apFormat": "false",
+                        "commas": "true",
+                        "decimalSeparator": ".",
+                        "language": "en",
+                        "numDecimals": "0",
+                        "ordinal": "false",
+                        "percentage": "false",
+                        "significantFigures": "0",
+                        "largeNumber": "false",
+                        "numDecimalsMillions": "1",
+                        "numDecimalsBillions": "2",
+                        "numDecimalsHuge": "3",
+                        "toWords": "false",
+                        "stringFormat": "unchanged",
+                        "listConjunction": "and",
+                        "listOxfordComma": "true"
+                      },
+                      {
+                        "klass": "text",
+                        "id": "b71889f6-07e4-4f0d-9fcd-dbb27a4fd4d0",
+                        "value": "\" target=\"_blank\" class=\"link\">View full statement</a>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "klass": "divider"
+              },
+              {
+                "klass": "text",
+                "id": "08d63413-8edd-43cf-8b60-fb8c0009fb15",
+                "value": "</blockquote>"
+              }
+            ]
+          },
+          {
+            "klass": "condition",
+            "id": "63653082-d8fc-447a-81e2-58a90f9b426b",
+            "code": "true",
+            "segments": []
+          }
+        ]
+      },
+      {
+        "klass": "divider"
+      },
+      {
+        "klass": "divider"
+      },
+      {
+        "klass": "synonym",
+        "id": "0d887281-a266-4c7d-b512-21a80ebc3401",
+        "synonym_variations": [
+          {
+            "klass": "synonym_variation",
+            "id": "ad939f72-1d8c-4e58-8090-0b37eeb80417",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "20c17d7f-368c-4a0f-8f1f-36c48e360db4",
+                "value": "Losing "
+              },
+              {
+                "id": "9568cc09-c9d9-44e8-acf9-e9dada8fd370",
+                "klass": "datavar",
+                "name": "name",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "551e542b-0d86-4cd0-87ba-a62cc1cd76b2",
+                "value": " is just another painful reality for NC until HB2 is repealed."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "166f44be-8e4d-415b-bb23-0dc6b7cb6f43",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "201bc566-a432-45aa-93cb-c4ef8bcfd7a7",
+                "value": "North Carolina continues to lose out from HB2; the loss of "
+              },
+              {
+                "id": "8ad28350-3d90-484c-8ba6-cc48fc2fa4ba",
+                "klass": "datavar",
+                "name": "name",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "8c495b70-22ad-49c9-9306-b1991c396619",
+                "value": " just adds to the fallout."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "34cecde9-aaa6-4e17-8908-4884a8077da2",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "7de8ae90-9a00-43f1-a9db-66ecfa6387dc",
+                "value": " Losing "
+              },
+              {
+                "id": "12e6aace-e360-42b5-b015-375af78682be",
+                "klass": "datavar",
+                "name": "name",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "90c671e7-8471-488c-ba5e-006edfeeb9fb",
+                "value": " "
+              },
+              {
+                "klass": "text",
+                "id": "3ae1ee86-3954-4f96-a132-5786d7c3eb50",
+                "value": "is just a painful reality in NC until HB2 is repealed."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "4c759746-3652-4317-8fd9-69266fc23511",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "c7e67bbd-3e1f-4cc8-9d54-cbc891dc4646",
+                "value": "Losing "
+              },
+              {
+                "id": "cb043c32-daa6-4a20-be20-f0e3afd91d54",
+                "klass": "datavar",
+                "name": "name",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "fc751eef-53f4-4fb3-83e7-094d4b7577e9",
+                "value": " is just one of many recent losses for NC over HB2."
+              }
+            ]
+          },
+          {
+            "klass": "synonym_variation",
+            "id": "30c23c50-fb54-4698-99bf-2198c9ef7fda",
+            "segments": [
+              {
+                "klass": "text",
+                "id": "bf26d436-02d6-46a1-8320-d48bee267dca",
+                "value": "The loss of "
+              },
+              {
+                "id": "74842d96-0ee7-4086-8a41-aa86eb2a84b4",
+                "klass": "datavar",
+                "name": "name",
+                "absoluteValue": "false",
+                "apFormat": "false",
+                "commas": "true",
+                "decimalSeparator": ".",
+                "language": "en",
+                "numDecimals": "0",
+                "ordinal": "false",
+                "percentage": "false",
+                "significantFigures": "0",
+                "largeNumber": "false",
+                "numDecimalsMillions": "1",
+                "numDecimalsBillions": "2",
+                "numDecimalsHuge": "3",
+                "toWords": "false",
+                "stringFormat": "unchanged",
+                "listConjunction": "and",
+                "listOxfordComma": "true"
+              },
+              {
+                "klass": "text",
+                "id": "fb9ad135-1cbd-48aa-8ac5-3d6fbb7168ce",
+                "value": " is just another in a long line of HB2 related losses for the state of North Carolina."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "klass": "divider"
+      }
+    ]
+  },
+  "updated_at": "2016-09-22T03:00:18.368Z",
+  "project": {
+    "id": 12747,
+    "slug": "sb2",
+    "name": "sb2",
+    "archived": false,
+    "created_at": "2016-09-20T02:33:46.896Z",
+    "updated_at": "2016-09-22T03:00:18.374Z",
+    "creator": "Rachel Tublitz",
+    "last_editor": "Rachel Tublitz",
+    "project_type": null,
+    "class_name": "Project",
+    "dataset_data_count": 46,
+    "has_restricted_access": false
+  }
+}
