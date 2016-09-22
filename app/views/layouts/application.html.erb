@@ -1,19 +1,10 @@
 <%= render partial: 'partials/head' %>
 <body class="<% unless logged_in? %>body--non-auth <% end %><% if @appPath.present? %>body--<%= @appPath %><% end %>">
-    <% if logged_in? %>
     <%= render partial: 'partials/sidebarNav' %>
-    <% end %>
     <div class="body-wrapper">
-        <% if logged_in? %>
-            <div class="app-banner"></div>
-        <% end %>
+        <div class="app-banner"></div>
         <%= render partial: 'partials/flash', locals: {flash: flash} %>
         <%= render partial: 'partials/header' %>
-
-        <% if !logged_in? && @appPath == 'home' %>
-            <div class="home-banner"></div>
-        <% end %>
-
         <div class="app-container container">
             <div class="app-content">
                 <%= yield %>

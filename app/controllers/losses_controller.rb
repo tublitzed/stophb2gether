@@ -1,5 +1,4 @@
 class LossesController < ApplicationController
-    before_action :require_auth
     before_action :set_active_tab
     PER_PAGE = 10
     DEFAULT_PAGE = 1

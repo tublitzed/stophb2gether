@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 
   def create
+    # redirect right now, no sessions allowed.
+    redirect_to root_url
+
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user

@@ -15,6 +15,9 @@ class UsersController < ApplicationController
   end
 
   def create
+    # redirect right now, no creating accounts allowed.
+    redirect_to root_url
+
     @user = User.new(user_params)
     if @user.save
       log_in @user

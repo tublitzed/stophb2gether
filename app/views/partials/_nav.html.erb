@@ -1,6 +1,5 @@
 <nav class="nav nav--main">
   <ul class="nav__links nav__links--main">
-    <% if logged_in? %>
       <li>
         <a href="<%= losses_path %>" class="nav__link<% if @appPath == 'losses' || @appPath == 'loss' %> nav__link--active<% end %>">
           <span class="nav__link-inner">
@@ -27,6 +26,5 @@
           <span class="fa fa-twitter"></span>
         </a>
       </li>
-    <% end %>
   </ul>
 </nav>

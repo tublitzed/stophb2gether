@@ -1,6 +1,2 @@
 <% provide(:title, 'Chronicling the HB2 related economic losses to the state of North Carolina.') %>
-<% if logged_in? %>
-  <%= render partial: 'home/home_auth', locals: { losses: @allLosses, totalLosses: @totalLosses } %>
-<% else %>
-  <%= render partial: 'home/home_non_auth' %>
-<% end %>
+<%= render partial: 'home/home_auth', locals: { losses: @allLosses, totalLosses: @totalLosses } %>

@@ -1,5 +1,4 @@
 class AboutController < ApplicationController
-  before_action :require_auth
   before_action :set_active_tab
   before_action -> { set_app_path('about') }
 
