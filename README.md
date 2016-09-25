@@ -1,6 +1,7 @@
 # stophb2gether
 Anti hb2 site dedicate to tracking lost revenue to the state of NC since HB2.
 
+
 # scripts
 
 - `npm run w`

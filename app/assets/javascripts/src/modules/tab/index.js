@@ -4,7 +4,7 @@ var urlUtil = require('../../util/url');
  * Assumes the presence of Foundation, using the Tabs API.
  * @link http://foundation.zurb.com/sites/docs/tabs.html
  */
-var Tabs = {
+var Tab = {
   /**
    * Adjust url param on tab change.
    */
@@ -31,4 +31,4 @@ var Tabs = {
   }
 };
 
-module.exports = Tabs;
+module.exports = Tab;

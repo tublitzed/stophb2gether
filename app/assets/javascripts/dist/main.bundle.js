@@ -5,23 +5,28 @@ var _alert = require('./modules/alert');
 
 var _alert2 = _interopRequireDefault(_alert);
 
+var _chart = require('./modules/chart');
+
+var _chart2 = _interopRequireDefault(_chart);
+
 var _form = require('./modules/form');
 
 var _form2 = _interopRequireDefault(_form);
 
-var _tabs = require('./modules/tabs');
+var _tab = require('./modules/tab');
 
-var _tabs2 = _interopRequireDefault(_tabs);
+var _tab2 = _interopRequireDefault(_tab);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
   _alert2.default.init();
+  _chart2.default.init();
   _form2.default.init();
-  _tabs2.default.init();
+  _tab2.default.init();
 });
 
-},{"./modules/alert":2,"./modules/form":3,"./modules/tabs":4}],2:[function(require,module,exports){
+},{"./modules/alert":2,"./modules/chart":3,"./modules/form":4,"./modules/tab":5}],2:[function(require,module,exports){
 'use strict';
 
 var Alert = {
@@ -37,6 +42,43 @@ module.exports = Alert;
 },{}],3:[function(require,module,exports){
 'use strict';
 
+/**
+ * Uses chart.js
+ */
+var myChart = {
+  init: function init() {
+    console.log('yo!');
+
+    var myChart = new Chart($('.chart'), {
+      type: 'bar',
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+          borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+};
+
+module.exports = myChart;
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
 var Form = {
   init: function init() {
     var $autoFocusEl = $('.autofocus');
@@ -48,7 +90,7 @@ var Form = {
 
 module.exports = Form;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 var urlUtil = require('../../util/url');
@@ -57,7 +99,7 @@ var urlUtil = require('../../util/url');
  * Assumes the presence of Foundation, using the Tabs API.
  * @link http://foundation.zurb.com/sites/docs/tabs.html
  */
-var Tabs = {
+var Tab = {
   /**
    * Adjust url param on tab change.
    */
@@ -85,9 +127,9 @@ var Tabs = {
   }
 };
 
-module.exports = Tabs;
+module.exports = Tab;
 
-},{"../../util/url":5}],5:[function(require,module,exports){
+},{"../../util/url":6}],6:[function(require,module,exports){
 'use strict';
 
 /**

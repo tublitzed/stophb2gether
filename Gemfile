@@ -11,6 +11,8 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0.3'
 
 gem 'foundation-rails'
+gem 'momentjs-rails'
+gem 'chart-js-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
