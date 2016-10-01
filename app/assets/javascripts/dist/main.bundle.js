@@ -42,113 +42,83 @@ module.exports = Alert;
 },{}],3:[function(require,module,exports){
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 /**
  * Uses chart.js
  */
 var myChart = {
-  TYPE_LOSSES_OVER_TIME: 'losses-over-time',
+    TYPE_LOSSES_OVER_TIME: 'losses-over-time',
 
-  /**
-   * All losses over time.
-   * @param  {Object} $el
-   */
-  buildLossesOverTime: function buildLossesOverTime($el) {
-    var _options;
+    /**
+     * All losses over time.
+     * @param  {Object} $el
+     */
+    buildLossesOverTime: function buildLossesOverTime($el) {
+        var data = {
+            labels: [[2016, 3, 26], [2016, 3, 27], [2016, 5, 5], [2016, 10, 1]],
+            datasets: [{
+                label: "Losses over time",
+                fill: false,
+                strokeColor: "rgba(255,255,255,1)",
+                pointColor: "#123",
+                pointStrokeColor: "rgba(255,255,255,1)",
+                data: [1, 3, 6, 7]
+            }]
+        };
 
-    var data = {
-      labels: [[2016, 3, 26], [2016, 3, 27], [2016, 5, 5], [2016, 10, 1]],
-      datasets: [{
-        label: "Losses over time",
-        fillColor: "rgba(255,255,255,0.1)",
-        strokeColor: "rgba(255,255,255,1)",
-        pointColor: "#123",
-        pointStrokeColor: "rgba(255,255,255,1)",
-        data: [1, 3, 6, 7
-        // [2016, 3, 29],
-        // [2016, 3, 29],
-        // [2016, 4, 27],
-        // [2016, 8, 29]
-        ]
-      }]
-    };
+        var options = {
+            scales: {
+                xAxes: [{
+                    afterBuildTicks: function afterBuildTicks(chart) {
+                        console.log(chart);
+                        // example of modifying ticks after render
+                        //chart.ticks = chart.ticks.slice(0,5);
+                    },
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        displayFormats: {
+                            'month': 'MMM'
+                            // 'millisecond': 'HH:mm:ss',
+                            // 'second': 'HH:mm:ss',
+                            // 'minute': 'HH:mm:ss',
+                            // 'hour': 'HH:mm:ss'
+                        }
+                    }
+                }]
+            }
+        };
+        var myLineChart = new Chart($el, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+    },
 
-    // var options = {
-    //   scaleFontColor: "rgba(0,0,0,1)",
-    //   scaleLineColor: "rgba(0,0,0,0.1)",
-    //   scaleGridLineColor: "rgba(0,0,0,0.1)",
-    //   scaleShowLabels: false,
-    //   scaleShowHorizontalLines: false,
-    //   bezierCurve: false,
-    //   pointDot: true,
-    //   pointDotRadius: 5,
-    //   pointDotStrokeWidth: 2,
-    //   scaleOverride: true,
-    //   // scaleSteps: 6,
-    //   // scaleStepWidth: 100,
-    //   responsive: true,
-    //   showTooltips: true,
-    //   tooltipTemplate: "<%= value %> " + "Lost",
-    //   tooltipFontSize: 16,
-    //   tooltipYPadding: 12,
-    //   tooltipXPadding: 12,
-    //   tooltipCornerRadius: 3,
-    //   tooltipFillColor: "#3797d3",
-    // };
-
-    var options = (_options = {
-      scaleFontColor: "rgba(255,255,255,1)",
-      scaleLineColor: "rgba(255,255,255,1)",
-      scaleGridLineColor: "transparent",
-      bezierCurve: false,
-      scaleOverride: true,
-      scaleSteps: 5,
-      scaleStepWidth: 100,
-      scaleStartValue: 0,
-      scaleLabel: "<%= value + ' foo' %>"
-    }, _defineProperty(_options, "scaleOverride", true), _defineProperty(_options, "scales", {
-      xAxes: [{
-        type: 'time',
-        time: {
-          displayFormats: {
-            unit: 'month'
-          }
+    /**
+     * Build out a single chart.
+     * @param {Object} $el
+     * @param {String} type
+     */
+    buildChart: function buildChart($el, type) {
+        if (type === this.TYPE_LOSSES_OVER_TIME) {
+            this.buildLossesOverTime($el);
         }
-      }]
-    }), _options);
-    var myLineChart = new Chart($el, {
-      type: 'line',
-      data: data,
-      options: options
-    });
-  },
+    },
 
-  /**
-   * Build out a single chart.
-   * @param {Object} $el
-   * @param {String} type
-   */
-  buildChart: function buildChart($el, type) {
-    if (type === this.TYPE_LOSSES_OVER_TIME) {
-      this.buildLossesOverTime($el);
+    /**
+     * If chart elements exist, build them.
+     */
+    init: function init() {
+        var _this = this;
+
+        var $chartEls = $('.chart');
+        if ($chartEls.length) {
+            $chartEls.each(function (index, el) {
+                console.log(el);
+                _this.buildChart($(el), $(el).data('chart-type'));
+            });
+        }
     }
-  },
-
-  /**
-   * If chart elements exist, build them.
-   */
-  init: function init() {
-    var _this = this;
-
-    var $chartEls = $('.chart');
-    if ($chartEls.length) {
-      $chartEls.each(function (index, el) {
-        console.log(el);
-        _this.buildChart($(el), $(el).data('chart-type'));
-      });
-    }
-  }
 };
 
 module.exports = myChart;
