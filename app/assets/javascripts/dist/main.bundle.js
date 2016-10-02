@@ -54,9 +54,9 @@ var chart = {
    * @return {Object}
    */
   buildConfig: function buildConfig(data) {
+    data.reverse(); // data comes in reverse order: we want to start with most recent date LAST, not first.
     var config = {
       columns: [['x'], ['losses']],
-      data: [],
       metadata: []
     };
     data.forEach(function (loss) {
@@ -67,6 +67,7 @@ var chart = {
         amount: loss.amount
       });
     });
+    console.log(config);
     return config;
   },
 
