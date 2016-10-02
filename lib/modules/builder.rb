@@ -38,6 +38,7 @@ module Builder
       'slug',
       'description',
       'photo_credit',
+      'running_total',
       'sources',
       'short_name',
       'tweet'
