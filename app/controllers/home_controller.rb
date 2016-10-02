@@ -18,7 +18,7 @@ class HomeController < ApplicationController
                 title: loss.title,
                 amount: loss.amount,
                 runningTotal: loss.running_total,
-                date: loss.date
+                date: loss.date.to_date
             }
         end
     end

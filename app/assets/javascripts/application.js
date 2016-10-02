@@ -4,11 +4,9 @@
 //= require jquery_ujs
 
 //= require foundation
-//= require moment
 
-// Chart.js depends on Moment, load moment first^
-//= require Chart
-
+//= require d3
+//= require c3
 
 //= require dist/main.bundle.js
 

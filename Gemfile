@@ -11,8 +11,9 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0.3'
 
 gem 'foundation-rails'
-gem 'momentjs-rails'
-gem 'chart-js-rails'
+
+gem 'd3-rails', '3.5.17'
+gem 'c3-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -51,5 +52,3 @@ group :test do
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
 end
-
-

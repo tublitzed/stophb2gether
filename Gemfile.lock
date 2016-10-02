@@ -46,6 +46,7 @@ GEM
       execjs (~> 2.0)
     bcrypt (3.1.7)
     builder (3.2.2)
+    c3-rails (0.4.11)
     capistrano (3.5.0)
       airbrussh (>= 1.0.0)
       capistrano-harrow
@@ -65,8 +66,6 @@ GEM
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
-    chart-js-rails (0.1.0)
-      railties (> 3.1)
     coderay (1.1.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -79,6 +78,8 @@ GEM
     config (1.2.1)
       activesupport (>= 3.0)
       deep_merge (~> 1.0, >= 1.0.1)
+    d3-rails (3.5.17)
+      railties (>= 3.1)
     deep_merge (1.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -137,8 +138,6 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    momentjs-rails (2.15.1)
-      railties (>= 3.1)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     nenv (0.3.0)
@@ -235,14 +234,15 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.7)
+  c3-rails
   capistrano
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
   capistrano3-puma
-  chart-js-rails
   coffee-rails (~> 4.0.0)
   config
+  d3-rails (= 3.5.17)
   figaro
   foundation-rails
   friendly_id (~> 5.1.0)
@@ -252,7 +252,6 @@ DEPENDENCIES
   jquery-rails
   mini_backtrace (= 0.1.3)
   minitest-reporters (= 1.0.5)
-  momentjs-rails
   pg
   puma (= 3.1.0)
   rails (= 4.2.3)
@@ -262,5 +261,8 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
 
+RUBY VERSION
+   ruby 2.2.4p230
+
 BUNDLED WITH
-   1.12.5
+   1.13.2

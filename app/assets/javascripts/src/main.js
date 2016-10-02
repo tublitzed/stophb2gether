@@ -4,6 +4,7 @@ import Form from './modules/form';
 import Tab from './modules/tab';
 
 $(function() {
+  console.log('dsds');
   Alert.init();
   Chart.init();
   Form.init();

@@ -40,7 +40,7 @@ var myChart = {
     if ($chartEls.length) {
       $chartEls.each((index, el) => {
         $el = $(el);
-        var success = this.buildChart($el, $el.data('chart-type'));
+        var success = this.buildChart(el, $el.data('chart-type'));
         if (!success) {
           $el.hide();
         }
