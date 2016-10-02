@@ -10,11 +10,25 @@ var myChart = {
    * Build out a single chart.
    * @param {Object} $el
    * @param {String} type
+   *
+   * @return {Boolean}
    */
   buildChart: function($el, type) {
-    if (type === this.TYPE_LOSSES_OVER_TIME) {
-      LossesOverTime.build($el);
+    var $dataEl = $('[name="data-for-' + type + '"]');
+    if (!$dataEl.length) {
+      return false;
     }
+
+    var data = JSON.parse($dataEl.val());
+    if (!data) {
+      return false;
+    }
+
+    if (type === this.TYPE_LOSSES_OVER_TIME) {
+      LossesOverTime.build($el, data);
+    }
+
+    return true;
   },
 
   /**
@@ -22,9 +36,14 @@ var myChart = {
    */
   init: function() {
     var $chartEls = $('.chart');
+    var $el;
     if ($chartEls.length) {
       $chartEls.each((index, el) => {
-        this.buildChart($(el), $(el).data('chart-type'));
+        $el = $(el);
+        var success = this.buildChart($el, $el.data('chart-type'));
+        if (!success) {
+          $el.hide();
+        }
       });
     }
   }

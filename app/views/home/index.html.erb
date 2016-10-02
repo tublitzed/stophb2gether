@@ -20,7 +20,7 @@
 <div class="row">
   <div class="small-12 columns">
     <div class="chart-wrapper">
-      <input type="hidden" value="<%= @allLosses.as_json %>" name="data-for-losses-over-time" />
+      <input type="hidden" value='<%= @chartDataLossesOverTime %>' name="data-for-losses-over-time" />
       <canvas class="chart" data-chart-type="losses-over-time"></canvas>
     </div>
   </div>

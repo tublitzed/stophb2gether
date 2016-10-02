@@ -1,18 +1,32 @@
 var chart = {
+
+
+  parseData: function(data) {
+    var config = {
+      labels: [],
+      data: [],
+      metadata: []
+    };
+    data.forEach((loss) => {
+      config.labels.push(loss.date);
+      config.data.push(loss.runningTotal);
+      config.metadata.push({
+        title: loss.title,
+        amount: loss.amount
+      });
+    });
+    return config;
+  },
   /**
    * Build out Losses over time chart
-   * @param  {Object} $el - DOM element to render chart into.
+   * @param {Object} $el - DOM element to render chart into.
+   * @param {Array}
    */
-  build: function($el) {
+  build: function($el, data) {
+    // console.log(data);
+    var parsed = this.parseData(data);
     var data = {
-      labels: [
-        [2016, 3, 26],
-        [2016, 3, 27],
-        [2016, 3, 27],
-        [2016, 3, 27],
-        [2016, 5, 5],
-        [2016, 10, 1]
-      ],
+      labels: parsed.labels,
       datasets: [{
         label: 'Millions lost to HB2 over time',
         fill: false,
@@ -24,38 +38,17 @@ var chart = {
         // pointHitRadius: 20,
         // pointHoverRadius: 10,
         pointRadius: 3,
-        data: [
-          345, 567, 987, 1041, 2000, 2500
-
-          /*
-          * TODO: change these to the following: objects that are parsed so that the values are plotted on the chart, but the metadata
-          is shown in tooltips. Need the following:
-          {
-            runningTotal: Number, // data point on chart - Y axis.
-            amount: Number, // actual loss amount.
-            date: Date, // loss reported date - X axis.
-            title: String // name of the loss.
-          }
-          */
-        ],
+        data: parsed.data,
       }]
     };
 
-    var metadata = [];
-    for (var i = 0; i <= data.datasets[0].data.length; i++) {
-      metadata.push({
-        amount: i * 10,
-        title: 'some loss here ' + i
-      });
-    }
-    console.log(metadata);
-
     var options = {
-      metadata: metadata, // hack to get extra vals into the tooltips.
+      metadata: parsed.metadata, // hack to get extra vals into the tooltips.
       tooltips: {
         callbacks: {
           label: function(tooltipItem, data) {
-            var html = tooltipItem.xLabel[1] + tooltipItem.xLabel[2];
+            var date = tooltipItem.xLabel;
+            var html = date;
             html += ' - ';
             html += this._options.metadata[tooltipItem.index].amount;
             return html;
@@ -67,20 +60,11 @@ var chart = {
       },
       scales: {
         xAxes: [{
-          afterBuildTicks: function(chart) {
-            //console.log(chart);
-            // example of modifying ticks after render
-            //chart.ticks = chart.ticks.slice(0,5);
-          },
           type: 'time',
           time: {
             unit: 'month',
             displayFormats: {
               'month': 'MMM'
-                // 'millisecond': 'HH:mm:ss',
-                // 'second': 'HH:mm:ss',
-                // 'minute': 'HH:mm:ss',
-                // 'hour': 'HH:mm:ss'
             },
           }
         }]

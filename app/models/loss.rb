@@ -13,5 +13,4 @@ class Loss < ActiveRecord::Base
       .order(date: :desc)
       .offset(offset).limit(limit)
   end
-
 end
