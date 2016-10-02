@@ -130,8 +130,8 @@ var chart = {
   buildOptions: function(config) {
     return {
       metadata: config.metadata, // hack to get extra vals into the tooltips.
-      tooltips: buildTooltips(config),
-      scales: buildScales(config)
+      tooltips: this.buildTooltips(config),
+      scales: this.buildScales(config)
     };
   },
 
@@ -145,8 +145,8 @@ var chart = {
     var config = this.buildConfig(data);
     var myLineChart = new Chart($el, {
       type: 'line',
-      data: buildData(config),
-      options: buildOptions(config)
+      data: this.buildData(config),
+      options: this.buildOptions(config)
     });
   }
 };
