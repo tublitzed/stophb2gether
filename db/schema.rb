@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918220425) do
+ActiveRecord::Schema.define(version: 20161002005658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160918220425) do
   end
 
   create_table "losses", force: :cascade do |t|
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.datetime "date"
     t.decimal  "amount"
     t.string   "title"
@@ -34,11 +34,12 @@ ActiveRecord::Schema.define(version: 20160918220425) do
     t.string   "description"
     t.string   "template"
     t.json     "sources"
-    t.boolean  "active",       default: false, null: false
-    t.boolean  "featured",     default: false, null: false
+    t.boolean  "active",        default: false, null: false
+    t.boolean  "featured",      default: false, null: false
     t.string   "short_name"
     t.string   "photo_credit"
     t.string   "tweet"
+    t.decimal  "running_total"
   end
 
   create_table "subscribers", force: :cascade do |t|

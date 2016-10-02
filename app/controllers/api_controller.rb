@@ -33,6 +33,7 @@ class ApiController < ApplicationController
       "notes",
       "percentage_of_total",
       "photo_credit",
+      "running_total",
       "scheduled_date",
       "short_name",
       "slug",
