@@ -33,6 +33,33 @@ var chart = {
     return config;
   },
 
+  buildTooltip: function(config) {
+    // nested like this b/c of context inside of D3.
+    var formatAmount = function(number) {
+      var formatter = d3.format('$s');
+      return formatter(number);
+    };
+
+    var formatDate = function(date) {
+      var formatter = d3.time.format('%B %d');
+      return formatter(date);
+    };
+    return {
+      contents: function(item, defaultTitleFormat, defaultValueFormat) {
+        item = item[0];
+        var html = '<div class="c3-tooltip__title">';
+        html += config.metadata[item.index].title;
+        html += '</div>';
+
+        html += '<div class="c3-tooltip__body">';
+        html += formatDate(item.x) + '<span class="splitter"> // </span>';
+        html += formatAmount(config.metadata[item.index].amount) + ' lost';
+        html += '</div>';
+
+        return '<div class="c3-tooltip">' + html + '</div>';
+      }
+    };
+  },
 
   /**
    * Build out Losses over time chart
@@ -41,32 +68,41 @@ var chart = {
    * @param {Array}
    */
   build: function(node, data) {
-    console.log(data);
     var config = this.buildConfig(data);
-    console.log(config);
-
     var chart = c3.generate({
-        bindto: node,
-        data: {
-            x: 'x',
-            columns: config.columns
-    //        xFormat: '%Y%m%d', // 'xFormat' can be used as custom format of 'x'
-            // columns: [
-            //     ['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04', '2013-01-05', '2013-01-06'],
-            //     ['losses', 130, 340, 200, 500, 250, 350]
-            // ]
-        },
-        axis: {
-            x: {
-                type: 'timeseries',
-                tick: {
-                    format: '%m',
-                    count: 10 // only show x number of ticks
-                }
-            }
+      bindto: node,
+      data: {
+        x: 'x',
+        xFormat: '%Y-%m-%d', // how date is parsed
+        columns: config.columns,
+        colors: {
+          losses: 'B7091E'
         }
+      },
+      axis: {
+        x: {
+          type: 'timeseries',
+          tick: {
+            format: function(value) {
+              var monthNames = ['January', 'February', 'March',
+                'April', 'May', 'June',
+                'July', 'August', 'September',
+                'October', 'November', 'December'
+              ];
+              var month = value.getMonth();
+              return monthNames[month];
+            },
+            values: ['2016-03-01', '2016-04-01', '2016-05-01', '2016-05-01', '2016-06-01', '2016-07-01', '2016-08-01', '2016-09-01', '2016-10-01'] // needs to match xFormat  in data
+          }
+        },
+        y: {
+          tick: {
+            format: d3.format('$s')
+          }
+        }
+      },
+      tooltip: this.buildTooltip(config)
     });
-    console.log(chart);
   }
 };
 
