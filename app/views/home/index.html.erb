@@ -20,6 +20,7 @@
 <div class="row">
   <div class="small-12 columns">
     <div class="chart-wrapper">
+      <input type="hidden" value="<%= @allLosses.as_json %>" name="data-for-losses-over-time" />
       <canvas class="chart" data-chart-type="losses-over-time"></canvas>
     </div>
   </div>
@@ -27,7 +28,7 @@
 
 <div class="row">
   <div class="small-12 columns">
-    <%= render partial: 'partials/losses', locals: { losses: @allLosses } %>
+    <%= render partial: 'partials/losses', locals: { losses: @featuredLosses } %>
     <%= render partial: 'partials/linkToAll' %>
   </div>
 </div>
