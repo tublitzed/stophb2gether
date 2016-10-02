@@ -1,11 +1,7 @@
 /**
- * Assumes moment.js is on page and chart.js
- *
- * @type {Object}
+ * Assumes c3
  */
-
 var chart = {
-
   /**
    * Convert data into a format that can be read by the chart.
    *
@@ -62,45 +58,72 @@ var chart = {
   },
 
   /**
+   * Build out the axis values for chart.
+
+   * @param  {Object} config
+   *
+   * @return {Object}
+   */
+  buildAxis: function(config) {
+    return {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: function(value) {
+            var monthNames = ['January', 'February', 'March',
+              'April', 'May', 'June',
+              'July', 'August', 'September',
+              'October', 'November', 'December'
+            ];
+            var month = value.getMonth();
+            return monthNames[month];
+          },
+          values: ['2016-03-01', '2016-04-01', '2016-05-01', '2016-05-01', '2016-06-01', '2016-07-01', '2016-08-01', '2016-09-01', '2016-10-01'] // needs to match xFormat  in data
+        }
+      },
+      y: {
+        tick: {
+          format: d3.format('$s')
+        }
+      }
+    };
+  },
+
+  /**
+   * Build the data for chart.
+
+   * @param  {Object}
+   *
+   * @return {Object}
+   */
+  buildData: function(config) {
+    return {
+      type: 'line',
+      x: 'x',
+      xFormat: '%Y-%m-%d', // how date is parsed
+      columns: config.columns,
+      colors: {
+        losses: 'B7091E'
+      }
+    };
+  },
+
+  /**
    * Build out Losses over time chart
    *
    * @param {Object} node - DOM node to generate chart into
-   * @param {Array}
+   * @param {Array} data - config data
    */
   build: function(node, data) {
     var config = this.buildConfig(data);
+
     var chart = c3.generate({
       bindto: node,
-      data: {
-        x: 'x',
-        xFormat: '%Y-%m-%d', // how date is parsed
-        columns: config.columns,
-        colors: {
-          losses: 'B7091E'
-        }
+      data: this.buildData(config),
+      transition: {
+        duration: 500
       },
-      axis: {
-        x: {
-          type: 'timeseries',
-          tick: {
-            format: function(value) {
-              var monthNames = ['January', 'February', 'March',
-                'April', 'May', 'June',
-                'July', 'August', 'September',
-                'October', 'November', 'December'
-              ];
-              var month = value.getMonth();
-              return monthNames[month];
-            },
-            values: ['2016-03-01', '2016-04-01', '2016-05-01', '2016-05-01', '2016-06-01', '2016-07-01', '2016-08-01', '2016-09-01', '2016-10-01'] // needs to match xFormat  in data
-          }
-        },
-        y: {
-          tick: {
-            format: d3.format('$s')
-          }
-        }
-      },
+      axis: this.buildAxis(config),
       tooltip: this.buildTooltip(config)
     });
   }
