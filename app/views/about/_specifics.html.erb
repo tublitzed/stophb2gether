@@ -10,7 +10,7 @@
 <% if (Loss.exists?(slug: 'ani-difranco')) %>
   <h4 id="ani-difranco"><a href="<%= url_for('losses/ani-difranco') %>" class="link">Ani DiFranco</a></h4>
   <p>
-  This event (<a href="http://www.enoriver.org/festival/" class="link" target="_blank">The 37th Annual Festival for the Eno</a>) was not actually cancelled. Ani DiFranco was however the planned headliner for the event until she pulled out. Based on <a href="http://www.enoriver.org/festival/applications/Eno_Demographics.pdf" class="link" target="_blank">this document of Eno Festival demographics</a>, we have a total economic impact for the festival at $1.9 million (also note that this is from 2010). We've estimated that the festival lost 2% of the total attendees over the lost headlining artist. We took 2% of $1.9 million, or $38,000.
+  This event (<a href="http://www.enoriver.org/festival/" class="link" target="_blank">The 37th Annual Festival for the Eno</a>) was not actually canceled. Ani DiFranco was however the planned headliner for the event until she pulled out. Based on <a href="http://www.enoriver.org/festival/applications/Eno_Demographics.pdf" class="link" target="_blank">this document of Eno Festival demographics</a>, we have a total economic impact for the festival at $1.9 million (also note that this is from 2010). We've estimated that the festival lost 2% of the total attendees over the lost headlining artist. We took 2% of $1.9 million, or $38,000.
   </p>
 <% end %>
 
@@ -24,7 +24,7 @@
   <h4 id="boston"><a href="<%= url_for('losses/boston') %>" class="link">Boston</a></h4>
   <p>
     <%= raw(formula_html("performances")) %>
-    Three shows were cancelled, one at Charlotte's Spectrum Center (formerly Time Warner Cable Arena, capacity 16,700), another at Greensboro's White Oak Amphitheatre (capacity 7,061), and the last at Raleigh's Red Hat Ampitheater (capacity 5,990).
+    Three shows were canceled, one at Charlotte's Spectrum Center (formerly Time Warner Cable Arena, capacity 16,700), another at Greensboro's White Oak Amphitheatre (capacity 7,061), and the last at Raleigh's Red Hat Ampitheater (capacity 5,990).
     <%= raw(average_ticket_price(58.73, "Boston", "http://www.pollstar.com/atpDetail.aspx?SearchBy=B")) %>
     <%= raw(hotel_html("Raleigh")) %>
     <%= raw(hotel_html("Charlotte")) %>
@@ -36,7 +36,7 @@
   <h4 id="cirque-du-soleil"><a href="<%= url_for('losses/cirque-du-soleil') %>" class="link">Cirque du Soleil</a></h4>
   <p>
     <%= raw(formula_html("performances")) %>
-    A total of 21 shows were cancelled, 7 in each location. Cirque du Soleil's OVO was scheduled to stop at the Greensboro Coliseum (capacity 23,000) and Charlotte's Spectrum Center( formerly Time Warner Cable Arena, capacity 16,700).  Cirque du Soleil's TORUK was scheduled to stop at Raleigh's PNC arena (capacity 19,500).
+    A total of 21 shows were canceled, 7 in each location. Cirque du Soleil's OVO was scheduled to stop at the Greensboro Coliseum (capacity 23,000) and Charlotte's Spectrum Center( formerly Time Warner Cable Arena, capacity 16,700).  Cirque du Soleil's TORUK was scheduled to stop at Raleigh's PNC arena (capacity 19,500).
 
     <%= raw(average_ticket_price(66.47, "Cirque du Soleil's OVO", "http://www.pollstar.com/atpDetail.aspx?SearchBy=C")) %>
     <%= raw(average_ticket_price(67.62, "Cirque du Soleil's TORUK", "http://www.pollstar.com/atpDetail.aspx?SearchBy=C")) %>
@@ -51,7 +51,7 @@
 <h4 id="demi-lovato-nick-jonas"><a href="<%= url_for('losses/demi-lovato-nick-jonas') %>" class="link">Demi Lovato and Nick Jonas</a></h4>
 <p>
   <%= raw(formula_html("performances")) %>
-  Two shows were cancelled, one at Charlotte's Spectrum Center( formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500).
+  Two shows were canceled, one at Charlotte's Spectrum Center( formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500).
   The ticket prices for the Raleigh show were used for both events. The Raleigh show prices are listed as <a href="https://www.thepncarena.com/events/detail/demi-lovato-2" class="link" target="blank">$26.95, $36.95, $66.95, and $86.95</a>. We averaged these for a final ticket price of $54.45.
   <%= raw(hotel_html("Raleigh")) %>  <%= raw(hotel_html("Charlotte")) %>
 </p>
@@ -94,7 +94,7 @@
 
 <% if (Loss.exists?(slug: 'maroon-5')) %>
   <h4 id="maroon-5"><a href="<%= url_for('losses/maroon-5') %>" class="link">Maroon 5</a></h4>
-  <p><%= raw(formula_html("performances")) %> Two shows were cancelled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500). Ticket price for the Charlotte show is listed as a range of <a href="http://charlotte.eventful.com/events/maroon-5-concert-/E0-001-090071917-3" class="link" target="_blank">$30.50 - $126</a>, we used a mean of $78.25. <%= raw(hotel_html("Charlotte")) %> <%= raw(hotel_html("Raleigh")) %>
+  <p><%= raw(formula_html("performances")) %> Two shows were canceled, one at Charlotte's Spectrum Center(formerly Time Warner Cable Arena, capacity 16,700), and the other at Raleigh's PNC Arena (capacity 19,500). Ticket price for the Charlotte show is listed as a range of <a href="http://charlotte.eventful.com/events/maroon-5-concert-/E0-001-090071917-3" class="link" target="_blank">$30.50 - $126</a>, we used a mean of $78.25. <%= raw(hotel_html("Charlotte")) %> <%= raw(hotel_html("Raleigh")) %>
   </p>
 <% end %>
 
