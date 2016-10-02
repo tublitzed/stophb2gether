@@ -26,7 +26,6 @@ var chart = {
         amount: loss.amount
       });
     });
-    console.log(config);
     return config;
   },
 
