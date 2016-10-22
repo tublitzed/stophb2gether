@@ -5,7 +5,7 @@ class SubscriberMailerTest < ActionMailer::TestCase
     mail = SubscriberMailer.new_subscriber(Subscriber.new({ email: 'foo@bar.com' }))
     assert_equal "New subscriber: foo@bar.com", mail.subject
     assert_equal ["tublitzed@gmail.com"], mail.to
-    assert_equal ["admin@stophb2gether.com"], mail.from
+    assert_equal ["stophb2gether@gmail.com"], mail.from
   end
 
 end
