@@ -48,3 +48,13 @@ SSH into prod. Then:
 1. `su - deploy`
 2. `cd stophb2gether/current`
 3. `bundle exec rails c production`
+
+# Let's encrypt:
+
+To see when cert expires, run:
+`/usr/local/sbin$ echo | openssl s_client -connect www.stophb2gether.com:443 2>/dev/null | openssl x509 -noout -dates`
+
+To renew cert, run:
+`certbot-auto renew`
+
+Seems that after renewing might need to restart nginx to pick it up.
