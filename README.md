@@ -10,6 +10,25 @@ Ubuntu 16.04.3 LTS
 - `npm run w`
 - `npm run lint`
 
+# initial server setup.
+
+* copy racheltublitz site setup.
+* then, add DB and user:
+
+First, create a new role (which is a user for postgres):
+- `sudo -u postgres createuser --interactive` - now, follow the prompts.
+   ```
+     Enter name of role to add: db-username-here
+     Shall the new role be a superuser? (y/n) y
+  ```
+- `sudo -u postgres createdb db-name-here`
+
+- now, change db password:
+
+- `sudo -u postgres psql`
+- \password {db-username-here}
+- \q
+
 # deployment
 
 `$ cap production deploy`
