@@ -40,11 +40,12 @@ gem 'seed_dump'
 gem "figaro"
 
 group :development do
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
+  gem 'capistrano3-nginx'
+  gem 'capistrano-upload-config'
 end
 
 group :test do
