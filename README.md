@@ -1,6 +1,9 @@
-# stophb2gether
-Anti hb2 site dedicate to tracking lost revenue to the state of NC since HB2.
+`ssh -i /Users/tublitzed/.ssh/id_rsa-aws.pem ubuntu@ec2-54-236-4-15.compute-1.amazonaws.com`
+54.236.4.15
 
+- Lives in the 3blitzed instance.
+
+Ubuntu 16.04.3 LTS
 
 # scripts
 
@@ -13,18 +16,17 @@ Anti hb2 site dedicate to tracking lost revenue to the state of NC since HB2.
 
 Then, login to the server and restart if new config needs to get reloaded.
 
-1. `ssh -i /Users/tublitzed/.ssh/id_rsa-aws.pem ubuntu@ec2-52-91-46-41.compute-1.amazonaws.com`
-2. `su - deploy`
-3. `sudo service nginx restart`
+1. `su - deploy`
+2. `sudo service nginx restart`
 
 # prod logs:
 
-`tail -f /home/deploy/stophb2gether/current/log/production.log`
+`tail -f /home/deployer/stophb2gether/current/log/production.log`
 
 # restart Puma in prod
 
 1. cd into app dir
-2. `~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/stophb2gether/shared/tmp/pids/puma.state restart`
+2. `~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deployer/stophb2gether/shared/tmp/pids/puma.state restart`
 
 # restart nginx in prod
 
@@ -39,7 +41,7 @@ SSH into prod. Then:
 3. `bundle exec rake db:seed:dump FILE=db/seeds-tmp.rb RAILS_ENV=production`
 4. `sudo mv db/seeds-tmp.rb /home/ubuntu/`
 5. logout of server
-6. `scp -i /Users/tublitzed/.ssh/id_rsa-aws.pem -r ubuntu@ec2-52-91-46-41.compute-1.amazonaws.com:~/seeds-tmp.rb /Users/tublitzed/Desktop/`
+6. `scp -i /Users/tublitzed/.ssh/id_rsa-aws.pem -r ubuntu@ec2-54-236-4-15.compute-1.amazonaws.com:~/seeds-tmp.rb /Users/tublitzed/Desktop/`
 7. `atom /Users/tublitzed/Desktop/seeds-tmp.rb`
 8. copy contents to local seeds file and rake db:reset
 

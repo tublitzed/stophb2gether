@@ -3,7 +3,7 @@ lock '3.5.0'
 set :application, 'stophb2gether'
 set :repo_url, 'git@github.com:tublitzed/stophb2gether.git' # Edit this to match your repository
 set :branch, :master
-set :deploy_to, '/home/deploy/stophb2gether'
+set :deploy_to, '/home/deployer/stophb2gether'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 # had to remove 'bin' from linked_dirs below to get rails console working in production.
