@@ -5,7 +5,9 @@ node_modules/
 .DS_Store
 
 config/application.yml
+config/application.yml.prod
 config/database.yml
+config/database.yml.prod
 
 config/settings.local.yml
 config/settings/*.local.yml

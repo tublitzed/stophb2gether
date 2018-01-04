@@ -51,6 +51,16 @@ SSH into prod. Then:
 2. `cd stophb2gether/current`
 3. `bundle exec rails c production`
 
+## Troubleshooting
+
+* For an error like this: `Net::SSH::AuthenticationFailed: Authentication failed for user deployer@xxx` when deploying, try this:
+  ```
+    $ eval $(ssh-agent)
+    $ ssh-add
+  ```
+  (make sure that you run `ssh-add /home/ubuntu/.ssh/id_rsa_github` with the correct keyname if not using default id_rsa key name)
+
+
 # Let's encrypt:
 
 To see when cert expires, run:
