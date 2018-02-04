@@ -51,6 +51,12 @@ Then, login to the server and restart if new config needs to get reloaded.
 
 1. `sudo service nginx restart`
 
+# seeding prod in production. The seeds file has everything.
+
+* `su - deployer`
+* `cd /home/deployer/stophb2gether/current`
+* `bundle exec rake db:seed RAILS_ENV=production`
+
 # copy prod db to local:
 
 SSH into prod. Then:
