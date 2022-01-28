@@ -1,5 +1,5 @@
-`ssh -i /Users/tublitzed/.ssh/id_rsa-aws.pem ubuntu@ec2-54-236-4-15.compute-1.amazonaws.com`
-54.236.4.15
+`ssh -i /Users/tublitzed/.ssh/id_rsa-aws.pem ubuntu@ec2-34-229-248-23.compute-1.amazonaws.com`
+34.229.248.23
 
 - Lives in the 3blitzed instance.
 
@@ -61,18 +61,18 @@ Then, login to the server and restart if new config needs to get reloaded.
 
 SSH into prod. Then:
 
-1. `su - deploy`
+1. `su - deployer`
 2. `cd stophb2gether/current`
 3. `bundle exec rake db:seed:dump FILE=db/seeds-tmp.rb RAILS_ENV=production`
 4. `sudo mv db/seeds-tmp.rb /home/ubuntu/`
 5. logout of server
-6. `scp -i /Users/tublitzed/.ssh/id_rsa-aws.pem -r ubuntu@ec2-54-236-4-15.compute-1.amazonaws.com:~/seeds-tmp.rb /Users/tublitzed/Desktop/`
+6. `scp -i /Users/tublitzed/.ssh/id_rsa-aws.pem -r ubuntu@ec2-34-229-248-23.compute-1.amazonaws.com:~/seeds-tmp.rb /Users/tublitzed/Desktop/`
 7. `atom /Users/tublitzed/Desktop/seeds-tmp.rb`
 8. copy contents to local seeds file and rake db:reset
 
 # Rails console in prod:
 
-1. `su - deploy`
+1. `su - deployer`
 2. `cd stophb2gether/current`
 3. `bundle exec rails c production`
 

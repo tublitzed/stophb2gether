@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 #lock '3.6.1'
 
-server '54.236.4.15', roles: [:web, :app, :db], primary: true
+server '34.229.248.23', roles: [:web, :app, :db], primary: true
 
 set :application,     'stophb2gether'
 set :repo_url,        'git@github.com:tublitzed/stophb2gether.git'
