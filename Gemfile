@@ -1,43 +1,33 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '3.3.5'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
-gem 'bcrypt','3.1.7'
-gem 'puma', '3.1.0'
-# Use postgresql as the database for Active Record
-gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.3'
+# Rails
+gem 'rails', '~> 7.2.2'
+gem 'puma', '~> 6.4'
+gem 'pg', '1.5.9'
 
+# CSS and JavaScript
+gem 'sassc-rails'
+gem 'jquery-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'turbo-rails'
+
+# Front-end Frameworks
 gem 'foundation-rails'
-
 gem 'd3-rails', '3.5.17'
 gem 'c3-rails'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+# Authentication
+gem 'bcrypt', '3.1.7'
 
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# Utilities
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
-
-# https://github.com/railsconfig/config
+gem 'sdoc', '~> 1.0', group: :doc
+gem 'friendly_id', '~> 5.1.0'
 gem 'config'
-# https://github.com/jnunemaker/httparty
 gem 'httparty'
-# https://github.com/rroblak/seed_dump
 gem 'seed_dump'
-
-gem "figaro"
+gem 'figaro'
 
 group :development do
   gem 'capistrano', '~> 3.6'
@@ -50,6 +40,6 @@ end
 
 group :test do
   gem 'minitest-reporters', '1.0.5'
-  gem 'mini_backtrace',     '0.1.3'
-  gem 'guard-minitest',     '2.3.1'
+  gem 'mini_backtrace', '0.1.3'
+  gem 'guard-minitest', '2.4.6'
 end

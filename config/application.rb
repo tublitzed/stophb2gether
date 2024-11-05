@@ -24,7 +24,7 @@ module StopHB2gether
     # Load shared modules
     config.paths.add 'lib/modules', eager_load: true
 
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # # Do not swallow errors in after_commit/after_rollback callbacks.
+    # config.active_record.raise_in_transactional_callbacks = true
   end
 end

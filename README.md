@@ -95,3 +95,11 @@ To renew cert, run:
 `certbot-auto renew`
 
 Seems that after renewing might need to restart nginx to pick it up.
+
+# Running locally:
+* Use rvm to install the correct ruby version
+* `bundle install`
+* `mkdir -p /Users/tublitzed/GIT/stophb2gether/shared/sockets` if it doesn't exist already (used to share ruby config across app)
+* `mkdir -p /Users/tublitzed/GIT/stophb2gether/shared/pids`
+* `mkdir -p /Users/tublitzed/GIT/stophb2gether/shared/log`
+* `rails s -b 0.0.0.0 -p 3000`

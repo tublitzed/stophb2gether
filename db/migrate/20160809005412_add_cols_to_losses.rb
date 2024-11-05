@@ -1,4 +1,4 @@
-class AddColsToLosses < ActiveRecord::Migration
+class AddColsToLosses < ActiveRecord::Migration[5.0]
   def change
     add_column :losses, :date, :timestamp
     add_column :losses, :amount, :decimal
