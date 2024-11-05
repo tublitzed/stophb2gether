@@ -16,3 +16,5 @@ config/environments/*.local.yml
 shared/pids
 shared/sockets
 shared/log
+
+bin/dev

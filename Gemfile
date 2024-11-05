@@ -7,13 +7,13 @@ gem 'puma', '~> 6.4'
 gem 'pg', '1.5.9'
 
 # CSS and JavaScript
-gem 'sassc-rails'
+gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbo-rails'
 
 # Front-end Frameworks
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 6.3'
 gem 'd3-rails', '3.5.17'
 gem 'c3-rails'
 

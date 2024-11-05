@@ -103,3 +103,6 @@ Seems that after renewing might need to restart nginx to pick it up.
 * `mkdir -p /Users/tublitzed/GIT/stophb2gether/shared/pids`
 * `mkdir -p /Users/tublitzed/GIT/stophb2gether/shared/log`
 * `rails s -b 0.0.0.0 -p 3000`
+
+## Assets
+* `rake assets:clobber` - remove assets
