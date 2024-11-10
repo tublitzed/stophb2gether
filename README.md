@@ -106,3 +106,6 @@ Seems that after renewing might need to restart nginx to pick it up.
 
 ## Assets
 * `rake assets:clobber` - remove assets
+
+## Notes
+* Disabled asset compilation in 2024 due to badly outdated deps. Moved to just including previously bundled files since this site will see zero functional updates moving forwards.
