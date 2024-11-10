@@ -3,7 +3,7 @@ ruby '3.3.5'
 
 # Rails
 gem 'rails', '~> 7.2.2'
-gem 'puma', '~> 6.4'
+gem 'puma', '~> 5.2'
 gem 'pg', '1.5.9'
 
 # CSS and JavaScript
@@ -33,7 +33,7 @@ group :development do
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rbenv'
-  gem 'capistrano3-puma'
+  gem 'capistrano3-puma', '~> 5.2'
   gem 'capistrano3-nginx'
   gem 'capistrano-upload-config'
 end
