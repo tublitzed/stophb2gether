@@ -3,7 +3,7 @@
   <% @loss.sources.each do |source| %>
     <li>
       <% if source['link'] == 'CUSTOM_CALC' %>
-        <a href="<%= url_for(['about', tab: 'calculations', anchor: "#{@loss.slug}"] ) %>" class="link">Custom calculation</a>, StopHB2gether.
+        <a href="<%= url_for(controller: 'about', action: 'index', tab: 'calculations', anchor: @loss.slug) %>" class="link">Custom calculation</a>, StopHB2gether.
       <% else %>
 
         <% if source['meta']['author'] %>

@@ -9,8 +9,8 @@ class LossesController < ApplicationController
       @totalLosses = Loss.sum(:amount)
       @allLosses = Loss.get_active
 
-      @currentPage = get_page
-      offset = (@currentPage - 1) * PER_PAGE
+      @current_page = get_page
+      offset = (@current_page - 1) * PER_PAGE
 
       puts offset
       @losses = Loss.get_active(PER_PAGE, offset)

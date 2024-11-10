@@ -16,11 +16,11 @@
     <div class="tabs-content" data-tabs-content="losses-page-tabs">
       <div class="tabs-panel<% if  @active_tab == 'losses' %> is-active<% end %>"" id="panel-losses">
 
-        <%= render partial: 'partials/pagination', locals: { currentPage: @currentPage, perPage: @perPage, items: @allLosses } %>
+        <%= render partial: 'partials/pagination', locals: { current_page: @current_page, perPage: @perPage, items: @allLosses } %>
         <div class="clear"></div>
         <%= render partial: 'partials/losses', locals: { losses: @losses } %>
         <br />
-        <%= render partial: 'partials/pagination', locals: { currentPage: @currentPage, perPage: @perPage, items: @allLosses } %>
+        <%= render partial: 'partials/pagination', locals: { current_page: @current_page, perPage: @perPage, items: @allLosses } %>
       <hr />
       <small class="small">Is this list missing something? <a href="<%= contact_path %>" class="link">Let us know.</a></small>
       </div>

@@ -19,6 +19,8 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
+set :puma_service_unit_name, "puma_stophb2gether_production"
+
 # Don't change these unless you know what you're doing
 set :pty,             true
 set :use_sudo,        false
@@ -45,6 +47,8 @@ set :log_level,     :debug
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
+Rake::Task["deploy:assets:precompile"].clear
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
