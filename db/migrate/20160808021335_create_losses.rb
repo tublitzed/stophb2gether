@@ -1,4 +1,4 @@
-class CreateLosses < ActiveRecord::Migration
+class CreateLosses < ActiveRecord::Migration[5.0]
   def change
     create_table :losses do |t|
 
