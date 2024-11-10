@@ -1,4 +1,3 @@
-1028a7a.js
 /*!
  * jQuery JavaScript Library v1.12.1
  * http://jquery.com/
