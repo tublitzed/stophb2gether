@@ -24,6 +24,9 @@ To seed into Neon, grab the connection string from the Neon web console (without
 
 Using Railway as of Oct 2026. Deployed via the Railway console.
 
+To deploy a specific feature branch, run `railway link` to make sure you're connected to the right project, then `railway up` to deploy the current branch.
+
+
 
 # Running locally:
 * Use rvm to install the correct ruby version
