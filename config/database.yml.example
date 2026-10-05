@@ -17,3 +17,8 @@ development:
 test:
   <<: *default
   database: dbnamehere
+
+# Neon. Set DATABASE_URL to the Neon connection string (direct, non-pooled).
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>

@@ -1,3 +1,7 @@
 SECRET_KEY_BASE: "{key-here}"
 GMAIL_USERNAME: "{value-here}"
 GMAIL_PASSWORD: "{value-here}"
+
+# Scoped to production so it doesn't override the local dev DB.
+production:
+  DATABASE_URL: "postgresql://{user}:{password}@{host}/{dbname}?sslmode=require"
